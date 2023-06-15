@@ -7,6 +7,10 @@ function show($stuff)
     print_r($stuff);
     echo "</pre>";
 }
+function redirect($data){
+    header("Location: $data");
+
+}
 
 $hostname = "http://localhost/bloodworks/";
 
