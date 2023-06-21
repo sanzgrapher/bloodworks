@@ -11,11 +11,12 @@ class Controller
         $filename = "views/" . $name . ".views.php";
 
 
-        echo $filename;
+        show ("contorller - >".$filename);
         if (file_exists($filename)) {
-
+          
             require $filename;
         } else {
+           
             $filename = "views/404.views.php";
             require $filename;
         }
