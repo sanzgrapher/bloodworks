@@ -1,36 +1,38 @@
 <?php
 //get user
-$user = new Model();
-$user->table = "user";
-$data = [
-    "id" => "6"
-];
-$data_not = ['fname'];
-$result = $user->where($data);
-show($result);
+// $user = new Model();
+// $user->table = "user";
+// $data = [
+//     "id" => "6"
+// ];
+// $data_not = ['fname'];
+// $result = $user->where($data);
+// show($result);
 
 // print $result['fname'];
 
 
-if (isset($_POST['submit'])) {
-    $user->table = "user";
-    $data = [
-        "id" => $_POST['id'],
-        "fname" => $_POST['fname'],
-        "email" => $_POST['email']
-    ];
-    $user->update(6, $data);
-    $cookie_value = "avaiable";
-    setcookie("STATUS", $cookie_value, time() + (60), "/"); // 86400 = 1 day
+// if (isset($_POST['submit'])) {
+//     $user->table = "user";
+//     $data = [
+//         "id" => $_POST['id'],
+//         "fname" => $_POST['fname'],
+//         "email" => $_POST['email']
+//     ];
+//     $user->update(6, $data);
+//     $cookie_value = "avaiable";
+//     setcookie("STATUS", $cookie_value, time() + (60), "/"); // 86400 = 1 day
 
 
 
-    // redirect("edit");
-}
+//     // redirect("edit");
+// }
 $cookie_name = "status";
 
 
 ?>
+
+<h1>Dash edit</h1>
 <ul>
     <li><a href="home">Home</a></li>
     <li><a href="blood-banks">Bloodbanks</a></li>

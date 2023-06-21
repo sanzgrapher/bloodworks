@@ -3,12 +3,12 @@
 include "header.php" ?>
 <?php
 
-$donorlist = new Model;
-$donorlist->table = "user";
-$data = [
-    "donor_availability" => "Available"
-];
-$donor_list = $donorlist->where($data);
+// $donorlist = new Model;
+// $donorlist->table = "user";
+// $data = [
+//     "donor_availability" => "Available"
+// ];
+// $donor_list = $donorlist->where($data);
 
 
 // show($donor_list);
@@ -20,6 +20,7 @@ $donor_list = $donorlist->where($data);
 // echo $count;
 
 ?>
+<h1>donor list</h1>
 <style>
     table,
     th,

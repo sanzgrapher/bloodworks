@@ -4,6 +4,7 @@ include "views/header.php";
 // body code here
 // echo hostname();
 
+echo "home";
 ?>
 
 <!-- header end-->
@@ -30,6 +31,7 @@ include "views/header.php";
 
  
 
+<h1>homepage</h1>
 
 
 <ul>
