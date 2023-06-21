@@ -7,8 +7,8 @@ class _404 extends Controller
 
     public function index()
     { // default function should be in every class
-        echo "404 controller";
-        $this->view('home');// from controller class 
+        show( "404 controller");
+        $this->view('404');// from controller class 
 
     }
 }
