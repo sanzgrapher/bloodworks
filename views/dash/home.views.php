@@ -3,7 +3,7 @@
 
 
 ?>
-
+<h1>Dash home</h1>
 <ul>
     <li><a href="home">Home</a></li>
     <li><a href="blood-banks">Bloodbanks</a></li>
@@ -16,6 +16,6 @@
 
 <ul>
     <li><a href="edit">Edit profile</a></li>
-</ul>
+</ul> 
 
 

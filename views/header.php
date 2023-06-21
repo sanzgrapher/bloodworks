@@ -18,8 +18,9 @@
     <!-- links -->
     <ul>
         <li><a href="home">Home</a></li>
-        <li><a href="blood-banks">Bloodbanks</a></li>
-        <li><a href="Donor-list">Donor lists</a></li>
+        <li><a href="bloodbanks">Bloodbanks</a></li>
+        <li><a href="Donorlist">Donor lists</a></li>
+        <li><a href="dash/edit">Donor lists</a></li>
     </ul>
 
     <div class="box">header</div>
