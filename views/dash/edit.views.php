@@ -27,6 +27,7 @@
 
 //     // redirect("edit");
 // }
+show($data);
 $cookie_name = "status";
 
 
@@ -50,12 +51,12 @@ if (!isset($_COOKIE["STATUS"])) {
 }
 ?>
 
-
+<h1>basic </h1>
 <form action="edit" method="post">
-    <?php foreach ($result as $row) { ?>
-        <input type="hidden" name="id" value="<?= $row->id; ?>">
-        <input type="text" name="fname" value="<?= $row->fname; ?>">
-        <input type="text" name="email" value="<?= $row->email; ?>">
+    <?php foreach ($loggedinuser as $user) { ?>
+        <input type="hidden" name="id" value="<?= $user->id; ?>">
+        <input type="text" name="fname" value="<?= $user->fname; ?>">
+        <input type="text" name="email" value="<?= $user->email; ?>">
 
         <input type="submit" name="submit" value="submit">
     <?php } ?>
@@ -67,15 +68,19 @@ if (!isset($_COOKIE["STATUS"])) {
 <h3>basic details</h3>
 <form action="edit" method="post">
     <label for="fname">First Name</label>
-    <input type="text" name="fname" value="<?= $row->fname; ?>">
+    <input type="text" name="fname" value="<?= $user->fname; ?>">
+    <label for="lname">Middl Name</label>
+    <input type="text" name="mname" value="<?= $user->mname; ?>">
     <label for="lname">Last Name</label>
-    <input type="text" name="lname" value="<?= $row->lname; ?>">
+    <input type="text" name="lname" value="<?= $user->lname; ?>">
     <label for="email">Email</label>
-    <input type="text" name="email" value="<?= $row->email; ?>">
+    <input type="text" name="email" value="<?= $user->dateofbirth; ?>">
     <label for="phone">Phone</label>
-    <input type="text" name="phone" value=" ">
+    <input type="text" name="phone" value="<?= $user->email; ?> ">
     <label for="dob">Date of Birth</label>
-    <input type="date" name="dob" value=" ">
+    <input type="date" name="dob" value="<?= $user->username; ?> ">
+    <label for="bloodgroup">Bloodgroup</label>
+    <input type="bloodgroup" name="bloodgroup" value="<?= $user->bloodgroup; ?> ">
     <label for="gender">gender</label>
     <select name="gender" id="gender">
         <option value="male">M</option>
@@ -99,8 +104,7 @@ if (!isset($_COOKIE["STATUS"])) {
         <option value="AB-">AB-</option>
         <option value="O-">O-</option>
     </select>
-    
-    
+
+
 </form>
 <h3>Address</h3>
-
