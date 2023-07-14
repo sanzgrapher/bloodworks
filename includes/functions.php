@@ -1,5 +1,6 @@
 <?php
 
+// $hostname = "http://localhost/bloodworks/";
 function show($stuff)
 {
     // printing anything sent as parameter
@@ -12,5 +13,9 @@ function redirect($data){
 
 }
 
-$hostname = "http://localhost/bloodworks/";
+function getLoggedinUser(){
+    $userid = $_SESSION['userid'];
+    return $userid;
+    
 
+}

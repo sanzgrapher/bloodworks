@@ -1,25 +1,10 @@
 <?php
+ $sn = 0;
+// show($data); ?>
+
+
+<?php include "header.php"  ;?>
  
-include "header.php" ?>
-<?php
-
-// $donorlist = new Model;
-// $donorlist->table = "user";
-// $data = [
-//     "donor_availability" => "Available"
-// ];
-// $donor_list = $donorlist->where($data);
-
-
-// show($donor_list);
- 
-?>
-<?php
-// count no of rows 
-// $count = count($donor_list);
-// echo $count;
-
-?>
 <h1>donor list</h1>
 <style>
     table,
@@ -29,21 +14,25 @@ include "header.php" ?>
         border-collapse: collapse;
     }
 </style>
- 
+
 <table>
     <tr>
+        <th>sn</th>
         <th>Name</th>
         <th>Bloodgroup</th>
+        <th>Address</th>
         <th>Contact</th>
     </tr>
-    <?php if (empty($donor_list)) {
+    <?php if (empty($donors)) {
         echo "No donor available";
     } else {
-        foreach ($donor_list as $donor) { ?>
+        foreach ($donors as $donor) { ?>
             <tr>
+                <td><?= ++$sn ?></td>
                 <td><?= $donor->fname . " " . $donor->mname . " " . $donor->lname; ?></td>
                 <td><?= $donor->bloodgroup; ?></td>
-                <td>Contach Btn</td>
+                <td><?= $donor->address; ?></td>
+                <td><a title="Here this button will open a form modal to send email with required data" href="#">Contach Now</a></td>
             </tr>
     <?php
         }
@@ -51,6 +40,7 @@ include "header.php" ?>
     ?>
 
 </table>
+
 
 
 

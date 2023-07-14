@@ -1,11 +1,14 @@
 <?php
 
-class Controller
+trait Controller
 {
 
-    public function view($name) // here the controller loads the respective view
+    public function view($name, $data=[]) // here the controller loads the respective view
     {
-        
+        if (!empty($data)){
+        extract($data);
+        // show("ram . $data");
+        }
        
 
         $filename = "views/" . $name . ".views.php";
@@ -20,6 +23,19 @@ class Controller
             $filename = "views/404.views.php";
             require $filename;
         }
+
+      
+
+
+
+
+
+
         
     }
 }
+
+
+
+
+

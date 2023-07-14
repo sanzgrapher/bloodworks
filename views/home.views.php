@@ -5,29 +5,9 @@ include "views/header.php";
 // echo hostname();
 
 echo "home";
-?>
+$_SESSION['userid'] = 2;
 
-<!-- header end-->
-
-<!-- body -->
-
-<!-- <img src="< ?= HOSTNAME ?>/assets/images/gg.webp" alt="" srcset=""> -->
-<?php
-// $query =  "Select * from site_info";
-// use Model;
-
-
-
-// $user = new Model;
-// // change variable data of class model
-// $user->table = "site_info";
-// $result = $user->one(); 
-
-// show($result);
-
-
-
-?>
+?> 
 
  
 

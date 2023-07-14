@@ -1,16 +1,32 @@
 <?php
-
-
-class BloodBanks extends Controller
+class BloodBanks 
 {
+use Controller;
 
     public function index($a = "", $b = "", $c = "")
-    { 
+    {
         show("home");
 
+        $bloodbanklist = $this->bloodbanklist(); // Call the private method within the class and capture the returned value
+        
+        $data = [
+            "bloodbanklist" => $bloodbanklist,
+             
+        ];
 
-
-        $this->view('blood-banks'); // from controller class 
-
+        $this->view('blood-banks', $data); // Pass the $bloodbanklist to the view
     }
+
+    private function bloodbanklist()
+    {
+        $bloodbanklist = new Model;
+        $bloodbanklist->table = "blood_banks";
+        $bloodbanklist->order_column = "bb_id";
+
+        $bloodbanklist = $bloodbanklist->findAll();
+        return $bloodbanklist;
+        // Do something with the $bloodbanklist data
+        // For example, you can pass it to the view or perform further operations
+    }
+     
 }

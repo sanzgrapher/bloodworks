@@ -1,8 +1,9 @@
 <?php
 
 
-class Dash extends Controller
+class Dash
 {
+    use Controller;
 
     public function index($a = "", $b = "", $c = "")
     {

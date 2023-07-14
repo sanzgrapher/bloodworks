@@ -1,9 +1,9 @@
 <?php
 
  
-class Events extends Controller
+class Events 
 {
-
+    use Controller;
     public function index($a = "", $b = "", $c = "")
     {
         
