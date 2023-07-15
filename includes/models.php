@@ -106,14 +106,8 @@ class Model
     public function update($id, $data, $id_column = 'id')
     {
 
-        // remove unwanted or not allowed data
-        if (!empty($this->allowedColumns)) {
-            foreach ($data as $key => $value) {
-                if (!in_array($key, $this->allowedColumns)) {
-                    unset($data[$key]);
-                }
-            }
-        }
+       
+       
 
         $keys = array_keys($data);
 
@@ -132,6 +126,7 @@ class Model
         // $data = [$id_column => $id];
         $data[$id_column] = $id;
         // echo $query;
+        // die();
         $this->query($query, $data);
         return false;
     }

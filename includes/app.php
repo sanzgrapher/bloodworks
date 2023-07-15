@@ -12,7 +12,7 @@ class App
         // splitting the url from the routing from htaccess and converting the remaining parameters to an array
         $URL = $_GET['url'] ?? 'home';
         $URL = explode("/", trim($URL, "/"));
-        show($URL);
+        // show($URL);
         return $URL;
     }
 
@@ -89,12 +89,12 @@ class App
 
         // $filename = "controllers/" . ucfirst($URL[0]) . ".php";
        
-        show("APP->".$filename);
+        // show("APP->".$filename);
        
         if (file_exists($filename)) {
 
-            show("app->controller");
-            show($filename);
+            // show("app->controller");
+            // show($filename);
 
 
             require $filename;
