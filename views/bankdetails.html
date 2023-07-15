@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="././assets/css/style.css">
+    
+</head>
+<body>
+    <section class="bank-detail-container">
+        <div class="bank-detail-header">
+            <div class="bank-img">
+                <img src="https://dummyimage.com/170x170/000/fff" alt="">
+            </div>
+            <div class="bank-detail-profile">
+                <h1>Add a heading</h1>
+                <h3>add a subheading</h3>
+                <p>Add a little bit of body text</p>
+            </div>
+
+        </div>
+        <div class="bank-detail-info">
+            <div class="bank-detail-tabs">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'information')">Information</button>
+                    <button class="tablinks" onclick="openCity(event, 'bloodstocks')">Blood Stocks</button>
+                    <button class="tablinks" onclick="openCity(event, 'events')">Events</button>
+                  </div>
+                  
+                  <div id="information" class="tabcontent">
+                    <h3>Blood-Bank Details</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum at laudantium deserunt! Placeat, nam! Inventore asperiores, molestias modi recusandae aperiam at vel doloribus corporis culpa cupiditate velit sequi qui ad.</p>
+                  </div>
+                  
+                  <div id="bloodstocks" class="tabcontent">
+                    <h3>The Blood Stock of the Blood Bank</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolores, consequuntur ex reiciendis assumenda distinctio iure consequatur vel repellendus atque nulla quibusdam ducimus debitis culpa repellat est laborum sed maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusantium necessitatibus perspiciatis doloribus quia numquam debitis amet eaque. Cupiditate autem error assumenda sequi vel minima doloremque sit provident neque nihil.</p> 
+                  </div>
+                  
+                  <div id="events" class="tabcontent">
+                    <h3>TEvents</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad est totam corrupti, neque cum nam unde, nobis debitis inventore consequatur incidunt maxime illum harum. Ea sint minus laudantium distinctio molestias?. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eveniet explicabo cupiditate ea totam, voluptatibus laborum deleniti quis? Mollitia blanditiis voluptas enim tenetur labore dolorum, quod totam explicabo quia eaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aut error perspiciatis nostrum laudantium nobis consequuntur. Asperiores, possimus! Nihil vel itaque vitae possimus dolorum atque eveniet nisi quidem eaque pariatur.</p>
+                  </div>
+            </div>         
+        </div>
+    </section>
+   
+      
+      <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      </script>
+   </body>
+</html>
