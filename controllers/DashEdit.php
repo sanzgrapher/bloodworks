@@ -7,14 +7,20 @@ class Dash
 
     public function index($a = "", $b = "", $c = "")
     {
-        show("home");
+        // show("home");
 
-        $loggedindata = $this->editUserData();
+        $loggedindata = $this->getUserData();
 
         $data = [
             "loggedinuser" => $loggedindata,
          
         ];
+
+        if (isset($_POST['edit-basic'])) {
+            
+
+            $this->editBasic();
+        }
 
 
 
@@ -22,7 +28,7 @@ class Dash
 
     }
 
-    public function editUserData (){
+    public function getUserData (){
 
     
         $getuserdata = new Model;
@@ -39,4 +45,33 @@ class Dash
         return $getuserdata;
        
     }
+
+    public function editBasic()
+    {
+        $id = getLoggedinUser();
+
+
+        $editBasic = new Model;
+
+
+        $editBasic->table = "user";
+    $data = [
+        
+        "fname" => $_POST['fname'],
+        "mname" => $_POST['mname'],
+        "lname" => $_POST['lname'],
+        "dateofbirth" => $_POST['dateofbirth'],
+        "phone_no" => $_POST['phone_no'],
+        "address" => $_POST['address'],
+    ];
+  
+    $editBasic->update($id, $data, "id");
+    redirect("http://bloodworks.local/dash/");
+    
+
+}
+
+
+
+
 }
