@@ -87,12 +87,43 @@ body {
     font-size: 1.2em;
     width: 100%;
 }
+td,
+th {
+    padding: 20px;
+
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#datatable th {
+    background-color: rgb(198, 27, 27);
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
 table thead tr th a{
-   color: #ff1f1f !important;
+   color: #ffffff !important;
   
     font-weight: 600;
     font-size: 1.2em;
 }
+
+
+/*  */
+/*----------------Table List---------------*/
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
 
 
@@ -397,6 +428,17 @@ form .fields .input_field {
     .info {
         width: 95%;
     }
+        .datatable-search .datatable-input{
+      font-size: 12px;
+      padding: 5px;
+
+      width : 100%;
+      margin: 3px;
+        }
+                 #datatable th a,
+                 #datatable td {
+                     font-size: 12px !important;
+                 }
         
 }
 
@@ -412,10 +454,14 @@ form .fields .input_field {
 }
 
 @media screen and (max-width: 567px) {
-    img {
+    /* img {
         width: 70%;
         height: 70%;
-    }
+    } */
+
+   
+
+
 }
 
 
