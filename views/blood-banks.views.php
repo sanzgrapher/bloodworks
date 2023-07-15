@@ -1,44 +1,42 @@
 <?php require "header.php";
 // show($data);
 ?>
+<main class="container-xxl">
+    <div class="table-section">
+        <h2 class="table-sec-title fw-bold display-5">Available Bloodbanks</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti excepturi harum accusantium ducimus vero ipsa dolore sint praesentium veritatis hic sapiente, nemo vitae perferendis quis inventore numquam quo totam reiciendis?</p>
+        <div style="overflow-x:auto;">
+            <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th class="th-sm">Name
+                        </th>
+                        <th class="th-sm">Position
+                        </th>
 
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (empty($bloodbanklist)) {
+                        echo "No donor available";
+                    } else {
+                        foreach ($bloodbanklist as $bloodbank) { ?>
+                            <tr>
+                                <td><?= $bloodbank->bb_id . " " . $bloodbank->bb_name; ?></td>
+                                <td><?= $bloodbank->bb_email; ?></td>
+                                <!-- <td>Contach Btn</td> -->
+                            </tr>
+                    <?php
+                        }
+                    }
+                    ?>
 
-<h1>bLOODBANKS</h1>
-Here will be list of bloodbanks
-and a btn to add bloodbank
+                </tbody>
 
-<style>
-    table,
-    th,
-    td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-</style>
+            </table>
 
-<table >
-  
-    <tr>
-        <th>Name</th>
-        <!-- <th>Bloodgroup</th>-->
-        <th>Contact</th>
-    </tr>
-    <?php if (empty($bloodbanklist)) {
-        echo "No donor available";
-    } else {
-        foreach ($bloodbanklist as $bloodbank) { ?>
-            <tr>
-                <td><?= $bloodbank->bb_id . " " . $bloodbank->bb_name; ?></td>
-                <td><?= $bloodbank->bb_email; ?></td>
-                <!-- <td>Contach Btn</td> -->
-            </tr>
-    <?php
-        }
-    }
-    ?>
+        </div>
+        </div>
 
-</table>
-
-
-
+</main>
 <?php require "footer.php"; ?>
