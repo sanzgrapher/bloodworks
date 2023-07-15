@@ -14,7 +14,7 @@ trait Controller
         $filename = "views/" . $name . ".views.php";
 
 
-        show ("contorller - >".$filename);
+        // show ("contorller - >".$filename);
         if (file_exists($filename)) {
           
             require $filename;
