@@ -15,7 +15,7 @@
 
 body {
     background: #eeeeee;
-    font-family: 'Open Sans', sans-serif;
+  
 }
 
 /* // navbar */
@@ -109,10 +109,7 @@ table thead tr th a{
     font-weight: 600;
     font-size: 1.2em;
 }
-
-
-/*  */
-/*----------------Table List---------------*/
+ 
  
 
  /*---------------Blood Bank Card---------------*/
