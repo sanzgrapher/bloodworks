@@ -7,10 +7,31 @@ class Dash
 
     public function index($a = "", $b = "", $c = "")
     {
-        show("home");
+        $loggedindata = $this->getUserData();
+        $data = [
+                "loggedinuser" => $loggedindata,
+
+            ];
 
 
+        $this->view('dash/home', $data); 
+      
+    }
+    public function getUserData()
+    {
 
-        $this->view('dash/home');
+
+        $getuserdata = new Model;
+        $getuserdata->table = "user";
+        $getuserdata->order_column = "id";
+
+        $getsessionid = getLoggedinUser();
+        $data = [
+            "id" => "$getsessionid"
+        ];
+
+
+        $getuserdata = $getuserdata->where($data);
+        return $getuserdata;
     }
 }
