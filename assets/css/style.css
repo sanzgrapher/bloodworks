@@ -4,6 +4,434 @@
     background-color: green;
     margin: 10px;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
 
-/* //new */
-/* //new */
+ 
+
+body {
+    background: #eeeeee;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* // navbar */
+.dropdown-toggle::after {
+    display: none;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+/* Font Awesome Icons have variable width. Added fixed width to fix that. */
+.icon-width {
+    width: 2rem;
+}
+
+#navbar4 {
+
+    justify-content: space-between;
+}
+ 
+
+
+
+.banner {
+    
+  
+    height: 100vh;
+}
+
+ 
+
+.banner .row {
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.text-primary {
+    color: #ff1f1f !important;
+}
+
+.btn {
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+}
+
+
+
+
+.table-section{
+    margin-top: 3rem;
+    min-height: 100vh;
+}
+.table-sec-title{
+    margin: 5rem 0 3rem 0;
+    color: #ff1f1f;
+    text-align: center;
+   
+    
+}
+.datatable-search .datatable-input{
+    border-radius: 2em;
+    border: 1px solid #ff1f1f;
+    padding: 0.5em 1em;
+    color: #ff1f1f;
+    font-weight: 600;
+    font-size: 1.2em;
+    width: 100%;
+}
+table thead tr th a{
+   color: #ff1f1f !important;
+  
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+
+
+
+
+/*-------------dashboard-----------*/
+.dash-container{
+    width: 100%;
+
+}
+.dashboard_container {
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    /* top: 80px;
+    left: 0; */
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.dashboard {
+
+    width: 25%;
+    min-width: 15%;
+    height: fit-content;
+    /* margin: 10px; */
+
+   
+}
+.dashboard ,.info{
+overflow: none;
+
+    margin: 10px;
+}
+
+.dashboard,
+.info .container {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
+        background-color: white;
+    border-radius: 10px;
+        padding: 80px 15px;
+   
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-bottom: 2px solid black;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.upload-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 150px;
+    min-width: 100px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(172, 18, 18);
+    color: white;
+    border-radius: 20px;
+    margin: 25px 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.side-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: fit-content;
+
+}
+
+.side-list a {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgb(68, 68, 68);
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.side-list a:hover {
+    color: rgb(172, 18, 18);
+}
+
+.side-list a i {
+    padding: 9px;
+}
+
+.info {
+    width: 75%;
+    /* height: 800px; */
+    /* margin: 10px; */
+}
+
+.head {
+    position: relative;
+    margin: auto;
+    top: 20px;
+    width: 300px;
+    justify-content: center;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+}
+
+/* dash */
+
+
+
+
+/*---form---*/
+
+.info .container {
+    /* position: relative; */
+    /* max-width: 900px; */
+    width: 100%;
+    border-radius: 6px;
+    /* padding: 30px; */
+    margin: 15px 0;
+   
+ 
+    background-color: rgb(255, 255, 255);
+}
+
+.info .container .heading {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+}
+
+.info .container form {
+    position: relative;
+    min-height: 490px;
+    margin-top: 16px;
+}
+
+.info .container form .details {
+    margin-top: 30px;
+}
+
+.info .container form .title {
+    display: block;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 6px 0;
+    color: #333;
+}
+
+.info .container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+form .fields .input_field {
+    display: flex;
+    width: calc(100% / 2 - 15px);
+    flex-direction: column;
+    margin: 10px 4px;
+}
+
+.input_field label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2e2e2e;
+}
+
+.input_field input,
+.input_field select {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    border-radius: 5px;
+    border: 1px solid #797979;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+
+.input_field input:is(:focus, :valid) {
+    box-shadow: -4px -3px 45px 10px rgba(181, 181, 181, 0.35);
+}
+
+.input_field input[type="date"] {
+    color: #707070;
+}
+
+.input_field input[type="date"]:valid {
+    color: #333;
+}
+
+.info .container form button input,
+.info .container form button select {
+    text-decoration: none;
+}
+
+form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(172, 18, 18);
+    color: white;
+    border-radius: 5px;
+    margin: 25px 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 14px;
+}
+
+
+form button:hover,
+.upload-img:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid rgb(172, 18, 18);
+    padding: -1px;
+}
+
+/* form  */
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+    background: #ff1f1f;
+    color: #fff;
+    padding: 2em;
+    text-align: center;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+/* footer */
+
+@media screen and (min-width: 769px) {
+    p {
+        font-size: 1.2em;
+    }
+         
+}
+/* for laptop and small  */
+@media screen and (max-width: 950px) { 
+form .fields .input_field {
+        display: flex;
+        width: calc(100% / 1 - 15px);
+        flex-direction: column;
+        margin: 10px 4px;
+    }
+
+    .dashboard_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard,
+    .info {
+        width: 95%;
+    }
+        
+}
+
+
+
+
+@media screen and (max-width: 768px) { 
+    .banner {
+        padding: 2em;
+        text-align: center;
+    }
+        
+}
+
+@media screen and (max-width: 567px) {
+    img {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+
+/* Path: assets\css\style.css - bootstrap replace */ 
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+    bottom: .5em;
+}
+.datatable-table{
+    border-collapse: collapse !important;
+}
