@@ -22,7 +22,7 @@
 
 </head>
 
-<body> 
+<body>
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
         <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
 
@@ -51,14 +51,15 @@
                     </li>
 
                     <li class="nav-item px-lg-2 dropdown d-menu">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>Dropdown
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>Bloodbank
                             <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </a>
                         <div class="dropdown-menu shadow-sm sm-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            
+                            <a class="dropdown-item" href="<?= HOSTNAME ?>bloodbanks">BloodBankList</a>
+                            <a class="dropdown-item" href="<?= HOSTNAME ?>addbloodbank">Add Bloodbank</a>
+
                         </div>
                     </li>
 
