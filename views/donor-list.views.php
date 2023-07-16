@@ -24,7 +24,7 @@ $sn = 0;
                         <th>Name</th>
                         <th>Bloodgroup</th>
                         <th>Address</th>
-                        <th>Phone Number</th>
+                        <th>Contact Number</th>
                         <th>View</th>
                     </tr>
                 </thead>
@@ -37,7 +37,10 @@ $sn = 0;
                             <td><?= $donor->fname . " " . $donor->mname . " " . $donor->lname; ?></td>
                             <td><?= $donor->bloodgroup; ?></td>
                             <td><?= $donor->address; ?></td>
-                            <td><?= $donor->phone; ?></td>
+                            
+                            <td><?= $donor->contact_number; ?></td>
+
+
                             <td><a class="link-info" href="#">View</a></td>
                         </tr>
                 <?php
