@@ -13,7 +13,7 @@ $_SESSION['userid'] = 2;
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 order-2 order-sm-1">
-                    <h2 class="fw-bold display-4">Donate Blood :<span class="text-primary"> Save Live </span></h2>
+                    <h2 class="fw-bold display-4">Donate Blood :<span class="text-primary"> Save Life </span></h2>
                     <p>Lorem ipsum Iusto numquam eum suscipit reiciendis sed ex ratione animi, et aperiam perspiciatis quaerat quibusdam! Minus, ab?</p>
                     <a href="#" class="btn btn-danger"> Donate</a>
                     <a href="#" class="btn btn-light btn-outline-danger"> Request</a>
