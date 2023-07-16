@@ -137,7 +137,7 @@ class Model
         $data[$id_column] = $id;
         $query = "delete from $this->table where $id_column = :$id_column";
 
-        //    echo $query;
+        
         $this->query($query, $data);
 
         return false;
