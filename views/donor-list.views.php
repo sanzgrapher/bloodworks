@@ -37,7 +37,7 @@ $sn = 0;
                             <td><?= $donor->fname . " " . $donor->mname . " " . $donor->lname; ?></td>
                             <td><?= $donor->bloodgroup; ?></td>
                             <td><?= $donor->address; ?></td>
-                            <td><?= $donor->phone; ?></td>
+                            <td><?= isset($donor->phone) ? $donor->phone : 'N/A'; ?></td>
 
 
                             <td><a class="link-info" href="#">View</a></td>
