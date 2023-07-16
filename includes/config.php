@@ -8,10 +8,11 @@
 
 
 
-define('HOSTNAME', "http://bloodworks.local/");
+
 
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
+    define('HOSTNAME', "http://localhost/bloodworks/");
 
     // CHANGE ACCORDNGLY ON THE SERVER
 
@@ -19,8 +20,9 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define('DBHOST', 'localhost');
     define('DBUSER', 'root');
     define('DBPASS', '');
-    define('ROOT', 'http://bloodworks.local/');
+    define('ROOT', 'http://localhost/bloodworks/');
 } else {
+    define('HOSTNAME', "http://bloodworks.local/");
 
     define('DBNAME', 'bloodworks');
     define('DBHOST', 'localhost');
