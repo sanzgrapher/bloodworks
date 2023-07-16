@@ -410,6 +410,7 @@ table thead tr th a{
 
     .tab button{
         min-width: 100%;
+        font-size: 10px;
     }
     .bank-detail-profile h1{
         font-size: 15px;
@@ -451,6 +452,10 @@ table thead tr th a{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .bank-detail-tabs{
+        position: relative;
+        top: 0;
     }
 }
 
