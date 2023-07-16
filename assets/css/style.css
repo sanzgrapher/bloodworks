@@ -280,7 +280,7 @@ table thead tr th a{
     display: flex;
     flex-direction: row;
     width: 1320px;
-    height: 150px;
+    height: 200px;
 }
 .bank-detail-profile{
 
@@ -300,7 +300,6 @@ table thead tr th a{
 }
 .bank-detail-header-bg{
     width: 100%;
-    border-radius: 10px 10px 0 0 ;
     border-bottom: 2px solid rgb(49, 49, 49);
     background-color: rgb(172, 18, 18);
 }
@@ -324,8 +323,6 @@ table thead tr th a{
     width: 100%;
     height: fit-content;
     padding: 80px 30px;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
-    border-radius: 0 0 10px 10px ;
 }
 .bank-detail-tabs{
     position: relative;
@@ -333,12 +330,12 @@ table thead tr th a{
     left: 0;
     margin: auto;
     max-width: 1320px;
+    
     height: fit-content;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     background-color: #e1e1e1;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
 }
 /* Style the tab */
 .tab {
@@ -379,6 +376,12 @@ table thead tr th a{
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
     margin: 20px;
+    min-height: 500px;
+    height: fit-content;
+  }
+
+  .active{
+    display: block;
   }
 
 @media screen and (max-width :1350px) {
@@ -456,6 +459,9 @@ table thead tr th a{
     .bank-detail-tabs{
         position: relative;
         top: 0;
+    }
+    .tabcontent{
+        font-size: 10px;
     }
 }
 
