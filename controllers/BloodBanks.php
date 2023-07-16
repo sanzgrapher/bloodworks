@@ -22,9 +22,15 @@ use Controller;
         $bloodbanklist = new Model;
         $bloodbanklist->table = "blood_banks";
         $bloodbanklist->order_column = "bb_id";
+        $data = [
+            "bb_status" => "verified"
+        ];
 
-        $bloodbanklist = $bloodbanklist->findAll();
+        $bloodbanklist = $bloodbanklist->where($data);
         return $bloodbanklist;
+
+        
+
         // Do something with the $bloodbanklist data
         // For example, you can pass it to the view or perform further operations
     }
