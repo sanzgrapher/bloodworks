@@ -34,7 +34,7 @@ $sn = 0;
                             <input type="text" name="bb_email" placeholder="Enter  e-mail" required>
                         </div>
                         <div class="input_field">
-                            <label>Mobile Number</label>
+                            <label>Contact Number</label>
                             <input type="text" maxlength="10" name="bb_phoneno" placeholder="Enter your mobile number" required>
                         </div>
                         <div class="input_field">
