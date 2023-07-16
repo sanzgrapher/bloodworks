@@ -140,7 +140,7 @@ include_once 'views/header.php';
 
             <div class="container">
                 <div class="heading">
-                    Crediantals
+                    Credentials
                 </div>
                 <form action="#">
                     <div class="form first">
