@@ -33,7 +33,7 @@
                                 <td><?=  $bloodbank->bb_name; ?></td>
                                 <td><?= $bloodbank->bb_email; ?></td>
                                 <td><?= $bloodbank->bb_address; ?></td>
-                                <td><?= $bloodbank->bb_contact; ?></td>
+                                <td><?= $bloodbank->bb_phoneno; ?></td>
                                 <td><a class="link-info" href="#">View</a></td>
                             </tr>
                     <?php
