@@ -15,7 +15,7 @@
 
 body {
     background: #eeeeee;
-    font-family: 'Open Sans', sans-serif;
+  
 }
 
 /* // navbar */
@@ -109,10 +109,7 @@ table thead tr th a{
     font-weight: 600;
     font-size: 1.2em;
 }
-
-
-/*  */
-/*----------------Table List---------------*/
+ 
  
 
  /*---------------Blood Bank Card---------------*/
@@ -465,7 +462,6 @@ table thead tr th a{
     }
 }
 
-
 /*-------------dashboard-----------*/
 .dash-container{
     width: 100%;
@@ -478,7 +474,7 @@ table thead tr th a{
     /* top: 80px;
     left: 0; */
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 .dashboard {
@@ -501,7 +497,7 @@ overflow: none;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
         background-color: white;
     border-radius: 10px;
-        padding: 80px 15px;
+        padding:  15px;
    
 }
 
@@ -618,7 +614,7 @@ overflow: none;
 
 .info .container form {
     position: relative;
-    min-height: 490px;
+    /* min-height: 490px; */
     margin-top: 16px;
 }
 
@@ -687,7 +683,7 @@ form .fields .input_field {
     text-decoration: none;
 }
 
-form button {
+form .button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -708,7 +704,7 @@ form button {
 }
 
 
-form button:hover,
+form .button:hover,
 .upload-img:hover {
     background-color: transparent;
     color: black;
