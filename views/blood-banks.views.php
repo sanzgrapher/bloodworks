@@ -14,8 +14,13 @@
                         </th>
                         <th class="th-sm">Email
                         </th>
+                        <th class="th-sm">Address
+                        </th>
+                        <th class="th-sm">Contact
+                        </th>
                         <th class="th-sm">View
                         </th>
+                        
 
                     </tr>
                 </thead>
@@ -27,6 +32,8 @@
                             <tr>
                                 <td><?=  $bloodbank->bb_name; ?></td>
                                 <td><?= $bloodbank->bb_email; ?></td>
+                                <td><?= $bloodbank->bb_address; ?></td>
+                                <td><?= $bloodbank->bb_contact; ?></td>
                                 <td><a class="link-info" href="#">View</a></td>
                             </tr>
                     <?php
