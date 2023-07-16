@@ -24,7 +24,7 @@ $sn = 0;
                         <th>Name</th>
                         <th>Bloodgroup</th>
                         <th>Address</th>
-                        <th>Contact_Number</th>
+                        <th>Contact Number</th>
                         <th>View</th>
                     </tr>
                 </thead>
