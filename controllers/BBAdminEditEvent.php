@@ -8,6 +8,9 @@ class BBAdmin
     { // default function should be in every class
 
         $eveid=$b;
+
+       
+
         $loggedindata = $this->getUserData();
 
        
@@ -54,8 +57,10 @@ class BBAdmin
         $eventlist = new Model;
         $eventlist->table = "event";
         $eventlist->order_column = "event_id";
+        $getsessionid = getLoggedinUser('bb_id');
+
         $data = [
-            "bb_id" => "18",
+            "bb_id" => "$getsessionid",
             "event_id" => $eveid
         ];
 
