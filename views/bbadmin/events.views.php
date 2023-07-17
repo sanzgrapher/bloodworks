@@ -10,7 +10,7 @@
          <div class="info ">
              <div class="container">
                  <div class="heading">
-                     Avaiable Blood bank requests
+                     List of Events
                  </div>
 
                  <div class="table-section">
@@ -62,7 +62,7 @@
                                                 <td>20-07-2023</td>
                                                 <td>061-572342</td>
                                                 <td>
-                                                     <button class="btn btn-success">edit</button>
+                                                <a href="<?= HOSTNAME ?>bbadmin/editevent" class="btn btn-danger">Edit</a>
                                                 </td>
                                          </tr>
                                  <?php
@@ -74,16 +74,15 @@
                             </table>
                         </div>
                  </div>
+
+             </div>
+             <div class="container">
+             <div class="event_btn_container">
+                 <a href="<?= HOSTNAME ?>bbadmin/addevent.views.php" class="btn btn-success">Add Event</a>
+                 </div>
              </div>
          </div>
      </section>
-     <section class="dashboard_container">
-     <div class="info ">
-             <div class="container">
-        <a href="" class="button">Add Event</a>
-        </div>
-        </div>
-    </section>
  </main>
 
  <?php include 'views/footer.php' ?>

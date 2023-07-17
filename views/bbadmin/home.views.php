@@ -1,6 +1,6 @@
  <?php
     include_once 'views/header.php';
-    $_SESSION['bb_id']=18;
+
 
     ?>
 
