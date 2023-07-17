@@ -14,7 +14,7 @@ include_once 'views/header.php';
                 <div class="heading">
                     Event Edit
                 </div>
-                <form action="edit" method="post">
+                <form action="editevent" method="post">
                     <?php foreach ($events as $event) { ?>
                         <div class="form first">
                             <div class="details personal">
@@ -22,6 +22,7 @@ include_once 'views/header.php';
                                 <input type="hidden" name="event_id" value="<?= $event->event_id; ?>">
                                 <div class="fields">
                                     <div class="input_field">
+                                        <input type="hidden" name="event_id" value="<?= $event->event_id; ?>">
                                         <label>Event Title</label>
                                         <input type="text" name="event_name" value="<?= $event->event_name; ?> " placeholder="Enter the event title" required>
                                     </div>
@@ -36,7 +37,11 @@ include_once 'views/header.php';
                                     </div>
                                     <div class="input_field">
                                         <label>Event Time</label>
-                                        <input type="date" name="event_time" value="<?= $event->event_time; ?>" placeholder="Enter the event time" required>
+                                        <input type="date" name="event_date" value="<?= $event->event_date; ?>" placeholder="Enter the event time" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Organizer</label>
+                                        <input type="text" name="organizer" value="<?= $event->organizer; ?>" placeholder="Enter the event organizer" required>
                                     </div>
                                     <div class="input_field">
                                         <label>Contact Info</label>
@@ -49,7 +54,7 @@ include_once 'views/header.php';
                                         <textarea name="event_desc" id="" cols="30" rows="5"><?= $event->event_desc; ?></textarea>
                                     </div>
                                 </div>
-                                <input class="submit button" type="submit" name="edit-basic" value="Update Details">
+                                <input class="submit button" type="submit" name="update-event" value="Update Event Details">
                             </div>
                         </div> <?php } ?>
                 </form>
