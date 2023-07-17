@@ -7,14 +7,7 @@ include_once 'views/header.php';
 
 
 <?php
-// if (!isset($_COOKIE["STATUS"])) {
-//     // echo "Cookie named '" . $cookie_name . "' is not set!";
-//     echo "NOT SET";
-// } else {
-//     echo "Cookie 'STATUS' is set!<br>";
-//     echo "Value is: " . $_COOKIE["STATUS"];
-//     echo "SET";
-// }
+ 
 ?>
 <main class="dash-container">
     <section class="dashboard_container">
