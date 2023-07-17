@@ -35,13 +35,13 @@
             <div class="collapse navbar-collapse" id="navbar4">
                 <ul class="navbar-nav mr-auto pl-lg-4">
                     <li class="nav-item px-lg-2 active">
-                        <a class="nav-link" href="<?= HOSTNAME ?>"> Home</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>"> HOME</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="<?= HOSTNAME ?>bloodbanks">BloodBanks</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>donorlist"> Donor List</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>donorlist"> DONOR LIST</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="<?= HOSTNAME ?>dash"> Dashboard</a>
