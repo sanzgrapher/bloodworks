@@ -60,7 +60,7 @@ class BBAdmin
         $getsessionid = getLoggedinUser('bb_id'); // functions file sends the session id
 
         $data = [
-            "bb_id" => '18'
+            "bb_id" => $getsessionid
         ];
 
         $eventlist = $eventlist->where($data);
