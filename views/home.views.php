@@ -3,7 +3,7 @@
 <?php
 include "views/header.php";
 
-$_SESSION['userid'] = 2;
+$_SESSION['bb_id'] = 18;
 ?>
 
 
