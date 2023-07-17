@@ -29,39 +29,33 @@
                              </thead>
                              <tbody>
                                   <?php 
-                                //  if (empty($bloodbanks)) {
-                                //         echo "No Requests available";
-                                //     } else {
-                                //         foreach ($bloodbanks as $bloodbank) {   
+                                 if (empty($events)) {
+                                        echo "No events available";
+                                    } else {
+                                        foreach ($events as $event) {   
                                             
                                             ?>
                                          <tr>
-                                             <!-- <td><?= $bloodbank->bb_name; ?></td>
+                                              <td><?= $event->event_name; ?></td>
+                                              
                                              <td style="text-align:left;">
-                                                 Email = <?= $bloodbank->bb_email ?> <br>
-                                                 Phone no :<?= $bloodbank->bb_phoneno; ?> <br>
-                                                 Address :<?= $bloodbank->bb_address; ?> <br>
-                                                 Description :<?= $bloodbank->bb_description; ?> <br>
-                                             </td> -->
-
-                                                <td>hghhjg</td>
-                                                <td>hghhjg</td>
+                                               
+                                             Organizer :<?= $event->organizer; ?> <br>
+                                             Location :<?= $event->event_location; ?> <br>
+                                             Contact :<?= $event->contact_info; ?> <br>
+                                                Description :<?= $event->event_desc; ?> <br>
+                                             </td>  
+ 
 
                                              <td>
-                                                 <form action="bbrequests" method="post">
-                                                     <!-- <input type="hidden" name="bb_id" value="<?= $bloodbank->bb_id ?>"> -->
-                                                     <button type="submit" class="btn btn-success" name="approve">Approve</button>
-                                                 </form>
+                                            <a href="<?= HOSTNAME?>/bbadmin/editevent/<?= $event->event_id ; ?>">Edit</a>     
 
-                                                 <form action="bbrequests" method="post">
-                                                     <!-- <input type="hidden" name="bb_id" value="<?= $bloodbank->bb_id ?>"> -->
-                                                     <button type="submit" class="btn btn-danger" name="reject">Decline</button>
-                                                 </form>
+                                                 
                                              </td>
                                          </tr>
                                  <?php
-                                    //     }
-                                    // }
+                                        }
+                                    }
                                     ?>
 
                              </tbody>
