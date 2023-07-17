@@ -3,10 +3,9 @@
 <?php
 include "views/header.php";
 
-$_SESSION['bb_id']=8;
 
 
-
+$_SESSION['bb_id'] = 18;
 ?>
 
 

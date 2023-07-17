@@ -7,33 +7,30 @@ class BBAdmin
     public function index($a = "", $b = "", $c = "")
     { // default function should be in every class
 
-
+        $eveid=$b;
         $loggedindata = $this->getUserData();
-        $eventlist = $this->eventDetail();
+
+       
+        
+      
+       
+        $eventlist = $this->eventDetail($eveid);
         $data = [
             "events" => $eventlist,
             "loggedinuser" => $loggedindata,
 
         ];
 
-        
+        if (isset($_POST['update-event'])) {
 
-
-
-
-        if (isset($_POST['add-event'])) {
-
-            $this->addEvent();
+            $this->updateEvent($eveid);
         }
 
 
-        
-        $this->view('bbadmin/events',$data);
-        
-       
+        $this->view('bbadmin/editevent', $data); // from controller class 
+
 
     }
-
     public function getUserData()
     {
         $getuserdata = new Model;
@@ -41,7 +38,7 @@ class BBAdmin
         $getuserdata->order_column = "bb_id";
         $getsessionid = getLoggedinUser('bb_id'); // functions file sends the session id
         if (!$getsessionid) {
-            redirect(HOSTNAME."bbadmin/login");
+            redirect(HOSTNAME . "bbadmin/login");
             die();
         }
         $data = [
@@ -52,31 +49,32 @@ class BBAdmin
     }
 
 
-    private function eventDetail()
+    private function eventDetail($eveid)
     {
         $eventlist = new Model;
         $eventlist->table = "event";
         $eventlist->order_column = "event_id";
-        $getsessionid = getLoggedinUser('bb_id'); // functions file sends the session id
-
         $data = [
-            "bb_id" => '18'
+            "bb_id" => "18",
+            "event_id" => $eveid
         ];
 
         $eventlist = $eventlist->where($data);
         return $eventlist;
 
+
+
+        // Do something with the $eventlist data
+        // For example, you can pass it to the view or perform further operations
     }
 
-    public function addEvent()
-    {
-        
-        $addEvent = new Model;
-        $addEvent->table = "event";
-        $getsessionid = getLoggedinUser('bb_id'); // functions file sends the session id
-       
+    public function updateEvent(){
+        $updateEvent = new Model;
+        $updateEvent->table = "event";
+        $eveid=$_POST['event_id'];
+         
         $data = [
-            "bb_id" => $getsessionid,
+            
             "event_name" => $_POST['event_name'],
             "event_location" => $_POST['event_location'],
             "event_date" => $_POST['event_date'],
@@ -84,10 +82,16 @@ class BBAdmin
             "organizer" => $_POST['organizer'],
             "contact_info" => $_POST['contact_info'],
         ];
+    
+       
+        $updateEvent = $updateEvent->update($eveid, $data, 'event_id');
+       if(!$updateEvent){
+              echo "<script>alert('Event not updated');</script>";
+       }
 
-        $addEvent->insert($data);
-        // send email;
-        redirect(HOSTNAME."bbadmin");
-
+        redirect(HOSTNAME . "bbadmin/events");
+       
     }
+
+
 }

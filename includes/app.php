@@ -12,7 +12,7 @@ class App
         // splitting the url from the routing from htaccess and converting the remaining parameters to an array
         $URL = $_GET['url'] ?? 'home';
         $URL = explode("/", trim($URL, "/"));
-        // show($URL);
+       
         return $URL;
     }
 
@@ -25,7 +25,7 @@ class App
         // first parameter indicates page 
         $URL = $this->splitURL(); // as split  Function is inside app class we need to use $this->
 
-
+      
         // ok
         // $filename = "../app/controllers/" . ucfirst($URL[0]) . ".php";
 
@@ -176,7 +176,10 @@ class App
                 unset($URL[1]);
             }
         }
-    //     show($URL);
+        
+       
+        $URL = $URL ? array_values($URL) : [];
+
         call_user_func_array([$controller, $this->method], $URL);
     }
 }

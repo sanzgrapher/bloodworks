@@ -27,6 +27,11 @@ class Login
         ];
 
         $user_return = $user->where($data);
+         if (empty($user_return)) {
+        
+        die("user not found");
+    }
+
 
         $userdata = $user_return[0];
 
@@ -43,7 +48,7 @@ class Login
                 
                 $_SESSION['userid'] = $userdata->id;
                
-redirect(HOSTNAME."dash");  
+                redirect(HOSTNAME."dash");  
                
         
             }else{

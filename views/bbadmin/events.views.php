@@ -1,8 +1,8 @@
 <?php
-    include_once 'views/header.php';
+include_once 'views/header.php';
 
 
-    ?>
+?>
 
  <main class="dash-container">
      <section class="dashboard_container">
@@ -13,46 +13,39 @@
                      List of Events
                  </div>
 
-                 <div class="table-section">
-                     <div style="overflow-x:auto;">
-                         <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
-                             <thead>
-                                 <tr>
-                                     <th class="th-sm">No.
-                                     </th>
-                                     <th class="th-sm">Event Name
-                                     </th>
-                                     <th class="th-sm">Location
-                                     </th>
-                                     <th class="th-sm">Event Description
-                                     </th>
-                                     <th class="th-sm">Event Organizers
-                                     </th>
-                                     <th class="th-sm">Event Time
-                                     </th>
-                                     <th class="th-sm">Contacts
-                                     </th>
-                                     <th class="th-sm">Edit Event
-                                     </th>
+                <div class="table-section">
+                    <div style="overflow-x:auto;">
+                        <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm">Name
+                                    </th>
+                                    <th class="th-sm">Description
+                                    </th>
+                                    <th class="th-sm">View
+                                    </th>
 
-                                 </tr>
-                             </thead>
-                             <tbody>
-                                  <?php 
-                                //  if (empty($bloodbanks)) {
-                                //         echo "No Requests available";
-                                //     } else {
-                                //         foreach ($bloodbanks as $bloodbank) {   
-                                            
-                                            ?>
-                                         <tr>
-                                             <!-- <td><?= $bloodbank->bb_name; ?></td>
-                                             <td style="text-align:left;">
-                                                 Email = <?= $bloodbank->bb_email ?> <br>
-                                                 Phone no :<?= $bloodbank->bb_phoneno; ?> <br>
-                                                 Address :<?= $bloodbank->bb_address; ?> <br>
-                                                 Description :<?= $bloodbank->bb_description; ?> <br>
-                                             </td> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                if (empty($events)) {
+                                    echo "No events available";
+                                } else {
+                                    foreach ($events as $event) {
+
+                                ?>
+                                        <tr>
+                                            <td><?= $event->event_name; ?></td>
+
+                                            <td style="text-align:left;">
+
+                                                Organizer :<?= $event->organizer; ?> <br>
+                                                Location :<?= $event->event_location; ?> <br>
+                                                Contact :<?= $event->contact_info; ?> <br>
+                                                Description :<?= $event->event_desc; ?> <br>
+                                            </td>
+
 
                                                 <td>1</td>
                                                 <td>AAAAAAAA</td>
@@ -66,8 +59,8 @@
                                                 </td>
                                          </tr>
                                  <?php
-                                    //     }
-                                    // }
+                                        }
+                                    }
                                     ?>
 
                                 </tbody>
@@ -85,4 +78,4 @@
      </section>
  </main>
 
- <?php include 'views/footer.php' ?>
+<?php include 'views/footer.php' ?>
