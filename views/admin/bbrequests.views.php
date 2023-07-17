@@ -5,7 +5,7 @@ include_once 'views/header.php';
 
 <main class="dash-container">
     <section class="dashboard_container">
-        <?php include 'asidemenu.php' ?>
+        <?php include_once 'asidemenu.php'; ?>
         <div class="info ">
             <div class="container">
                 <div class="heading">

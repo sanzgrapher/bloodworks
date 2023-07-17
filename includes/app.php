@@ -69,14 +69,47 @@ class App
 
 
         // views
-            
-          
 
-        if ($URL[0] == "dash" && !isset($URL[1])) {
-            $filename = "controllers/Dash"  . ".php";
+
+
+        // if ($URL[0] == "dash" && !isset($URL[1])) {
+        //     $filename = "controllers/Dash"  . ".php";
+        // }
+        // elseif ($URL[0] == "dash" && isset($URL[1])) {
+        //     $filename = "controllers/" . $URL[0].$URL[1] . ".php";
+
+        // }
+
+
+
+        if($URL[0] == "dash"){
+            if ($URL[0] == "dash" && !isset($URL[1])) {
+                $filename = "controllers/Dash"  . ".php";
+            } elseif ($URL[0] == "dash" && isset($URL[1])) {
+                $filename = "controllers/" . $URL[0] . $URL[1] . ".php";
+            }
+            
         }
-        elseif ($URL[0] == "dash" && isset($URL[1])) {
-            $filename = "controllers/" . $URL[0].$URL[1] . ".php";
+        elseif ($URL[0] == "admin"  ) {
+            if ($URL[0] == "admin" && !isset($URL[1])) {
+                $filename = "controllers/Admin"  . ".php";
+            } elseif ($URL[0] == "admin" && isset($URL[1])) {
+                $filename = "controllers/" . $URL[0] . $URL[1] . ".php";
+            }
+            
+            
+            
+        }
+        elseif ($URL[0] == "bbadmin"  ) {
+           
+            
+            if ($URL[0] == "bbadmin" && !isset($URL[1])) {
+                $filename = "controllers/bbadmin"  . ".php";
+            } elseif ($URL[0] == "bbadmin" && isset($URL[1])) {
+                $filename = "controllers/" . $URL[0] . $URL[1] . ".php";
+                
+            }
+         
 
         }
         else{
@@ -96,12 +129,13 @@ class App
             // show("app->controller");
             // show($filename);
 
-
+       
             require $filename;
 
 
             // after including respective page take the class file and method
             $this->controller = ucfirst($URL[0]);
+
             unset($URL[0]);
         } else {
             $filename = "controllers/_404.php";
@@ -132,8 +166,9 @@ class App
         // }
 
 
-
+ 
         $controller = new $this->controller;
+
 
         if (!empty($URL[1])) {
             if (method_exists($controller, $URL[1])) {

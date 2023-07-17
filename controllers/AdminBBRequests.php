@@ -1,7 +1,7 @@
 <?php
 
 
-class Dash
+class Admin
 {
     use Controller;
 
@@ -24,7 +24,7 @@ class Dash
         
         
         
-        $this->view('dash/bbrequests', $data);
+        $this->view('admin/bbrequests', $data);
     }
     
     // get bloodbank requests data from table blood_banks where status - not-verified
@@ -52,7 +52,7 @@ class Dash
             "bb_status" => "verified"
         ];
         $acceptBloodBanks->update($id,$data, 'bb_id');
-        redirect("http://bloodworks.local/dash/bbrequests");
+        redirect(HOSTNAME ."admin/bbrequests");
     }
 
     // reject bloodbank requests
@@ -63,7 +63,7 @@ class Dash
         $rejectBloodBanks->table = "blood_banks";
         
         $rejectBloodBanks->delete($bb_id , 'bb_id');
-        redirect("http://bloodworks.local/dash/bbrequests");
+        redirect(HOSTNAME ."admin/bbrequests");
     }
 
 
