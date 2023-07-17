@@ -67,7 +67,8 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
                     <li class="nav-item">
-                        <button type="button" class="btn rounded btn-danger">Login</button>
+                        <a  href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">Login</a>
+                        <a  href="<?= HOSTNAME ?>/register" class="btn rounded btn-primary btn-outline">Register</a>
 
                     </li>
                 </ul>
