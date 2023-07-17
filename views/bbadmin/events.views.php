@@ -1,4 +1,4 @@
- <?php
+<?php
     include_once 'views/header.php';
 
 
@@ -73,6 +73,10 @@
 
          </div>
      </section>
+     <section>
+        <a href="" class="button">Add Event</a>
+     </section>
  </main>
+
 
  <?php include 'views/footer.php' ?>
