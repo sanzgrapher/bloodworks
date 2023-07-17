@@ -77,9 +77,13 @@
              </div>
          </div>
      </section>
-     <section>
+     <section class="dashboard_container">
+     <div class="info ">
+             <div class="container">
         <a href="" class="button">Add Event</a>
-     </section>
+        </div>
+        </div>
+    </section>
  </main>
 
  <?php include 'views/footer.php' ?>
