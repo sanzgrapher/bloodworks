@@ -8,12 +8,16 @@ class BBAdmin
     { // default function should be in every class
 
         $eveid=$b;
+        $loggedindata = $this->getUserData();
 
+       
+        
       
        
         $eventlist = $this->eventDetail($eveid);
         $data = [
             "events" => $eventlist,
+            "loggedinuser" => $loggedindata,
 
         ];
 
@@ -27,6 +31,24 @@ class BBAdmin
 
 
     }
+    public function getUserData()
+    {
+        $getuserdata = new Model;
+        $getuserdata->table = "blood_banks";
+        $getuserdata->order_column = "bb_id";
+        $getsessionid = getLoggedinUser('bb_id'); // functions file sends the session id
+        if (!$getsessionid) {
+            redirect("/login");
+            die();
+        }
+        $data = [
+            "bb_id" => "$getsessionid"
+        ];
+        $getuserdata = $getuserdata->where($data);
+        return $getuserdata;
+    }
+
+
     private function eventDetail($eveid)
     {
         $eventlist = new Model;
