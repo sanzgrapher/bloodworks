@@ -17,6 +17,10 @@ body {
     background: #eeeeee;
   
 }
+main
+{
+    min-height: 100vh;
+}
 
 /* // navbar */
 .dropdown-toggle::after {
