@@ -1,38 +1,4 @@
-<?php
-
-//get user
-// $user = new Model();
-// $user->table = "user";
-// $data = [
-//     "id" => "6"
-// ];
-// $data_not = ['fname'];
-// $result = $user->where($data);
-// show($result);
-
-// print $result['fname'];
-
-
-// if (isset($_POST['submit'])) {
-//     $user->table = "user";
-//     $data = [
-//         "id" => $_POST['id'],
-//         "fname" => $_POST['fname'],
-//         "email" => $_POST['email']
-//     ];
-//     $user->update(6, $data);
-//     $cookie_value = "avaiable";
-//     setcookie("STATUS", $cookie_value, time() + (60), "/"); // 86400 = 1 day
-
-
-
-//     // redirect("edit");
-// }
-// show($data);
-// $cookie_name = "status";
-
-
-?>
+ 
 <?php
 include_once 'views/header.php';
 
@@ -187,3 +153,4 @@ include_once 'views/header.php';
         </div>
     </section>
 </main>
+<?php include 'views/footer.php' ?>
