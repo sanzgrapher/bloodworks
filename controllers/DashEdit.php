@@ -28,27 +28,26 @@ class Dash
 
     }
 
-    public function getUserData (){
-
-    
+    public function getUserData()
+    {
         $getuserdata = new Model;
         $getuserdata->table = "user";
         $getuserdata->order_column = "id";
-        
-        $getsessionid = getLoggedinUser();
+        $getsessionid = getLoggedinUser('userid'); // functions file sends the session id
+        if (!$getsessionid) {
+            redirect("../login");
+            die();
+        }
         $data = [
             "id" => "$getsessionid"
         ];
-
-
         $getuserdata = $getuserdata->where($data);
         return $getuserdata;
-       
     }
 
     public function editBasic()
     {
-        $id = getLoggedinUser();
+        $id = getLoggedinUser('userid');
 
 
         $editBasic = new Model;

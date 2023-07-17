@@ -13,9 +13,17 @@ function redirect($data){
 
 }
 
-function getLoggedinUser(){
-    $userid = $_SESSION['userid'];
-    return $userid;
+function getLoggedinUser($utype ){
+    if(isset($_SESSION[$utype])){
+        $utype = $_SESSION[$utype];
+        return $utype;
+    }
+    else{
+        return false;
+    }
+
+        
+    
     
 
 }
