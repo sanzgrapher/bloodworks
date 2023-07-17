@@ -41,7 +41,7 @@ class BBAdmin
         $getuserdata->order_column = "bb_id";
         $getsessionid = getLoggedinUser('bb_id'); // functions file sends the session id
         if (!$getsessionid) {
-            redirect("/login");
+            redirect(HOSTNAME."bbadmin/login");
             die();
         }
         $data = [
@@ -51,7 +51,7 @@ class BBAdmin
         return $getuserdata;
     }
 
-    
+
     private function eventDetail()
     {
         $eventlist = new Model;
