@@ -3,7 +3,11 @@
 <?php
 include "views/header.php";
 
+<<<<<<< HEAD
 $_SESSION['bb_id']=8;
+=======
+
+>>>>>>> c8cba5789f53595677bf163d779493c5074a3ef6
 ?>
 
 
