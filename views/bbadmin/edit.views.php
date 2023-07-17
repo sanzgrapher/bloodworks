@@ -107,3 +107,4 @@
          </div>
      </section>
  </main>
+ <?php include 'views/footer.php' ?>
