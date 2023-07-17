@@ -20,11 +20,12 @@ $sn = 0;
             <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing=" 0" width="100%">
                 <thead>
                     <tr>
-                        <th>sn</th>
+                        <th>S.N</th>
                         <th>Name</th>
                         <th>Bloodgroup</th>
                         <th>Address</th>
-                        <th>Contact</th>
+                        <th>Contact Number</th>
+                        <th>View</th>
                     </tr>
                 </thead>
                 <?php if (empty($donors)) {
@@ -36,7 +37,10 @@ $sn = 0;
                             <td><?= $donor->fname . " " . $donor->mname . " " . $donor->lname; ?></td>
                             <td><?= $donor->bloodgroup; ?></td>
                             <td><?= $donor->address; ?></td>
-                            <td><a title="Here this button will open a form modal to send email with required data" href="#">Contach Now</a></td>
+                            <td><?= isset($donor->phone) ? $donor->phone : 'N/A'; ?></td>
+
+
+                            <td><a class="link-info" href="#">View</a></td>
                         </tr>
                 <?php
                     }

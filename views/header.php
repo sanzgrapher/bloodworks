@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
         <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
 
-                <span class="ml-3 font-weight-bold">BRAND</apan>
+                <span class="ml-3 font-weight-bold "><span class="">Blood</span>Works</apan>
             </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,19 +35,19 @@
             <div class="collapse navbar-collapse" id="navbar4">
                 <ul class="navbar-nav mr-auto pl-lg-4">
                     <li class="nav-item px-lg-2 active">
-                        <a class="nav-link" href="<?= HOSTNAME ?>"> Home</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>"> HOME</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>bloodbanks">bloodbanks</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>bloodbanks">BloodBanks</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>donorlist"> Donor List</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>donorlist"> DONOR LIST</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>dash"> dash</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>dash"> Dashboard</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>dash/edit"> edit</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>dash/edit"> Dashboard Edit</a>
                     </li>
 
                     <li class="nav-item px-lg-2 dropdown d-menu">
