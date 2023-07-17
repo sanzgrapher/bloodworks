@@ -43,6 +43,8 @@ class Model
 
         $query .= " order by $this->order_column $this->order_type limit $this->limit offset $this->offset";
         //    echo $query;
+        // show($query);
+        // die;
         $data = array_merge($data, $data_not);
         return $this->query($query, $data);
     }
