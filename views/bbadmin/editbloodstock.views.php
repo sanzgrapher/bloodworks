@@ -23,38 +23,38 @@
                                 <div class="fields">
                                     <div class="input_field">
                                         <label>A Positive</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter the quantity of A positive bloodstocks" required>
+                                        <input type="text" name="apositive" value="<?= $user->apositive; ?> " placeholder="Enter the quantity of A positive bloodstocks" required>
                                     </div>
                                     <div class="input_field">
                                         <label>A Negative</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter the quantity of A negative bloodstocks" required>
+                                        <input type="text" name="anegative" value="<?= $user->anegative; ?> " placeholder="Enter the quantity of A negative bloodstocks" required>
                                     </div>
 
                                     <div class="input_field">
                                         <label>B Positive</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter the quantity of B positive bloodstocks" required>
+                                        <input type="text" name="bpositive" value="<?= $user->bpositive; ?> " placeholder="Enter the quantity of B positive bloodstocks" required>
                                     </div>
                                     <div class="input_field">
                                         <label>B Negative</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter the quantity of B negative bloodstocks" required>
+                                        <input type="text" name="bnegative" value="<?= $user->bnegative; ?> " placeholder="Enter the quantity of B negative bloodstocks" required>
                                     </div>
 
                                     <div class="input_field">
                                         <label>AB Positive</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter the quantity of AB positive bloodstocks" required>
+                                        <input type="text" name="abpositive" value="<?= $user->abpositive; ?> " placeholder="Enter the quantity of AB positive bloodstocks" required>
                                     </div>
                                     <div class="input_field">
                                         <label>AB Negative</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter the quantity of AB negative bloodstocks" required>
+                                        <input type="text" name="abnegative" value="<?= $user->abnegative; ?> " placeholder="Enter the quantity of AB negative bloodstocks" required>
                                     </div>
 
                                     <div class="input_field">
                                         <label>O Positive</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter the quantity of O positive bloodstocks" required>
+                                        <input type="text" name="opositive" value="<?= $user->opositive; ?> " placeholder="Enter the quantity of O positive bloodstocks" required>
                                     </div>
                                     <div class="input_field">
                                         <label>O Negative</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter the quantity of O negative bloodstocks" required>
+                                        <input type="text" name="onegative" value="<?= $user->onegative; ?> " placeholder="Enter the quantity of O negative bloodstocks" required>
                                     </div>
                                 </div>
                                 <input class="submit button" type="submit" name="edit-basic" value="Update Details">

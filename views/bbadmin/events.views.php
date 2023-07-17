@@ -10,7 +10,7 @@
          <div class="info ">
              <div class="container">
                  <div class="heading">
-                     Avaiable Blood bank requests
+                     List of Events
                  </div>
 
                  <div class="table-section">
@@ -72,9 +72,6 @@
 
 
          </div>
-     </section>
-     <section>
-        <a href="" class="button">Add Event</a>
      </section>
  </main>
 

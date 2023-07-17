@@ -73,12 +73,13 @@ main
 
 .table-section{
     margin-top: 3rem;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 .table-sec-title{
     margin: 5rem 0 3rem 0;
     color: #ff1f1f;
     text-align: center;
+    
    
     
 }
@@ -102,7 +103,7 @@ th {
 
 #datatable th {
     background-color: rgb(198, 27, 27);
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
 
 }
@@ -113,7 +114,7 @@ table thead tr th a{
     font-weight: 600;
     font-size: 1.2em;
 }
- 
+
  
 
  /*---------------Blood Bank Card---------------*/
@@ -818,3 +819,15 @@ table.dataTable thead .sorting_desc_disabled:before {
 .datatable-table{
     border-collapse: collapse !important;
 }
+
+
+
+.event_btn_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.event_btn_container a{
+    width: 90%;
+}
+
