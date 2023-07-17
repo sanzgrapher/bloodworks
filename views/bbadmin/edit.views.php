@@ -27,11 +27,11 @@
                                     </div>
                                     <div class="input_field">
                                         <label>Username</label>
-                                        <input type="text"  name="bb_username" value="<?= $user->bb_username ?>"placeholder="Enter your username" required>
+                                        <input type="text"  name="bb_username" value="<?= $user->bb_username; ?>"placeholder="Enter your username" required>
                                     </div>
                                     <div class="input_field">
                                         <label>Contact Number</label>
-                                        <input type="text" maxlength="10" name="bb_phoneno" value="<?= $user->bb_phoneno ?>" placeholder="Enter the blood bank contact number" required>
+                                        <input type="text" maxlength="10" name="bb_phoneno" value="<?= $user->bb_phoneno; ?>" placeholder="Enter the blood bank contact number" required>
                                     </div>
                                     <div class="input_field">
                                         <label>Address</label>
