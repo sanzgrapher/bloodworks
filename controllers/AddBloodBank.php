@@ -30,7 +30,7 @@ class AddBloodBank
             "bb_description" => $_POST['bb_description'],
         ];
         $addBloodBank->insert($data);
-        redirect("http://bloodworks.local/bloodbanks");
+        redirect(HOSTNAME."/bloodbanks");
 
     }
 
