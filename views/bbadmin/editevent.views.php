@@ -34,6 +34,10 @@
                                         <input type="text" name="event_desc" value="<?= $user->event_desc; ?>" placeholder="Enter the event description" required>
                                     </div>
                                     <div class="input_field">
+                                        <label>Event Time</label>
+                                        <input type="date" name="event_time" value="<?= $user->event_time; ?>" placeholder="Enter the event time" required>
+                                    </div>
+                                    <div class="input_field">
                                         <label>Organizers</label>
                                         <input type="text" name="organizer" value=" <?= $user->organizer; ?>" placeholder="Enter the organizer name" required>
                                     </div>

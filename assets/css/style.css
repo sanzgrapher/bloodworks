@@ -94,7 +94,7 @@ main
 td,
 th {
     padding: 20px;
-
+    height: 30px;
     justify-content: center;
     align-content: center;
     text-align: center;

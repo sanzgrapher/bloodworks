@@ -16,29 +16,62 @@
                 <div class="heading">
                     Events
                 </div>
-                <div class="event_list" style="overflow-x: auto;">
-                      <table>
-                          <tr>
-                              <th>No.</th>
-                              <th>Name</th>
-                              <th>Location</th>
-                              <th>Event Details</th>
-                              <th>Event Organizers</th>
-                              <th>Event Time</th>
-                              <th>Contacts</th>
-                              <th>Edit Events</th>
-                          </tr>
-                          <tr>
-                              <td><?php echo $rows['event_id'];?></td>
-                              <td><?php echo $rows['event_name'];?></td>
-                              <td><?php echo $rows['event_loaction'];?></td>
-                              <td><?php echo $rows['event_desc'];?></td>
-                              <td><?php echo $rows['organizer'];?></td>
-                              <td><?php echo $rows['event_time'];?></td>
-                              <td><?php echo $rows['contact_info'];?></td>
-                              <td><a href="editevent.html">Edit Event</a></td>
-                          </tr>
-                      </table>
+                <div class="table-section">
+                    <div style="overflow-x:auto;">
+                        <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm">Name
+                                    </th>
+                                    <th class="th-sm">Location
+                                    </th>
+                                    <th class="th-sm">Event Details
+                                    </th>
+                                    <th class="th-sm">Event Organizers
+                                    </th>
+                                    <th class="th-sm">Event Time
+                                    </th>
+                                    <th class="th-sm">Contacts
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
+                                if (empty($bloodbanks)) {
+                                    echo "No Requests available";
+                                } else {
+                                    foreach ($bloodbanks as $bloodbank) { ?>
+                                        <tr>
+                                            <td><?= $bloodbank->bb_name; ?></td>
+                                            <td style="text-align:left;">
+                                                Email = <?= $bloodbank->bb_email ?> <br>
+                                                Phone no :<?= $bloodbank->bb_phoneno; ?> <br>
+                                                Address :<?= $bloodbank->bb_address; ?> <br>
+                                                Description :<?= $bloodbank->bb_description; ?> <br>
+                                            </td>
+                                            <td>
+                                                <form action="bbrequests" method="post">
+                                                    <input type="hidden" name="bb_id" value="<?= $bloodbank->bb_id ?>">
+                                                    <button type="submit" class="btn btn-success" name="approve">Approve</button>
+                                                </form>
+
+                                                <form action="bbrequests" method="post">
+                                                    <input type="hidden" name="bb_id" value="<?= $bloodbank->bb_id ?>">
+                                                    <button type="submit" class="btn btn-danger" name="reject">Decline</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                <?php
+                                    }
+                                }
+                                ?>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
                 </div>
             </div>
         </div>
