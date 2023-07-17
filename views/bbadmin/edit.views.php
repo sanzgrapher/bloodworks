@@ -37,18 +37,17 @@
                                         <label>Address</label>
                                         <input type="text" name="bb_address" value=" <?= $user->bb_address; ?>" placeholder="Enter the blood bank address" required>
                                     </div>
-                                    <div class="input_field">
-                                        <label>Status</label>
-                                        <input type="text" name="bb_status" value=" <?= $user->bb_status; ?>" placeholder="Enter the status of the bloodbank" required>
-                                    </div>
+                                     
                                     <div class="input_field">
                                         <label>Description</label>
-                                        <input type="text" name="bb_description" value=" <?= $user->bb_descriptionname; ?>" placeholder="Enter the blood bank description" required>
+                                        <input type="text" name="bb_description" value=" <?= $user->bb_description; ?>" placeholder="Enter the blood bank description" required>
                                     </div>
                                 </div>
                                 <input class="submit button" type="submit" name="edit-basic" value="Update Details">
                             </div>
-                        </div> <?php } ?>
+                        </div>
+                         <?php 
+                         } ?>
                 </form>
             </div>
 
