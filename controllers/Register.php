@@ -1,6 +1,6 @@
 <?php
 
-class Login
+class Register
 {
     use Controller;
 
@@ -12,7 +12,7 @@ class Login
 
 
 
-        $this->view('login'); // from controller class 
+        $this->view('register'); // from controller class 
 
     }
 }
