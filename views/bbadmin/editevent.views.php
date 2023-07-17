@@ -19,7 +19,7 @@ include_once 'views/header.php';
                         <div class="form first">
                             <div class="details personal">
                                 <span class="title">Event Details</span>
-                                <input type="hidden" name="event_id" value="<?= $user->event_id; ?>">
+                                <input type="hidden" name="event_id" value="<?= $event->event_id; ?>">
                                 <div class="fields">
                                     <div class="input_field">
                                         <input type="hidden" name="event_id" value="<?= $event->event_id; ?>">
