@@ -8,7 +8,7 @@ class Register
     { // default function should be in every class
 
 
-        show("home");
+        
 
 
 

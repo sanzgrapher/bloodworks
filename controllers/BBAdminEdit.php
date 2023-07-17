@@ -8,8 +8,7 @@ class BBAdmin
     { // default function should be in every class
 
 
-        show("home");
-
+        
 
 
         $this->view('bbadmin/edit'); // from controller class 

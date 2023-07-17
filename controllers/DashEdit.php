@@ -7,7 +7,7 @@ class Dash
 
     public function index($a = "", $b = "", $c = "")
     {
-        // show("home");
+    
 
         $loggedindata = $this->getUserData();
 

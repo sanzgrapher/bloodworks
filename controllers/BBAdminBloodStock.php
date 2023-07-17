@@ -8,8 +8,7 @@ class  BBAdmin
     { // default function should be in every class
 
 
-        echo "home";
-
+     
 
 
         $this->view('bbadmin/bloodstock'); // from controller class 

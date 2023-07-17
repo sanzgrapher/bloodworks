@@ -5,7 +5,7 @@ use Controller;
 
     public function index($a = "", $b = "", $c = "")
     {
-        show("home");
+  
 
         $bloodbanklist = $this->bloodbanklist(); // Call the private method within the class and capture the returned value
         

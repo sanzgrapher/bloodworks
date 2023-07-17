@@ -8,7 +8,7 @@ class _404
 
     public function index()
     { // default function should be in every class
-        show( "404 controller");
+        
         $this->view('404');// from controller class 
 
     }

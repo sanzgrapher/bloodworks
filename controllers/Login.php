@@ -8,7 +8,7 @@ class Login
     { // default function should be in every class
 
 
-        show("home");
+      
 
 
 
