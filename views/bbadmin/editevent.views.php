@@ -27,16 +27,16 @@ include_once 'views/header.php';
                                     </div>
                                     <div class="input_field">
                                         <label>Location</label>
-                                        <input type="text"  name="event_location" value="<?= $user->event_location; ?>"placeholder="Enter the event location" required>
+                                        <input type="text"  name="event_location" value="<?= $event->event_location; ?>"placeholder="Enter the event location" required>
                                     </div>
 
                                     <div class="input_field">
                                         <label>Event Description</label>
-                                        <input type="text" name="event_desc" value="<?= $user->event_desc; ?>" placeholder="Enter the event description" required>
+                                        <input type="text" name="event_desc" value="<?= $event->event_desc; ?>" placeholder="Enter the event description" required>
                                     </div>
                                     <div class="input_field">
                                         <label>Event Time</label>
-                                        <input type="date" name="event_time" value="<?= $user->event_time; ?>" placeholder="Enter the event time" required>
+                                        <input type="date" name="event_time" value="<?= $event->event_time; ?>" placeholder="Enter the event time" required>
                                     </div>
                                     <div class="input_field">
                                         <label>Contact Info</label>
