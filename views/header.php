@@ -59,6 +59,23 @@
                         <div class="dropdown-menu shadow-sm sm-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item" href="<?= HOSTNAME ?>bloodbanks">BloodBankList</a>
                             <a class="dropdown-item" href="<?= HOSTNAME ?>addbloodbank">Add Bloodbank</a>
+                            <a class="dropdown-item" href="<?= HOSTNAME ?>bbadmin">BB Dash</a>
+
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item px-lg-2 dropdown d-menu">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>
+                            Admin
+                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu shadow-sm sm-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="<?= HOSTNAME ?>admin">Admin Dash</a>
+                            <a class="dropdown-item" href="<?= HOSTNAME ?>admin/bbrequests">BB Requests</a>
 
                         </div>
                     </li>
@@ -67,8 +84,8 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
                     <li class="nav-item">
-                        <a  href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">Login</a>
-                        <a  href="<?= HOSTNAME ?>/register" class="btn rounded btn-primary btn-outline">Register</a>
+                        <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">Login</a>
+                        <a href="<?= HOSTNAME ?>/register" class="btn rounded btn-primary btn-outline">Register</a>
 
                     </li>
                 </ul>
