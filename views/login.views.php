@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="<?= HOSTNAME ?>/assets/css/style.css">
 </head>
+
 <body>
     <div class="formpage">
         <h1>Login</h1>
@@ -23,9 +25,8 @@
             <button type="button" onclick="location.href='register'">Create New Account</button>
 
 
-<form action="login" method="post">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <input type="submit" value="login" name="login">
+        </form>
+    </div>
+</body>
 
-</form>
+</html>
