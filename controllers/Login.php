@@ -47,6 +47,8 @@ class Login
             if ($password == $userdata->password) {
                 
                 $_SESSION['userid'] = $userdata->id;
+                $_SESSION['loggedin'] = true;
+                $_SESSION['u-type'] = 'dash';
                
                 redirect(HOSTNAME."dash");  
                

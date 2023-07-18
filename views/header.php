@@ -46,7 +46,7 @@
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="<?= HOSTNAME ?>events"> EVENTS</a>
                     </li>
-                    
+
 
                     <!-- <li class="nav-item px-lg-2 dropdown d-menu">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>BLOOD BANK
@@ -82,8 +82,12 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
                     <li class="nav-item">
+                        <?php $checkIflLoggedIn = checkIflLoggedIn(); if($checkIflLoggedIn == false) {?>
                         <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
-                        <a href="<?= HOSTNAME ?>/register" class="btn rounded btn-primary btn-outline">REGISTER</a>
+                    <?php }else{ ?>
+                    <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
+                    <?php } ?>
+
 
                     </li>
                 </ul>

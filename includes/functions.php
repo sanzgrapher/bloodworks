@@ -27,3 +27,14 @@ function getLoggedinUser($utype ){
     
 
 }
+
+function checkIflLoggedIn(){
+    if(isset($_SESSION['loggedin'])){
+
+        return $_SESSION['u-type'];
+    }
+    else{
+        return false;
+    }
+}
+
