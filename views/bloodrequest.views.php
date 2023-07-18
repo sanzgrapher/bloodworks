@@ -78,7 +78,7 @@ include_once 'views/header.php';
                                         </select>
                                     </div>
                                     <div class="input_field">
-                                        <label>Blood Group</label>
+                                        <label>Blood Units</label>
                                         <select name="bloodunits">
                                             <option value="">Select Unit</option>
                                             <option value="1">1 Units</option>

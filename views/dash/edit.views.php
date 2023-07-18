@@ -23,13 +23,15 @@ include_once 'views/header.php';
 
 
                 <div class="container">
+                    <form action="">
                     <div class="switch-donor">
                         <a>Become Donor</a>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" name="switch" >
                             <span class="slider round"></span>
                         </label>
                     </div>
+                    </form>
                 </div>
                 
 
@@ -66,12 +68,6 @@ include_once 'views/header.php';
                                         <label>Username</label>
                                         <input type="text" placeholder="Enter your username" value="<?= $user->username ?>" required>
                                     </div>
-
-
-
-
-
-
 
                                     <div class="input_field">
                                         <label>Mobile Number</label>

@@ -16,15 +16,21 @@
                  <div class="heading">
                      Blood Bank Home admin
                  </div>
-                 
-               
              </div>
+             <div class="container">
+                <div class="heading">
+                     Statistics
+                 </div>
+                    <div class="bank-card-list">
+                        <div class="bank-card">
+                            <a>Events</a>
+                            <p><?= $totalevents ?></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
 
-
-          
-
-
-         </div>
      </section>
  </main>
  <?php include 'views/footer.php' ?>
