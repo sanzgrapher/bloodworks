@@ -11,6 +11,11 @@ class Login
         if (isset($_POST['login'])) {
             $this->validateLogin();
         }
+       if(isset($_SESSION['loggedin']) ){
+          redirect(HOSTNAME.$_SESSION['u-type']);
+       }
+       
+
     }
 
     public function validateLogin()

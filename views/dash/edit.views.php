@@ -21,18 +21,41 @@
          <div class="info ">
 
 
-                <div class="container">
-                    <form action="">
-                    <div class="switch-donor">
-                        <a>Become Donor</a>
-                        <label class="switch">
-                            <input type="checkbox" name="switch" >
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    </form>
-                </div>
-                
+                         <form id="availabilityForm" method="POST" action="edit">
+
+
+
+
+                             <label class="switch">
+                                 <input onchange="toggleValue()" type="checkbox" id="availability" name="availability" <?= ($user->donor_availability == "Available" ? "checked" : ""); ?>>
+                                 <span class="slider round"></span>
+
+                             </label>
+                             <input class="btn btn-primary" type="submit" name="toogle" value="Submit">
+
+
+
+
+                         </form>
+                         <script>
+                             function toggleValue() {
+                                 var checkbox = document.getElementById("availability");
+                                 var value = checkbox.checked ? "on" : "off";
+
+                             }
+                         </script>
+
+
+
+
+
+
+
+
+
+                     </div>
+                 </div>
+
 
 
 
