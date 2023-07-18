@@ -29,7 +29,7 @@ include_once 'views/header.php';
                     <?php foreach ($loggedinuser as $user) { ?>
                         <div class="form first">
                             <div class="details personal">
-                                <span class="title">Fill the details if the form to request  for blood</span>
+                                <span class="title">Fill the details of the form to request  for blood</span>
                                 <input type="hidden" name="id" value="<?= $user->id; ?>">
                                 <div class="fields">
                                     <div class="input_field">
@@ -67,14 +67,14 @@ include_once 'views/header.php';
                                         <label>Blood Group</label>
                                         <select name="bloodgroup">
                                             <option value="">Select Your Blood Group</option>
-                                            <option value="A+">A Positive</option>
-                                            <option value="A-">A Negaitive</option>
-                                            <option value="B+">B Positive</option>
-                                            <option value="B-">B Negative</option>
-                                            <option value="AB+">AB Positive</option>
-                                            <option value="AB-">AB Negative</option>
-                                            <option value="O+">O Positive</option>
-                                            <option value="O+">O Negative</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
                                         </select>
                                     </div>
                                     <div class="input_field">

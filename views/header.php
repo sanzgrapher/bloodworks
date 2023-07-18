@@ -41,28 +41,29 @@
                         <a class="nav-link" href="<?= HOSTNAME ?>donorlist"> DONOR LIST</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>dash"> Dashboard</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>bloodbanks"> BLOOD BANKS</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>dash/edit"> Dashboard Edit</a>
+                        <a class="nav-link" href="<?= HOSTNAME ?>events"> EVENTS</a>
                     </li>
 
-                    <li class="nav-item px-lg-2 dropdown d-menu">
+
+                    <!-- <li class="nav-item px-lg-2 dropdown d-menu">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>BLOOD BANK
                             <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </a>
                         <div class="dropdown-menu shadow-sm sm-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="<?= HOSTNAME ?>bloodbanks">Blood Bank List</a>
+                            
                             <a class="dropdown-item" href="<?= HOSTNAME ?>addbloodbank">Add Bloodbank</a>
                             <a class="dropdown-item" href="<?= HOSTNAME ?>bbadmin">BB Dash</a>
 
                         </div>
-                    </li>
+                    </li> -->
 
 
-                    <li class="nav-item px-lg-2 dropdown d-menu">
+                    <!-- <li class="nav-item px-lg-2 dropdown d-menu">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>
                             ADMIN
@@ -75,14 +76,18 @@
                             <a class="dropdown-item" href="<?= HOSTNAME ?>admin/bbrequests">BB Requests</a>
 
                         </div>
-                    </li>
+                    </li> -->
 
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>CONTACT</a> </li>
+                    <!-- <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>CONTACT</a> </li> -->
                 </ul>
                 <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
                     <li class="nav-item">
+                        <?php $checkIflLoggedIn = checkIflLoggedIn(); if($checkIflLoggedIn == false) {?>
                         <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
-                        <a href="<?= HOSTNAME ?>/register" class="btn rounded btn-primary btn-outline">REGISTER</a>
+                    <?php }else{ ?>
+                    <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
+                    <?php } ?>
+
 
                     </li>
                 </ul>

@@ -47,35 +47,77 @@ include_once 'views/header.php';
                                             </td>
 
 
-                                                <td>1</td>
-                                                <td>AAAAAAAA</td>
-                                                <td>Pokhara</td>
-                                                <td>aksbdaobdoabsdoasdaosdaodbaosbdovbdvbdv asa csasjapsdjapsdad</td>
-                                                <td>John doe, Mikal Angeko</td>
-                                                <td>20-07-2023</td>
-                                                <td>061-572342</td>
-                                                <td>
-                                                <a href="<?= HOSTNAME ?>bbadmin/editevent" class="btn btn-danger">Edit</a>
-                                                </td>
-                                         </tr>
-                                 <?php
-                                        }
+                                            <td>
+                                                <a href="<?= HOSTNAME ?>/bbadmin/editevent/<?= $event->event_id; ?>">Edit</a>
+
+
+                                            </td>
+                                        </tr>
+                                <?php
                                     }
-                                    ?>
+                                }
+                                ?>
 
-                                </tbody>
-                            </table>
-                        </div>
-                 </div>
+                            </tbody>
 
-             </div>
-             <div class="container">
-             <div class="event_btn_container">
-                 <a href="<?= HOSTNAME ?>bbadmin/addevent.views.php" class="btn btn-success">Add Event</a>
-                 </div>
-             </div>
+                        </table>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="container">
+                <div class="heading">
+                    Add Events
+                </div>
+                <form action="events" method="post">
+                    
+                        <div class="form first">
+                            <div class="details personal">
+                                <span class="title">Event Details</span>
+                               
+                                <div class="fields">
+                                    <div class="input_field">
+                                        <label>Event Title</label>
+                                        <input type="text" name="event_name"  placeholder="Enter the event title" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Location</label>
+                                        <input type="text" name="event_location" placeholder="Enter the event location" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Organizer</label>
+                                        <input type="text" name="organizer" placeholder="Enter the event location" required>
+                                    </div>
+
+                                    
+                                    <div class="input_field">
+                                        <label>Date</label>
+                                        <input type="date" name="event_date"  placeholder="Enter the event date" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Contact Info</label>
+                                        <textarea type="text" maxlength="10" name="contact_info" placeholder="Enter the contact number" required></textarea>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Event Description</label>
+
+
+                                        <textarea name="event_desc" id="" cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <input class="submit button" type="submit" name="add-event" value="Add Event">
+                            </div>
+                        </div>  
+                </form>
+
+
+
          </div>
      </section>
  </main>
+
 
 <?php include 'views/footer.php' ?>

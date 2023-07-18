@@ -23,8 +23,8 @@ include_once 'views/header.php';
 
 
                 <div class="container">
-                    <div>
-                        <a>Become a Donor</a>
+                    <div class="switch-donor">
+                        <a>Become Donor</a>
                         <label class="switch">
                             <input type="checkbox">
                             <span class="slider round"></span>
@@ -46,7 +46,7 @@ include_once 'views/header.php';
                                 <span class="title">Personal Details</span>
                                 <input type="hidden" name="id" value="<?= $user->id; ?>">
                                 <div class="fields">
-                                    <div class="input_field">
+                                    <div class="input_field">a
                                         <label>First Name</label>
                                         <input type="text" name="fname" value="<?= $user->fname; ?> " placeholder="Enter your First name" required>
                                     </div>
