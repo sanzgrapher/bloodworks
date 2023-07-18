@@ -9,8 +9,8 @@
          <div class="side-list">
              <a href="<?= HOSTNAME ?>dash/">
                  <i class="fa-solid fa-chart-simple active"></i>Home</a>
-             <a href="<?= HOSTNAME ?>dash/requestlist.views.php">
-                 <i class="fa-solid fa-list"></i>Request List</a>
+             <!-- <a href="<?= HOSTNAME ?>dash/requestlist.views.php">
+                 <i class="fa-solid fa-list"></i>Request List</a> -->
              <a href="<?= HOSTNAME ?>dash/edit">
                  <i class="fa-regular fa-user"></i>Settings</a>
              <a href="<?= HOSTNAME ?>logout">
