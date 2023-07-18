@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="<?= HOSTNAME ?>/assets/css/style.css">
 </head>
+
 <body>
     <div class="formpage">
         <h1>Login</h1>
@@ -23,3 +25,8 @@
             <button type="button" onclick="location.href='register'">Create New Account</button>
 
 
+        </form>
+    </div>
+</body>
+
+</html>
