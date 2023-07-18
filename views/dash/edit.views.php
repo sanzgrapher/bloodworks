@@ -46,7 +46,7 @@ include_once 'views/header.php';
                                 <span class="title">Personal Details</span>
                                 <input type="hidden" name="id" value="<?= $user->id; ?>">
                                 <div class="fields">
-                                    <div class="input_field">a
+                                    <div class="input_field">
                                         <label>First Name</label>
                                         <input type="text" name="fname" value="<?= $user->fname; ?> " placeholder="Enter your First name" required>
                                     </div>

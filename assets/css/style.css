@@ -892,9 +892,10 @@ table.dataTable thead .sorting_desc_disabled:before {
       border-radius: 50%;
     }
   
-    .switch_donor a{
-        display: flex;
+    .switch-donor a{
         align-items: center;
-        font-size: 15px;
-        margin: 10px;
+        position: relative;
+        top: 4px;
+        font-size: 20px;
+        margin: 0 10px;
     }
