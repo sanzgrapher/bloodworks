@@ -12,7 +12,7 @@ class Model
 
     public $table = "users"; //inheritable
 
-    protected $limit = '10';
+    protected $limit = '100';
     protected $offset = 0;
     protected $order_type = "desc";
     public $order_column = "id";

@@ -157,7 +157,7 @@
              <?php } ?>
 
 
-             <div class="container">
+             <!-- <div class="container">
                  <div class="heading">
                      Credentials
                  </div>
@@ -190,7 +190,7 @@
                          </div>
                      </div>
                  </form>
-             </div>
+             </div> -->
 
 
          </div>
