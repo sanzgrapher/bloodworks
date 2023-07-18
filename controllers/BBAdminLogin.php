@@ -48,6 +48,8 @@ class BBAdmin
             if ($password == $userdata->bb_password  ) {
 
                 $_SESSION['bb_id'] = $userdata->bb_id;
+                $_SESSION['loggedin'] = true;
+                $_SESSION['u-type'] = 'bbadmin';
 
                 redirect(HOSTNAME . "bbadmin");
             } else {
