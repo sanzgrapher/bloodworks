@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="<?= HOSTNAME ?>/assets/css/style.css">
 </head>
 <body>
-    <div class="form">
+    <div class="formpage">
         <h1>Login</h1>
         <form name="form" action="login" method="POST">
             <div class="input-container">
