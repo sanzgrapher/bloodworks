@@ -897,5 +897,6 @@ table.dataTable thead .sorting_desc_disabled:before {
         position: relative;
         top: 4px;
         font-size: 20px;
+        font-weight: bold;
         margin: 0 10px;
     }
