@@ -11,8 +11,8 @@
             <a href="<?= HOSTNAME ?>dash/">
                 <i class="fa-solid fa-chart-simple active"></i>Home</a>
             <a href="<?= HOSTNAME ?>dash/edit">
-                <i class="fa-regular fa-user"></i>Settings</a>
-            <a href="<?= HOSTNAME?>logout">
+                <i class="fa-regular fa-user"></i>Settings</a> 
+            <a href="#">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
 
         </div>

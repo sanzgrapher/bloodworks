@@ -7,14 +7,34 @@ include_once 'views/header.php';
 
 
 <?php
- 
-
+// if (!isset($_COOKIE["STATUS"])) {
+//     // echo "Cookie named '" . $cookie_name . "' is not set!";
+//     echo "NOT SET";
+// } else {
+//     echo "Cookie 'STATUS' is set!<br>";
+//     echo "Value is: " . $_COOKIE["STATUS"];
+//     echo "SET";
+// }
 ?>
 <main class="dash-container">
     <section class="dashboard_container">
-        
         <?php include'asidemenu.php' ?>
         <div class="info ">
+
+
+                <div class="container">
+                    <div class="switch-donor">
+                        <a>Become Donor</a>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                
+
+
+
             <div class="container">
                 <div class="heading">
                     PROFILE
@@ -125,16 +145,6 @@ include_once 'views/header.php';
                                     <label>Password</label>
                                     <input type="password" placeholder="ReEnter your password" required>
                                 </div>
-
-
-
-
-
-
-
-
-
-
                             </div>
 
                             <input class="submit button" type="submit" name="edit-login" value="Update Login">
