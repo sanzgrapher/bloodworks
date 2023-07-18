@@ -18,8 +18,8 @@
             <a href="<?= HOSTNAME ?>bbadmin/events">
                 <i class="fa-regular fa-user"></i>BB Events</a>
 
-            <a href="#">
-                <i class="fa-regular fa-trash-can"></i>Delete Profile</a>
+            <a href="<?= HOSTNAME ?>logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
         </div>
         <div class="hamburger1">
             <div class="bar1"></div>
