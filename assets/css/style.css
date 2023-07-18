@@ -139,26 +139,34 @@ table thead tr th a{
 
 }
 .bank-card{
-    width: calc(100% / 3 - 15px);
-    height: 350px;
+    width: calc(100% / 2 - 80px);
+    height: 120px;
     min-width: 100px;
     /* border: 2px solid rgb(64, 64, 64); */
     border-radius: 10px;
     padding: 10px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
     flex-direction: column;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .4);
 }
 .bank-card-list{
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-.bank-card a, .bank-card-link a{
+.bank-card a, .bank-card-link h2{
     text-decoration: none;
-    color: rgb(172, 18, 18);
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    font-weight: bold;
 }
- 
+
+.bank-card-link h2{
+    font-size: 30px;
+}
 .bank-card img{
     margin-bottom: 10px;
 }
@@ -166,7 +174,7 @@ table thead tr th a{
     font-size: 25px;
 }
 .bank-card p{
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
     color: #575757;
 }
@@ -611,8 +619,9 @@ overflow: none;
 
 .info .container .heading {
     position: relative;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
+    margin: 10px;
     color: #333;
 }
 

@@ -71,43 +71,37 @@
 
 
 
-                 <div class="container">
-                     <div class="heading">
-                         PROFILE
-                     </div>
-                     <form action="edit" method="post">
-
-                         <div class="form first">
-                             <div class="details personal">
-                                 <span class="title">Personal Details</span>
-                                 <input type="hidden" name="id" value="<?= $user->id; ?>">
-                                 <div class="fields">
-                                     <div class="input_field">
-                                         <label>First Name</label>
-                                         <input type="text" name="fname" value="<?= $user->fname; ?> " placeholder="Enter your First name" required>
-                                     </div>
-                                     <div class="input_field">
-                                         <label>Middle Name</label>
-                                         <input type="text" name="mname" value="<?= $user->mname; ?>" placeholder="Enter your Middle name">
-                                     </div>
-                                     <div class="input_field">
-                                         <label>Last Name</label>
-                                         <input type="text" name="lname" value="<?= $user->lname; ?>" placeholder="Enter your Last name" required>
-                                     </div>
-                                     <div class="input_field">
-                                         <label>Date of Birth</label>
-                                         <input type="date" placeholder="Select Date" value="<?= $user->dateofbirth ?>" name="dateofbirth" required>
-                                     </div>
-                                     <div class="input_field">
-                                         <label>Username</label>
-                                         <input type="text" placeholder="Enter your username" value="<?= $user->username ?>" required>
-                                     </div>
-
-
-
-
-
-
+            <div class="container">
+                <div class="heading">
+                    PROFILE
+                </div>
+                <form action="edit" method="post">
+                    <?php foreach ($loggedinuser as $user) { ?>
+                        <div class="form first">
+                            <div class="details personal">
+                                <span class="title">Personal Details</span>
+                                <input type="hidden" name="id" value="<?= $user->id; ?>">
+                                <div class="fields">
+                                    <div class="input_field">
+                                        <label>First Name</label>
+                                        <input type="text" name="fname" value="<?= $user->fname; ?> " placeholder="Enter your First name" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Middle Name</label>
+                                        <input type="text" name="mname" value="<?= $user->mname; ?>" placeholder="Enter your Middle name">
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Last Name</label>
+                                        <input type="text" name="lname" value="<?= $user->lname; ?>" placeholder="Enter your Last name" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Date of Birth</label>
+                                        <input type="date" placeholder="Select Date" value="<?= $user->dateofbirth ?>" name="dateofbirth" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Username</label>
+                                        <input type="text" placeholder="Enter your username" value="<?= $user->username ?>" required>
+                                    </div>
 
                                      <div class="input_field">
                                          <label>Mobile Number</label>
