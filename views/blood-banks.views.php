@@ -18,8 +18,8 @@
                         </th>
                         <th class="th-sm">Contact
                         </th>
-                        <th class="th-sm">View
-                        </th>
+                        <!-- <th class="th-sm">View
+                        </th> -->
                         
 
                     </tr>
@@ -34,7 +34,7 @@
                                 <td><?= $bloodbank->bb_email; ?></td>
                                 <td><?= $bloodbank->bb_address; ?></td>
                                 <td><?= $bloodbank->bb_phoneno; ?></td>
-                                <td><a class="link-info" href="#">View</a></td>
+                                <!-- <td><a class="link-info" href="#">View</a></td> -->
                             </tr>
                     <?php
                         }

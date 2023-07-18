@@ -21,10 +21,43 @@ class Dash
 
             $this->editBasic();
         }
+        if (isset($_POST['toogle'])) {
+           
+           
+          
+           
+            $this->donorSwitch();
+        }
+       
+  
+
+
 
 
 
         $this->view('dash/edit', $data); 
+
+    }
+    public function donorSwitch(){
+      
+
+       if(isset($_POST['availability'])  ){
+           $availability = "Available";
+        }
+        else{
+            $availability = "Unavailable";
+        }
+      
+
+        $id = getLoggedinUser('userid');
+        $donorSwitch = new Model;
+        $donorSwitch->table = "user";
+        $data = [
+            "donor_availability" => $availability,
+        ];
+        
+        $donorSwitch->update($id, $data, "id");
+        redirect(HOSTNAME."dash");
 
     }
 
@@ -62,10 +95,11 @@ class Dash
         "dateofbirth" => $_POST['dateofbirth'],
         "phone_no" => $_POST['phone_no'],
         "address" => $_POST['address'],
+        "bloodgroup" => $_POST['bloodgroup'],
     ];
   
     $editBasic->update($id, $data, "id");
-    redirect("http://bloodworks.local/dash/");
+    redirect(HOSTNAME."dash");
     
 
 }

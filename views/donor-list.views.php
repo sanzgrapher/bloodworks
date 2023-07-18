@@ -20,12 +20,12 @@ $sn = 0;
             <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing=" 0" width="100%">
                 <thead>
                     <tr>
-                        <th>S.N</th>
+                       
                         <th>Name</th>
                         <th>Bloodgroup</th>
                         <th>Address</th>
-                        <th>Contact Number</th>
-                        <th>View</th>
+                        <!-- <th>Contact Number</th> -->
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <?php if (empty($donors)) {
@@ -33,14 +33,14 @@ $sn = 0;
                 } else {
                     foreach ($donors as $donor) { ?>
                         <tr>
-                            <td><?= ++$sn ?></td>
+                            
                             <td><?= $donor->fname . " " . $donor->mname . " " . $donor->lname; ?></td>
                             <td><?= $donor->bloodgroup; ?></td>
                             <td><?= $donor->address; ?></td>
-                            <td><?= isset($donor->phone) ? $donor->phone : 'N/A'; ?></td>
+                            <!-- <td><?= isset($donor->phone_no) ? $donor->phone_no : 'N/A'; ?></td> -->
 
 
-                            <td><a class="link-info" href="#">View</a></td>
+                            <td><a class="link-info" href="#">Contact</a></td>
                         </tr>
                 <?php
                     }
