@@ -49,8 +49,8 @@ include_once 'views/header.php';
                                 <tr>
 
 
-                                    <th>req_description</th>
-                                    <th>transaction_status</th>
+                                    <th>Request Description</th>
+                                    <th>Transaction Status</th>
                                     <th>Action</th>
 
                                 </tr>
