@@ -22,8 +22,10 @@
 
             <button type="button" onclick="location.href='register'">Create New Account</button>
 
-           
-        </form>
-    </div>
-</body>
-</html>
+
+<form action="login" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <input type="submit" value="login" name="login">
+
+</form>
