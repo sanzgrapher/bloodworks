@@ -24,7 +24,7 @@
                     <div class="bank-card-list">
                         <div class="bank-card">
                             <a>Events</a>
-                            <p><?= $totalevents ?></p>
+                            <!-- <p><?= $totalevents ?></p> -->
                         </div>
                         </div>
                     </div>
