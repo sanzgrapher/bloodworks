@@ -38,10 +38,10 @@ class BloodRequest
         $getuserdata->table = "user";
         $getuserdata->order_column = "id";
         $getsessionid = getLoggedinUser('userid');
-        if (!$getsessionid) {
-            redirect("../login");
-            die();
-        }
+        // if (!$getsessionid) {
+        //     redirect("../login");
+        //     die();
+        // }
         $data = [
             "id" => "$getsessionid"
         ];
