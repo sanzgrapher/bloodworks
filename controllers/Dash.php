@@ -18,10 +18,24 @@ class Dash
             "requests" => $requestlist,
 
             ];
+        if (isset($_POST['complete'])) {
+            // die("complete");
+            $this->completeTransaction();
+        }
 
 
         $this->view('dash/home', $data); 
       
+    }
+    public function completeTransaction(){
+        $id = $_POST['req_id'];
+        $completeTransaction = new Model;
+        $completeTransaction->table = "request_list";
+        $data = [
+            "transaction_status" => "completed"
+        ];
+        $completeTransaction->update($id,$data, 'req_id');
+        redirect(HOSTNAME ."dash");
     }
 
     
