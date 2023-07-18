@@ -7,12 +7,18 @@ class Admin
     public function index($a = "", $b = "", $c = "")
     { // default function should be in every class
         $count =$this->count();
-     
-     
+
+
+
+        
+        
+        if (!isset($_SESSION['loggedin'] ) || $_SESSION['u-type'] != "admin") {
+            redirect(HOSTNAME . "admin/login");
+            die();
+        }
+
         $this->view('admin/home',$count); // from controller class 
-
-
-
+      
     }
 
     public function count(){

@@ -52,6 +52,25 @@ class Admin
             "bb_status" => "verified"
         ];
         $acceptBloodBanks->update($id,$data, 'bb_id');
+
+
+        // add bloodbank to bloodstock table
+        $addBloodStock = new Model;
+        $addBloodStock->table = "bloodstock";
+        $data = [
+            "bb_id" => $id,
+            "a_pos" => "0",
+            "a_neg" => "0",
+            "b_pos" => "0",
+            "b_neg" => "0",
+            "ab_pos" => "0",
+            "ab_neg" => "0",
+            "o_pos" => "0",
+            "o_neg" => "0"
+
+        ];
+        $addBloodStock->insert($data);
+
         redirect(HOSTNAME ."admin/bbrequests");
     }
 
