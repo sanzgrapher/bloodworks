@@ -49,7 +49,7 @@ class Register
             "bloodgroup" => $bloodgroup,
             "address" => $address,
             "phone_no" => $phone_no,
-            "donor availability" => "Unavailable"
+            "donor_availability" => "Unavailable"
         ];
 
         $user->insert($data);
