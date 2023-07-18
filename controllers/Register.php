@@ -14,6 +14,10 @@ class Register
             $this->registerUser();
           
         }
+        if (isset($_SESSION['loggedin'])) {
+            redirect(HOSTNAME . $_SESSION['u-type']);
+        }
+       
 
         $this->view('register');
 
@@ -44,7 +48,8 @@ class Register
             "username" => $username,
             "bloodgroup" => $bloodgroup,
             "address" => $address,
-            "phone_no" => $phone_no
+            "phone_no" => $phone_no,
+            "donor availability" => "Unavailable"
         ];
 
         $user->insert($data);

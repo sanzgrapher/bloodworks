@@ -10,35 +10,34 @@ include_once 'views/header.php';
                 <div class="heading">
                     User Dashboard
                 </div>
-                
                 <div class="table-section">
-                <h3>Avaiable Events</h3>   
-                      <div style="overflow-x:auto;">
+                    <h3>Your Request List</h3>
+                    <div style="overflow-x:auto;">
 
 
                         <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing=" 0" width="100%">
                             <thead>
                                 <tr>
-                                  
-                                    <th>Name</th>
-                                    <th>Event Location</th>
-                                    <th>Organizers</th>
-                                    <th>Contact</th>
-                                
+
+
+                                    <th>req_description</th>
+                                    <th>transaction_status</th>
+                                    <th>Action</th>
+
                                 </tr>
                             </thead>
-                            <?php if (empty($events)) {
+                            <?php if (empty($requests)) {
                                 echo "No event available";
                             } else {
-                                foreach ($events as $event) { ?>
+                                foreach ($requests as $request) { ?>
                                     <tr>
-                               
-                                        <td><?= $event->event_name ?></td>
-                                        <td><?= $event->event_location; ?></td>
-                                        <td><?= $event->organizer; ?></td>
-                                        <td><?= $event->contact_info; ?></td>
 
- 
+                                        <td><?= $request->req_description  ?></td>
+                                        <td><?= $request->transaction_status; ?></td>
+
+                                        <td>btn</td>
+
+
                                     </tr>
                             <?php
                                 }
@@ -49,8 +48,16 @@ include_once 'views/header.php';
                     </div>
                 </div>
 
+
+               
+
             </div>
+
+
         </div>
+        
+            
+         
     </section>
 </main>
 

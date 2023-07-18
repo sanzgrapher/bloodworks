@@ -598,6 +598,92 @@ overflow: none;
     justify-content: center;
     align-items: center;
 }
+/* style1.css */
+ 
+
+.formpage {
+    margin: 50px auto;
+   width: max-content;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
+    text-align: center;
+}
+
+.formpage h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #ff1f1f;
+    margin-bottom: 20px;
+}
+
+.formpage label {
+    text-align: left;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    min-width: 20px;
+}
+
+.formpage .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.formpage .input-container label {
+    margin-right: 0px;
+}
+
+.formpage .inputbox {
+    flex: none;
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formpage input[type="submit"],
+.formpage button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff1f1f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formpage input[type="submit"]:hover,
+.formpage button:hover {
+    background-color: #db1d1d;
+}
+
+.formpage p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.formpage a {
+    color: #333;
+}
+ 
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .formpage {
+        width: 100%;
+        padding: 10px;
+    }
+    .registerpage {
+        width: 90%;
+        padding: 10px;
+    }
+}
 
 
 /* dash */

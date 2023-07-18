@@ -20,18 +20,6 @@
          <?php include 'asidemenu.php' ?>
          <div class="info ">
 
-             <?php foreach ($loggedinuser as $user) { ?>
-                 <div class="container">
-                     <div class="switch-donor">
-                         <a>Become Donors</a>
-                         <!-- 
-                     <form action="edit" id="availabilityForm" method="POST">
-                         <label class="switch">
-                             <input type="checkbox" name="availability" ' . ($columnValue === "available" ? "checked" : "") . ' onchange="submitForm()"> Available';
-                             <span class="slider round"></span>
-                         </label>
-                     </form> -->
-
 
                          <form id="availabilityForm" method="POST" action="edit">
 
