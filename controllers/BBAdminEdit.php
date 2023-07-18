@@ -13,10 +13,40 @@ class BBAdmin
             "loggedinuser" => $loggedindata,
 
         ];
+        if (isset($_POST['edit-bbdetail'])) {
+            $this->editBBdetail();
+        }
         
 
 
         $this->view('bbadmin/edit', $data); // from controller class 
+
+    }
+    public function editBBdetail(){
+        $bb_name = $_POST['bb_name'];
+        $bb_email = $_POST['bb_email'];
+        $bb_username = $_POST['bb_username'];
+        $bb_address = $_POST['bb_address'];
+        $bb_phoneno = $_POST['bb_phoneno'];
+        $bb_description = $_POST['bb_description'];
+        $bb_id = $_POST['bb_id'];
+
+        $bb = new Model;
+        $bb->table = "blood_banks";
+
+        $data = [
+            "bb_name" => $bb_name,
+             
+             
+            "bb_address" => $bb_address,
+            "bb_phoneno" => $bb_phoneno,
+            "bb_description" => $bb_description,
+        ];
+   
+        $bb->update($bb_id,$data,"bb_id");
+        if ($bb) {
+            redirect(HOSTNAME . "bbadmin");
+        }
 
     }
 
