@@ -8,9 +8,15 @@ class BBAdmin
     { // default function should be in every class
 
         $loggedindata = $this->getUserData();
+        $bloodrequests = $this->requestlist();
+
+
+
 
         $data = [
             "loggedinuser" => $loggedindata,
+            "requests" => $bloodrequests
+
 
         ];
         
@@ -37,4 +43,25 @@ class BBAdmin
         $getuserdata = $getuserdata->where($data);
         return $getuserdata;
     }
+
+    private function requestlist()
+    {
+        $requestlist = new Model;
+        $requestlist->table = "request_list";
+        $requestlist->order_column = "req_id";
+   
+       
+     
+        $requestlist = $requestlist->findAll();
+        return $requestlist;
+
+
+
+
+        // Do something with the $eventlist data
+        // For example, you can pass it to the view or perform further operations
+    }
+
+
+
 }

@@ -1,102 +1,100 @@
 <!-- Footer -->
 <footer class=" text-center text-white" style="background-color:#262626; height:min-content">
-    
+
     <div class="container p-4">
 
 
 
 
- 
-      
-           
-            <div class="row">
-                
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
 
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
- 
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
 
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-              
 
-               
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
+        <div class="row">
 
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-               
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Public Pages</h5>
 
-                
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-                
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="<?= HOSTNAME ?>" class="text-white">Home</a>
+                    </li>
+                    <li>
+                        <a href="<?= HOSTNAME ?>donorlist" class="text-white">Donors List</a>
+                    </li>
+                    <li>
+                        <a href="<?= HOSTNAME ?>bloodbanks" class="text-white">Bloodbank List</a>
+                    </li>
+                    <li>
+                        <a href="<?= HOSTNAME ?>events" class="text-white">Events</a>
+                    </li>
+                </ul>
             </div>
-           
-        
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Forms</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="<?= HOSTNAME ?>addbloodbank" class="text-white">Blood Bank Request</a>
+                    </li>
+                    <li>
+                        <a href="<?= HOSTNAME ?>bloodrequest" class="text-white">Request Blood</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Dash Panels</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="<?= HOSTNAME ?>bbadmin" class="text-white">BB Admin</a>
+                    </li>
+                    <li>
+                        <a href="<?= HOSTNAME ?>admin" class="text-white">Admin</a>
+                    </li>
+                    <li>
+                        <a href="<?= HOSTNAME ?>dash" class="text-white">User Dash</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-white">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
 
     </div>
-    
+
 
 </footer>
 <!-- Footer -->

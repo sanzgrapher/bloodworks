@@ -87,6 +87,9 @@ class Dash
 
 
         $editBasic->table = "user";
+        $dateOfBirth = $_POST['dateofbirth'];
+        $age = date_diff(date_create($dateOfBirth), date_create('today'))->y;
+
     $data = [
         
         "fname" => $_POST['fname'],
@@ -96,6 +99,7 @@ class Dash
         "phone_no" => $_POST['phone_no'],
         "address" => $_POST['address'],
         "bloodgroup" => $_POST['bloodgroup'],
+        "age" => $age,
     ];
   
     $editBasic->update($id, $data, "id");

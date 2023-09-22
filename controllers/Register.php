@@ -34,6 +34,8 @@ class Register
         $bloodgroup = $_POST['bloodgroup'];
         $address = $_POST['address'];
         $phone_no = $_POST['phone_no'];
+       
+        $age = date_diff(date_create($dateofbirth), date_create('today'))->y;
 
         $user = new Model;
         $user->table = "user";
@@ -49,7 +51,8 @@ class Register
             "bloodgroup" => $bloodgroup,
             "address" => $address,
             "phone_no" => $phone_no,
-            "donor availability" => "Unavailable"
+            "donor_availability" => "Unavailable",
+            "age" => $age
         ];
 
         $user->insert($data);

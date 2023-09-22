@@ -15,8 +15,20 @@ class Donorlist
              
             "donors" => $donor
         ];
+        
+        if (isset($_POST['sendmail'])) {
+            
+            $this->sendemail();
+        }
 
         $this->view('donor-list', $data); // Pass the $bloodbanklist to the view
+    }
+    public function sendemail()
+    {
+
+       smtp_mailer('narayandhakal443@gmail.com','Padandas.com',"email");
+    //    smtp_mailer('to','subject',",'msg");
+
     }
     private function donor()
     {
