@@ -267,6 +267,21 @@ table thead tr th a{
 }
 
 /*----------------------Blood Bank Details---------------------*/
+  .main-test-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .testbox {
+
+      padding: 20px;
+      width: fit-content;
+      border: 3px solid #e0e0e0;
+  }
+
+
+  
 .bank-detail-container{
     position: relative;
     top: 100px;
