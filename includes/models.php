@@ -58,7 +58,7 @@ class Model
     public function first($data, $data_not = [])
     {
 
-            die("here");
+          
 
         // return one row
         $keys = array_keys($data);
@@ -79,6 +79,7 @@ class Model
 
         $query .= " limit $this->limit offset $this->offset";
         //    echo $query;
+        //    die();
         $data = array_merge($data, $data_not);
         $result = $this->query($query, $data);
         if ($result) {
