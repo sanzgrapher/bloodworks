@@ -15,3 +15,4 @@ const dataTable = new simpleDatatables.DataTable("#datatable", {
 	fixedHeight: true,
  
 })
+
