@@ -58,7 +58,7 @@ class Model
     public function first($data, $data_not = [])
     {
 
-          
+            die("hereeeee");
 
         // return one row
         $keys = array_keys($data);
