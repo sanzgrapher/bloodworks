@@ -20,7 +20,7 @@
                         </th>
                         <!-- <th class="th-sm">View
                         </th> -->
-                        
+
 
                     </tr>
                 </thead>
@@ -30,7 +30,10 @@
                     } else {
                         foreach ($bloodbanklist as $bloodbank) { ?>
                             <tr>
-                                <td><?=  $bloodbank->bb_name; ?></td>
+
+                                
+                                <td><a  href="<?= ROOT ?>/bloodbank/<?= $bloodbank->bb_id;?>"><?= $bloodbank->bb_name; ?></a></td>
+
                                 <td><?= $bloodbank->bb_email; ?></td>
                                 <td><?= $bloodbank->bb_address; ?></td>
                                 <td><?= $bloodbank->bb_phoneno; ?></td>
