@@ -49,10 +49,12 @@ class BBAdmin
         $requestlist = new Model;
         $requestlist->table = "request_list";
         $requestlist->order_column = "req_id";
-   
-       
-     
-        $requestlist = $requestlist->findAll();
+
+
+        $data = [
+            "transaction_status" => "pending"
+        ];
+        $requestlist = $requestlist->where($data);
         return $requestlist;
 
 
