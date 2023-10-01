@@ -23,28 +23,31 @@
             </div>
 
         </div>
+
+
+        <?php
+
+        if ($isCheckIn != "1") { ?>
+            <form method="POST" action="<?= $eventData->event_id ?>">
+
+
+
+
+                <label class="switch">
+                    <input onchange="toggleValue()" type="checkbox" name="eventCheckIn" <?php // ($isCheckIn == "true" ? "checked" : ""); 
+                                                                                        ?>>
+                    <span class="slider round"></span>
+
+                </label>
+                <input class="btn btn-primary" type="submit" name="eventCheckIn-btn" value="Submit">
+            </form>
+        <?php } else {
+            echo "You have already checked in {print here button}";
+        } ?>
     <?php
 
     }
     ?>
-
-
-    <form method="POST" action="edit">
-
-
-
-
-        <label class="switch">
-            <input onchange="toggleValue()" type="checkbox" name="eventCheckIn" <?= (false == "Available" ? "checked" : ""); ?>>
-            <span class="slider round"></span>
-
-        </label>
-        <input class="btn btn-primary" type="submit" name="eventCheckIn-btn" value="Submit">
-
-
-
-
-    </form>
 
 
 
