@@ -6,10 +6,34 @@ class Event
 {
     use Controller;
 
-    public function index()
-    { // default function should be in every class
+    public function index($a = "", $b = "", $c = "")
+    {
+        $event_id=$a;
 
-        $this->view("event"); // from controller class 
+        $eventDetails = $this->eventDetails($event_id);
+
+        $data = [
+            "eventData" => $eventDetails,
+
+        ];
+
+
+        $this->view("event", $data); // from controller class 
+
 
     }
+
+    public function eventDetails($event_id){
+        $eventDetails = new Model;
+        $eventDetails->table = "event";
+        $eventDetails->order_column = "event_id";
+        $data = [
+            "event_id" => $event_id
+        ];
+
+        $eventDetails = $eventDetails->where($data);
+        return $eventDetails;
+    }
+    
+
 }
