@@ -16,6 +16,7 @@
 
 
     <link rel="stylesheet" href="<?= HOSTNAME ?>/assets/css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -24,7 +25,38 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
+
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">BLOODWORKS</label>
+        <ul>
+            <li>
+                <a href="<?= HOSTNAME ?>" >HOME</a>
+            </li>
+            <li>
+                <a href="<?= HOSTNAME ?>donorlist">DONATE</a>
+            </li>
+            <li>
+                <a href="<?= HOSTNAME ?>bloodbanks">BLOODBANK</a>
+            </li>
+            <li>
+                <a href="<?= HOSTNAME ?>events">EVENTS</a>
+            </li>
+            <li class="nav-item">
+                <?php $checkIflLoggedIn = checkIflLoggedIn(); if($checkIflLoggedIn == false) {?>
+                <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
+                <?php }else{ ?>
+                <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
+                <?php } ?>
+            </li>
+        </ul>
+
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
         <div class="container"> 
             <a class="navbar-brand d-flex align-items-center" href="#">
 
@@ -58,7 +90,7 @@
             </div>
             </div>
 
-            <!-- <div class="topnav" id="myTopnav">
+            <div class="topnav" id="myTopnav">
              <div class="tab">
             <div class="collapse navbar-collapse" id="navbar4">
 
@@ -107,17 +139,8 @@
             </div>
             </div>
                 </div> -->
-        </div>
-    </nav>
+        <!-- </div>
+    </nav> -->
+ 
 
-    <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
-                x.className += " responsive";
-              } else {
-                x.className = "topnav";
-              }
-        }
-        </script>
-        
+   

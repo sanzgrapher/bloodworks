@@ -1,53 +1,6 @@
 <?php include "header.php"; 
 ?>
 
-<!-- <main style="margin-top: 5%;" class="container-xxl">
-    <h1>Single Blood Bank Page</h1>
-    <?php if (empty($bbData)) {
-        echo "No donor available";
-    } else {
-        $bbData = $bbData[0];
-
-    ?>
-    <div class="main-test-box">
-        <div class="testbox">
-            <h2>BB Basic Details</h2>
-            <ul>
-                <li><strong>BB Image :</strong> n/a</li>
-                <li><strong>BB Name :</strong> <?= $bbData->bb_name ?></li>
-                <li><strong>BB Description : </strong><?= $bbData->bb_description ?></li>
-                <li><strong>BB Address :</strong> <?= $bbData->bb_address ?></li>
-                <li><strong>BB Email : </strong><?= $bbData->bb_email ?></li>
-                <li><strong>BB Contact : </strong><?= $bbData->bb_phoneno ?></li>
-            </ul>
-        </div>
-        <div class="testbox">
-            <h2>BB Events</h2>
-            <ul>
-                <li>Event Table</li>
-                <li>Event 1</li>
-                <li>Event 2</li>
-                <li>Event 3</li>
-                <li>Event 4</li>
-                <li>Event 5</li>
-        
-            </ul>
-        </div>
-        <div class="testbox">
-            <h2>BB Blood Stocks</h2>
-            <ul>
-                <li>Blood stok  Table</li>
-                <li>Blood group = in stock quantity</li>
-        
-            </ul>
-        </div>
-        </div>
-    <?php
-
-    }
-    ?>
-
-</main> -->
 
 <section class="bb-profile-container">
         <div class="bb-profile ">
@@ -68,7 +21,7 @@
         <div class="tab-container">
         <div class="topnav" id="myTopnav1">
             <div class="tab">
-                <a href="#"><button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button></a>
+                <a href="#"><button class="tablinks active" onclick="openTab(event, 'Overview')">Overview</button></a>
                 <a href="#"><button class="tablinks" onclick="openTab(event, 'Events')" id="defaultOpen">Events</button></a>
                 <a href="#"><button class="tablinks" onclick="openTab(event,'Stocks')">Stocks</button></a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction1()">
@@ -78,7 +31,7 @@
         </div>
 
 
-        <div id="Overview" class="tabcontent">
+        <div id="Overview" class="tabcontent" style="display:block">
                 <div class="container">
                     <h1 class="table-sec-title fw-bold display-5">
                         Blood Bank's Details
@@ -104,7 +57,7 @@
         </div>
 
         
-        <div id="Events" class="tabcontent">
+        <div id="Events" class="tabcontent" >
                 <div class="table-section">
                     <h1 class="table-sec-title fw-bold display-5">Available events</h1>
                     <div style="overflow-x:auto;">

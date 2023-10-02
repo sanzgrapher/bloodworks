@@ -22,6 +22,119 @@ main
     min-height: 100vh;
 }
 
+
+nav{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #F8F9FA;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+}
+
+label.logo{
+    color: #000000;
+    font-size: 20px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold
+}
+ nav ul{
+    float: right;
+    margin-right: 20px;
+ }
+
+ nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+ }
+
+ nav ul li a{
+    color:  #000000;
+    font-size: 17px;
+    padding: 7px 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+ }
+
+ a:active, a:hover{
+    background: #eee;
+    transition: .5s;
+ }
+
+ .checkbtn{
+    font-size: 25px;
+    color: #000;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+ 
+ }
+
+ #check{
+    display: none;
+ }
+
+
+ @media (max-width :1080px)
+ {
+    label.logo{
+        font-size: 2.2vw;
+        padding-left: 50px;
+    }
+  .checkbtn{
+    display: block;
+  }  
+
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #d4d4d4;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li{
+    display: block;
+    margin :50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a{
+    font-size:  16px;
+  }
+
+  a:hover, a:active{
+    background: none;
+    color: #535353;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }
+ }
+
+ @media (max-width :660px)
+ {
+    label.logo{
+        font-size: 15px;
+        padding-left: 50px;
+    }
+    .checkbtn{
+        font-size: 17px;
+      }  
+ }
+
+
 /* // navbar */
 .dropdown-toggle::after {
     display: none;
@@ -72,11 +185,12 @@ main
 
 
 .table-section{
-    margin-top: 3rem;
-    /* min-height: 100vh; */
+    min-height: 100vh;
+    /* position: relative;
+    top:120px; */
 }
 .table-sec-title{
-    margin: 5rem 0 3rem 0;
+    margin: 2rem 0 3rem 0;
     color: #ff1f1f;
     text-align: center;
     
@@ -407,17 +521,12 @@ table thead tr th a{
     color: white;
 }
 
-.bb-profile-container{
-    margin-top: 80px;
-    width: 100%;
-}
+
 
 .bb-profile{
-
     min-width: 15%;
     height: fit-content;
     overflow: none;
-    margin:  10px 5px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
     background-color: rgb(149, 39, 39);
     padding:  15px;
@@ -434,15 +543,13 @@ table thead tr th a{
   }
   
   /* Style the buttons inside the tab */
-  .tab button, .top button{
+  .tab button{
     background-color: inherit;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 18px 16px;
     transition: 0.3s;
-  }
-  .tab button {
     float: left;
     margin: 10px;
     font-size: 18px;
@@ -450,21 +557,14 @@ table thead tr th a{
     font-weight: bold;
     width: 150px;
   }
-
-  .top button{
-    font-size: 15px;
-    font-weight: bold;
-    width: 150px;
-    margin: 0px 10px;
-  }
   
   /* Change background color of buttons on hover */
-  .tab button:hover, .top button:hover {
+  .tab button:hover{
     background-color: #e7e7e7;
   }
   
   /* Create an active/current tablink class */
-  .tab button.active, .top button:active {
+  .tab button.active{
     background-color: #ccc;
   }
   
@@ -491,10 +591,7 @@ table thead tr th a{
     border-bottom-left-radius: 7px;
   }
 
-  .active{
-    display: block;
-  }
-
+  
   .topnav .icon {
     display: none;
     justify-content: center;
@@ -512,7 +609,7 @@ table thead tr th a{
   }
 
 @media screen and (max-width: 800px) {
-.topnav a{display: none;}
+.topnav a:not(:first-child){display: none;}
 .topnav a.icon {
   float: right;
   display: block;
@@ -524,29 +621,34 @@ table thead tr th a{
 .topnav.responsive {position: relative;}
 .topnav.responsive .icon {
   position: absolute;
-  right: 0;
-  top: 0;
+  left: 300px;
+  top: -10px;
   margin: 1px 8px;
 }
-.topnav.responsive a, .topnav.responsive button {
+.topnav.responsive a
+{
+    width: 100%;
+}
+.topnav.responsive button{
+    width: 600px;
+}
+.topnav.responsive a, 
+.topnav.responsive button {
   float: none;
   display: block;
-  text-align: left;
   font-size: 15px;
   text-decoration: none;
   padding: 15px 10px;
+}
+.tab{
+    padding-top: 10px;
 }
 
 
 }
 @media screen and (max-width: 430px) {
 .topnav.responsive a, .topnav.responsive button {
-  float: none;
-  display: block;
-  text-align: left;
   font-size: 12px;
-  text-decoration: none;
-  padding: 15px 10px;
   margin: 1px;
 }
 
@@ -590,7 +692,6 @@ table thead tr th a{
     .tab button {
         font-size: 15px;
         padding: 12px 12px;
-        margin: 8px;
      }
 
 }
@@ -625,9 +726,9 @@ table thead tr th a{
         align-items: center;
     }
     .tab button {
+        width: 100%;
         font-size: 12px;
         padding: 8px 8px;
-        margin: 7px;
     }
 }
 
