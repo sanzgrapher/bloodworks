@@ -133,7 +133,16 @@ label.logo{
         font-size: 17px;
       }  
  }
-
+ @media (max-width :360px)
+ {
+    label.logo{
+        font-size: 12px;
+        padding-left: 30px;
+    }
+    .checkbtn{
+        font-size: 10px;
+      }  
+ }
 
 /* // navbar */
 .dropdown-toggle::after {
@@ -621,17 +630,15 @@ table thead tr th a{
 .topnav.responsive {position: relative;}
 .topnav.responsive .icon {
   position: absolute;
-  left: 300px;
-  top: -10px;
+  /* left: 70px;
+  top: -10px; */
   margin: 1px 8px;
 }
 .topnav.responsive a
 {
     width: 100%;
 }
-.topnav.responsive button{
-    width: 600px;
-}
+
 .topnav.responsive a, 
 .topnav.responsive button {
   float: none;
