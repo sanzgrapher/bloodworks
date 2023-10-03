@@ -5,13 +5,16 @@
 <section class="bb-profile-container">
         <div class="bb-profile ">
             <div class="profile-name-container">
+                
+                <div class="title-con">
                 <img src="https://resources.premierleague.com/premierleague/badges/rb/t43.svg" alt="" class="profile-img1">
                 <div class="title-contain">
-                    <h3>Manchester City
-                        </h3>
-                    <h4>
-                        Etihad Stadium, Manchester<br>
-                        Est: 1887</h1>
+                                    <h3>Manchester City
+                                        </h3>
+                                    <h4>
+                                        Etihad Stadium, Manchester<br>
+                                        Est: 1887</h1>
+                                </div>
                 </div>
             </div>
 
@@ -58,8 +61,9 @@
 
         
         <div id="Events" class="tabcontent" >
+        <div class="container">
+                <h1 class="table-sec-title fw-bold display-5">Available events</h1>
                 <div class="table-section">
-                    <h1 class="table-sec-title fw-bold display-5">Available events</h1>
                     <div style="overflow-x:auto;">
                         <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing=" 0" width="100%">
                             <thead>
@@ -114,7 +118,8 @@
                                 </tr>
                         </table>
                     </div>
-                </div>      
+                </div>  
+            </div>    
         </div>
 
         <div id="Stocks" class="tabcontent">

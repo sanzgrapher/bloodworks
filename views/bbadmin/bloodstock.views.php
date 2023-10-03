@@ -18,7 +18,6 @@ include_once 'views/header.php';
                         <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    
                                     <th class="th-sm">A +
                                     </th>
                                     <th class="th-sm">A -

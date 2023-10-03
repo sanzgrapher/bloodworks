@@ -9,7 +9,7 @@
 
  <main class="dash-container">
      <section class="dashboard_container">
-         <div class="info ">
+         <div class="info">
 
 
              <div class="container">
