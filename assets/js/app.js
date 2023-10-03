@@ -16,3 +16,10 @@ const dataTable = new simpleDatatables.DataTable("#datatable", {
  
 })
 
+// form switch toogle 
+function toggleValue() {
+     
+    var checkbox = document.getElementById("availability");
+    var value = checkbox.checked ? "on" : "off";
+
+ }

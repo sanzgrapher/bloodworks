@@ -30,10 +30,10 @@ $sn = 0;
                             <td><?= $event->event_name ?></td>
                             <td><?= $event->event_location; ?></td>
                             <td><?= $event->organizer; ?></td>
-                            <td><?=  $event->contact_info ; ?></td>
+                            <td><?= $event->contact_info; ?></td>
 
 
-                            <td><a class="btn btn-danger" href="#">Take Part</a></td>
+                            <td><a class="btn btn-danger" href="event/<?= $event->event_id ?>">View Evemt</a></td>
                         </tr>
                 <?php
                     }
