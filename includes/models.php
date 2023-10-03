@@ -12,10 +12,10 @@ class Model
 
     public $table = "users"; //inheritable
 
-    protected $limit = '10';
+    protected $limit = '100';
     protected $offset = 0;
     protected $order_type = "desc";
-    protected $order_column = "id";
+    public $order_column = "id";
 
     public function findAll()
     {
@@ -43,6 +43,8 @@ class Model
 
         $query .= " order by $this->order_column $this->order_type limit $this->limit offset $this->offset";
         //    echo $query;
+        // show($query);
+        // die;
         $data = array_merge($data, $data_not);
         return $this->query($query, $data);
     }
@@ -56,7 +58,7 @@ class Model
     public function first($data, $data_not = [])
     {
 
-            die("here");
+          
 
         // return one row
         $keys = array_keys($data);
@@ -77,6 +79,7 @@ class Model
 
         $query .= " limit $this->limit offset $this->offset";
         //    echo $query;
+        //    die();
         $data = array_merge($data, $data_not);
         $result = $this->query($query, $data);
         if ($result) {
@@ -84,3 +87,55 @@ class Model
         }
         return false;
     }
+    public function insert($data)
+    {
+         
+
+        $keys = array_keys($data);
+
+
+        $query = "insert into $this->table (" . implode(",", $keys) . ") values (:" . implode(" , :", $keys) . ")";
+ 
+        $this->query($query, $data);
+        return false;
+    }
+    public function update($id, $data, $id_column = 'id')
+    {
+
+       
+       
+
+        $keys = array_keys($data);
+
+        $query = "update $this->table set ";
+
+        foreach ($keys as $key) {
+            $query .= $key . " = :" . $key . ", ";
+        }
+
+
+
+
+        $query = trim($query, ", ");
+
+        $query .= " where $id_column = :$id_column ";
+        // $data = [$id_column => $id];
+        $data[$id_column] = $id;
+        // echo $query;
+        // die();
+        $this->query($query, $data);
+        return false;
+    }
+
+    public function delete($id, $id_column = 'id')
+    {
+
+        $data[$id_column] = $id;
+        $query = "delete from $this->table where $id_column = :$id_column";
+
+        
+        $this->query($query, $data);
+
+        return false;
+    }
+}
