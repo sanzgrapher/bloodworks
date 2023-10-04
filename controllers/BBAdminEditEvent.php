@@ -18,9 +18,11 @@ class BBAdmin
       
        
         $eventlist = $this->eventDetail($eveid);
+        $eventdonors = $this->eventPaticipatiants($eveid);
         $data = [
             "events" => $eventlist,
             "loggedinuser" => $loggedindata,
+            "eventdonors" => $eventdonors
 
         ];
 
@@ -28,12 +30,108 @@ class BBAdmin
 
             $this->updateEvent($eveid);
         }
+        if (isset($_POST['update_blood_unit'])) {
+
+            $this->updateDonation($eveid);
+        }
 
 
         $this->view('bbadmin/editevent', $data); // from controller class 
 
 
+    
     }
+    public function updateDonation($eve_id){
+        $updateeventdonors = new Model;
+        $updateeventdonors->table = "event_participants";
+        $participation_id=$_POST['participation_id'];
+        // $u_id=$_POST['user_id'];
+
+        $data = [
+
+            "blood_unit" => $_POST['blood_unit'],
+           
+        ];
+   
+
+        $updateeventdonors = $updateeventdonors->update($participation_id, $data, 'participation_id');   
+
+      
+             redirect(HOSTNAME . "bbadmin/editevent/$eve_id#update-donation");
+
+
+
+
+    }
+
+
+    public function eventPaticipatiants ($eveid){
+        $geteventdonors = new Model;
+        $geteventdonors->table = "event_participants";
+        $geteventdonors->order_column = "participation_id";
+        // // $getsessionid = getLoggedinUser('bb_id'); // functions file sends the session id
+        // // if (!$getsessionid) {
+        // //     redirect(HOSTNAME . "bbadmin/login");
+        // //     die();
+        // // }
+
+
+
+
+        // $data = [
+        //     "event_id" => "$eveid"
+        // ];
+        // $geteventdonors = $geteventdonors->where($data);
+
+
+        $table1 = 'event_participants';
+        $table2 = 'user';
+        $columns = 'user.username,user.id,event_participants.blood_unit,event_participants.participation_id';
+        $conditions = [
+            'event_participants.user_id' => 'user.id',
+            'event_participants.event_id' => $eveid, // Event ID 5
+        ];
+
+        $geteventdonors = $geteventdonors->joinTables($table1, $table2, $columns, $conditions);
+        
+   
+
+ 
+
+
+ 
+
+        return $geteventdonors;
+
+    }
+ 
+
+
+
+
+    // public function getDonorsData()
+    // {
+    //     $getuserdata = new Model;
+    //     $getuserdata->table = "user";
+    //     $getuserdata->order_column = "id";
+    //     $getsessionid = getLoggedinUser('userid');
+    //     if (!$getsessionid) {
+    //         redirect("../login");
+    //         die();
+    //     }
+    //     $data = [
+    //         "id" => "$getsessionid"
+    //     ];
+    //     $getuserdata = $getuserdata->where($data);
+    //     return $getuserdata;
+    // }
+
+
+
+
+
+
+
     public function getUserData()
     {
         $getuserdata = new Model;
