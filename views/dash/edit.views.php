@@ -49,13 +49,7 @@
 
 
                          </form>
-                         <script>
-                             function toggleValue() {
-                                 var checkbox = document.getElementById("availability");
-                                 var value = checkbox.checked ? "on" : "off";
-
-                             }
-                         </script>
+                         
 
 
 
