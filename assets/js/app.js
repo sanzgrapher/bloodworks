@@ -25,7 +25,7 @@ function toggleValue() {
  }
 
 
-
+//Modal Popup for Donorlist
 // Get the modal
 const modal = document.getElementById("myModal");
 // All page modals
@@ -34,8 +34,6 @@ var modals = document.querySelectorAll('.modal');
 const modalBtn = document.querySelectorAll('.modal-btn');
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
-
-
 // Listen 	for OPEN Click
 modalBtn.forEach(function(e) {
   e.addEventListener('click', openModal);
@@ -60,3 +58,22 @@ modalBtn.forEach(function(e) {
       modal.style.display = "none";
     }
   }
+
+//Fetch data of the donir row to modal popup
+$(document).ready(function(){
+  $('.edit-btn').on('click', function(){
+
+      $tr = $(this).closest('tr');
+
+      var data =$tr.children("td").map(function() {
+          return $(this).text();
+      }).get();
+
+      console.log(data);
+
+      $('#fullname').val(data[0]); 
+      $('#bloodgroup').val(data[1]);
+      $('#address').val(data[2]);
+      $('#contact').val(data[3]);
+  });
+});
