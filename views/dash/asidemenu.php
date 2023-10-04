@@ -13,6 +13,8 @@
                  <i class="fa-solid fa-list"></i>Request List</a> -->
              <a href="<?= HOSTNAME ?>dash/edit">
                  <i class="fa-regular fa-user"></i>Settings</a>
+             <a href="<?= HOSTNAME ?>dash/requests">
+                 <i class="fa-regular fa-user"></i>Your Requests</a>
              <a href="<?= HOSTNAME ?>logout">
                  <i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
 
