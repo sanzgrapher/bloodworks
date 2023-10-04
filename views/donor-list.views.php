@@ -9,7 +9,7 @@ $sn = 0;
 
 
 
-<main class="container-xxl">
+<main class="container-xxl top-gap">
 
     <div class="table-section">
         <h1 class="table-sec-title fw-bold display-5">Available donors</h1>
@@ -29,7 +29,7 @@ $sn = 0;
                     </tr>
                 </thead>
 
-              
+
 
 
 
@@ -47,9 +47,9 @@ $sn = 0;
 
                             <td>
                                 <!-- <form action="donorlist" method="POST"> -->
-                                    <!-- <input class="submit button" type="submit" name="sendmail" value="Send For Approval"> -->
-                                    <!-- <input value="sendemail" type="submit" class="btn btn-primary"> -->
-                                    <button id="myBtn" class="btn btn-danger">Open Modal</button>
+                                <!-- <input class="submit button" type="submit" name="sendmail" value="Send For Approval"> -->
+                                <!-- <input value="sendemail" type="submit" class="btn btn-primary"> -->
+                                <button id="myBtn" class="btn btn-danger">Open Modal</button>
                                 <!-- </form> -->
                             </td>
                         </tr>

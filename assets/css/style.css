@@ -24,8 +24,8 @@ main
 
 
 .bb-navbar{
-    position: -webkit-sticky;
-    position: sticky;
+  
+    position: fixed;
     top: 0;
     background-color: #F8F9FA;
     height: 80px;
@@ -239,7 +239,9 @@ table thead tr th a{
     font-weight: 600;
     font-size: 1.2em;
 }
-
+.top-gap{
+    padding-top: 80px;
+}
  
 
  /*---------------Blood Bank Card---------------*/

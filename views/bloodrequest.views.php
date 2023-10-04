@@ -7,7 +7,7 @@
 
 
 
- <main class="dash-container">
+ <main class="dash-container top-gap">
      <section class="dashboard_container">
          <div class="info">
 
@@ -33,7 +33,7 @@
                                          <label>Patient's First Name</label>
                                          <input type="text" name="fname" placeholder="Enter your First name" required>
                                      </div>
-                                      
+
                                      <div class="input_field">
                                          <label>Patient's Last Name</label>
                                          <input type="text" name="lname" placeholder="Enter your Last name" required>
@@ -71,7 +71,7 @@
                                              <option value="O-">O-</option>
                                          </select>
                                      </div>
-                                     
+
                                      <div class="input_field">
                                          <label>Urgency</label>
                                          <select name="urgency">
@@ -93,7 +93,7 @@
 
                                  </div>
                                  <input class="submit button" type="submit" name="request-blood" value="Post Request Blood">
-                                 
+
                              </div>
                          </div>
                      </form>

@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
 
-<main style="margin-top: 5%;" class="container-xxl">
+<main style="margin-top: 5%;" class="container-xxl top-gap">
     <h1>Single event detail</h1>
     <?php if (empty($eventData)) {
         echo "No Event available";

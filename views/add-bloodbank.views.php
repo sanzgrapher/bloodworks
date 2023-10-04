@@ -9,7 +9,7 @@ $sn = 0;
 
 
 
-<main class="container-xxl">
+<main class="container-xxl top-gap">
 
     <div class="table-section">
         <h1 class="table-sec-title fw-bold display-5">Add Blood Bank</h1>

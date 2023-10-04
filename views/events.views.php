@@ -2,7 +2,7 @@
 $sn = 0;
 ?>
 <?php include "header.php"; ?>
-<main class="container-xxl">
+<main class="container-xxl top-gap">
 
     <div class="table-section">
         <h1 class="table-sec-title fw-bold display-5">Available events</h1>
