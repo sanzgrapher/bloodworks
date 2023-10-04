@@ -39,7 +39,7 @@ include_once 'views/header.php';
                 <div class="heading">
                     User Dashboard
                 </div>
-                <div class="table-section">
+                <!-- <div class="table-section">
                     <h3>Your Request List</h3>
                     <div style="overflow-x:auto;">
 
@@ -85,7 +85,7 @@ include_once 'views/header.php';
 
                         </table>
                     </div>
-                </div>
+                </div> -->
 
 
 

@@ -48,6 +48,38 @@ class Model
         $data = array_merge($data, $data_not);
         return $this->query($query, $data);
     }
+    public function joinTables($table1, $table2, $columns = '*', $conditions = [], $orderColumn = null, $orderType = 'ASC', $limit = null, $offset = null)
+    {
+        $query = "SELECT $columns FROM $table1 INNER JOIN $table2 ON ";
+     
+
+        // Add join conditions
+        foreach ($conditions as $key => $value) {
+        
+            $query .= "$key = $value AND ";
+        }
+      
+        // Remove the trailing "AND" from the join conditions
+        $query = rtrim($query, 'AND ');
+
+        // Add ORDER BY clause if specified
+        if (!empty($orderColumn)) {
+            $query .= " ORDER BY $orderColumn $orderType";
+        }
+
+        // Add LIMIT and OFFSET if specified
+        if (!empty($limit)) {
+            $query .= " LIMIT $limit";
+        }
+        if (!empty($offset)) {
+            $query .= " OFFSET $offset";
+        }
+        
+        // Execute the query using your database connection and return the results
+        // Replace $this->query with your actual database query execution method
+        return $this->query($query);
+    }
+
 
     public function one(){
         $query = "select * from $this->table  limit 1";
