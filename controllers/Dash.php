@@ -9,34 +9,22 @@ class Dash
     {
         $loggedindata = $this->getUserData();
         $eventlist = $this->eventLists();
-        $requestlist = $this->requestlist();
+       
          
        
         $data = [
                 "loggedinuser" => $loggedindata,
             "events" => $eventlist,
-            "requests" => $requestlist,
+           
 
             ];
-        if (isset($_POST['complete'])) {
-            // die("complete");
-            $this->completeTransaction();
-        }
+  
 
 
         $this->view('dash/home', $data); 
       
     }
-    public function completeTransaction(){
-        $id = $_POST['req_id'];
-        $completeTransaction = new Model;
-        $completeTransaction->table = "request_list";
-        $data = [
-            "transaction_status" => "completed"
-        ];
-        $completeTransaction->update($id,$data, 'req_id');
-        redirect(HOSTNAME ."dash");
-    }
+
 
     
     public function getUserData()
@@ -69,31 +57,9 @@ class Dash
 
 
 
-        // Do something with the $eventlist data
-        // For example, you can pass it to the view or perform further operations
+       
     }
-    private function requestlist()
-    {
-        $requestlist = new Model;
-        $requestlist->table = "request_list";
-        $requestlist->order_column = "req_id";
-        $getsessionid = getLoggedinUser('userid');
-        if (!$getsessionid) {
-            redirect("../login");
-            die();
-        }
-        $data = [
-            "user_id" => "$getsessionid"
-        ];
-        $requestlist = $requestlist->where($data);
-        return $requestlist;
 
-        
-
-
-        // Do something with the $eventlist data
-        // For example, you can pass it to the view or perform further operations
-    }
 
 
 
