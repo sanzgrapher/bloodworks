@@ -22,6 +22,12 @@ main
     min-height: 100vh;
 }
 
+.brand{}
+.brand a:hover{
+text-decoration: none;
+background: none;
+}
+
 
 .bb-navbar{
   
