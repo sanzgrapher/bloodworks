@@ -28,6 +28,7 @@ $sn = 0;
                         <th>Action</th>
                     </tr>
                 </thead>
+
                 <?php if (empty($donors)) {
                     echo "No donor available";
                 } else {
@@ -38,10 +39,11 @@ $sn = 0;
                             <td><?= $donor->bloodgroup; ?></td>
                             <td><?= $donor->address; ?></td>
                             <!-- <td><?= isset($donor->phone_no) ? $donor->phone_no : 'N/A'; ?></td> -->
-
-
+                            
+                            
                             <td>
                                 <form action="donorlist" method="POST">
+                                    <button id="myBtn" class="btn btn-danger">Open Modal</button>
                                     <input class="submit button" type="submit" name="sendmail" value="Send For Approval">
 
                                     <!-- <input value="sendemail" type="submit" class="btn btn-primary"> -->
@@ -52,7 +54,6 @@ $sn = 0;
                     }
                 }
                 ?>
-
             </table>
         </div>
     </div>
@@ -60,6 +61,133 @@ $sn = 0;
 
 
 </main>
+
+
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="info bb-form">
+            <div class="container">
+                <span class="close">&times;</span>
+                <div class="heading">
+                    Request Blood
+                </div>
+                <form action="bloodrequest" method="post">
+
+                    <div class="form first">
+                        <div class="details personal">
+                            <span class="title">Donor's Information</span>
+                            <input type="hidden" name="id" value="<?= $user; ?>">
+                            <div class="fields">
+                                <div class="input_field">
+                                    <label>Donor's First Name</label>
+                                    <input type="text" name="fname" placeholder="Enter your First name" required>
+                                </div>
+
+                                <div class="input_field">
+                                    <label>Donor's Last Name</label>
+                                    <input type="text" name="lname" placeholder="Enter your Last name" required>
+                                </div>
+                                <div class="input_field">
+                                    <label>Contact Number</label>
+                                    <input type="text" maxlength="10" name="phone_no" placeholder="Enter your mobile number" required>
+                                </div>
+                                <div class="input_field">
+                                    <label>Address</label>
+                                    <input type="text" name="address" placeholder=" City-ward no,tole eg,(Pokhara-17,Chhorepatan)" required>
+                                </div>
+
+                                <!-- <div class="input_field">
+                           <label>Gender</label>
+                           <select name="gender">
+                               <option value="">Select Gender</option>
+                               <option value="female">Female</option>
+                               <option value="male">Male</option>
+                               <option value="other">Other</option>
+                           </select>
+                       </div> -->
+
+                                <div class="input_field">
+                                    <label>Blood Group</label>
+                                    <select name="bloodgroup">
+                                        <option value="">Select Your Blood Group</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+
+                                <div class="input_field">
+                                    <label>Urgency</label>
+                                    <select name="urgency">
+                                        <option value="">Select Urgency</option>
+                                        <option value="urgent">Urgent</option>
+                                        <option value="moderate">Moderate</option>
+                                        <option value="not urgent">Not Urgent</option>
+                                    </select>
+                                </div>
+                                <div class="input_field">
+                                    <label>Required Before</label>
+                                    <input type="date" placeholder="Select Date" name="required_date" required>
+                                </div>
+                                <div class="input_field">
+                                    <label>Reason for Requirment</label>
+                                    <input type="text" placeholder="State your reason for requesting blood" name="reason" required>
+                                </div>
+
+
+                            </div>
+                            <input class="submit button" type="submit" name="request-blood" value="SUBMIT">
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
 
 
 

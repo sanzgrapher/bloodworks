@@ -23,7 +23,7 @@ main
 }
 
 
-nav{
+.bb-navbar{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -40,18 +40,18 @@ label.logo{
     padding: 0 100px;
     font-weight: bold
 }
- nav ul{
+.bb-navbar ul{
     float: right;
-    margin-right: 20px;
+    margin-right: 100px;
  }
 
- nav ul li{
+ .bb-navbar ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
  }
 
- nav ul li a{
+ .bb-navbar ul li a{
     color:  #000000;
     font-size: 17px;
     padding: 7px 16px;
@@ -92,7 +92,7 @@ label.logo{
     display: block;
   }  
 
-  ul{
+  .bb-navbar ul{
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -103,13 +103,13 @@ label.logo{
     transition: all .5s;
   }
 
-  nav ul li{
+  .bb-navbar ul li{
     display: block;
     margin :50px 0;
     line-height: 30px;
   }
 
-  nav ul li a{
+  .bb-navbar ul li a{
     font-size:  16px;
   }
 
@@ -195,8 +195,7 @@ label.logo{
 
 .table-section{
     min-height: 100vh;
-    /* position: relative;
-    top:120px; */
+    position: relative;
 }
 .table-sec-title{
     margin: 2rem 0 3rem 0;
@@ -497,8 +496,6 @@ table thead tr th a{
     margin: auto;
     width: fit-content;
     height: fit-content;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 10px;
 }
@@ -507,6 +504,11 @@ table thead tr th a{
     width: 350px;
     height: 300px;
     border-radius: 10px;
+}
+.title-con{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .title-contain{
     flex-direction: column;
@@ -542,6 +544,10 @@ table thead tr th a{
 }
 
 /* Style the tab */
+.topnav{
+    border-bottom: 2px double rgb(124, 120, 120);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
+}
 .tab {
     position: relative;
     margin: auto;
@@ -579,13 +585,15 @@ table thead tr th a{
   
   /* Style the tab content */
   .tabcontent {
+    position: relative;
+    margin: auto;
     display: none;
-    padding: 60px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
     min-height: 500px;
     border-radius: 7px;
     height: fit-content;
+    padding-bottom: 10px;
   }
 
   .tab-main-container{
@@ -671,8 +679,6 @@ table thead tr th a{
 
 @media screen and (max-width: 1000px) {
 
- 
-
     .bank-detail-profile h1{
         font-size: 20px;
      }
@@ -688,7 +694,7 @@ table thead tr th a{
     .title-contain h4{  
         font-size: 20px;
      }
-    .profile-name-container {
+    .title-con {
         display: flex;
         flex-direction: column;
      }
@@ -828,11 +834,14 @@ overflow: none;
 
 .dashboard,
 .info .container {
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
         background-color: white;
     border-radius: 10px;
         padding:  15px;
+        
    
+}
+.info .container{
+    margin: 10px 0;
 }
 
 .profile-container {
@@ -889,8 +898,7 @@ overflow: none;
     padding: 10px;
     width: 100%;
     border-bottom: 1px solid rgb(68, 68, 68);
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 1rem;
     text-decoration: none;
     color: black;
 }
@@ -1011,31 +1019,33 @@ overflow: none;
 
 
 /*---form---*/
-
+.info{
+    position: relative;
+    margin: auto;
+}
+.bb-form{
+    width: fit-content;
+}
 .info .container {
-    /* position: relative; */
-    /* max-width: 900px; */
-    width: 100%;
+    position: relative;
     border-radius: 6px;
-    /* padding: 30px; */
-    margin: 15px 0;
-   
- 
     background-color: rgb(255, 255, 255);
 }
 
 .info .container .heading {
     position: relative;
     font-size: 30px;
-    font-weight: 600;
-    margin: 10px;
+    font-weight: bold;
+    width: fit-content;
+    margin: auto;
     color: #333;
 }
 
 .info .container form {
     position: relative;
     /* min-height: 490px; */
-    margin-top: 16px;
+    margin:auto;
+    z-index: 100;
 }
 
 .info .container form .details {
@@ -1044,10 +1054,10 @@ overflow: none;
 
 .info .container form .title {
     display: block;
-    margin-top: 30px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 6px 0;
+    margin: auto;
+    width: fit-content;
     color: #333;
 }
 
@@ -1087,7 +1097,7 @@ form .fields .input_field {
 
 
 .input_field input:is(:focus, :valid) {
-    box-shadow: -4px -3px 45px 10px rgba(181, 181, 181, 0.35);
+    box-shadow: 0px 0px 3.5px 3.5px rgba(181, 181, 181, 0.35);
 }
 
 .input_field input[type="date"] {
@@ -1103,28 +1113,34 @@ form .fields .input_field {
     text-decoration: none;
 }
 
-form .button {
+form .button,.button {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 43px;
     max-width: 200px;
-    width: 100%;
-    border: none;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 12px;
+    border: 1px solid rgb(172, 18, 18);;
     outline: none;
     background-color: rgb(172, 18, 18);
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     position: relative;
     top: 0;
     left: 0;
 
 }
-
+.form input[type="submit"]{
+    font-size: 18px;
+    width: 300px;
+    margin-top: 10px;
+}
 
 form .button:hover,
 .upload-img:hover {
@@ -1166,7 +1182,7 @@ footer a {
          
 }
 /* for laptop and small  */
-@media screen and (max-width: 950px) { 
+@media screen and (max-width: 1050px) { 
 form .fields .input_field {
         display: flex;
         width: calc(100% / 1 - 15px);
@@ -1174,16 +1190,23 @@ form .fields .input_field {
         margin: 10px 4px;
     }
 
-    .dashboard_container {
-        display: flex;
-        flex-direction: column;
+  
+    .side-list a,.info label, .info input{
+        font-size: 12px;
+        
     }
 
-    .dashboard,
-    .info {
-        width: 95%;
+    .dashboard h3{
+        font-size: 18px;
     }
-        .datatable-search .datatable-input{
+
+    .info .container .heading, .info .container h3{
+        font-size: 20px;
+    }
+    .info .container .userdetails{
+        font-size: 14px;
+    }
+    .datatable-search .datatable-input{
       font-size: 12px;
       padding: 5px;
 
@@ -1209,12 +1232,23 @@ form .fields .input_field {
 }
 
 @media screen and (max-width: 567px) {
-    /* img {
-        width: 70%;
-        height: 70%;
-    } */
+    .dashboard_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-   
+    .dashboard{
+        position: relative;
+        margin: auto;
+        width: 95%;
+    }
+    .side-list{
+        text-align: center;
+    }
+    .info{
+        width: 95%;
+    }
 
 
 }
@@ -1320,3 +1354,41 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+     padding: 40px;/* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

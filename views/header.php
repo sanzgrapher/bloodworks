@@ -27,7 +27,7 @@
 <body>
 
 
-    <nav>
+    <nav class="bb-navbar">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
