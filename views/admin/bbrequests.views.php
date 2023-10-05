@@ -44,6 +44,7 @@ include_once 'views/header.php';
                                                     <input type="hidden" name="bb_id" value="<?= $bloodbank->bb_id ?>">
                                                     <button type="submit" class="btn btn-success" name="approve">Approve</button>
                                                 </form>
+                                                <br>
 
                                                 <form action="bbrequests" method="post">
                                                     <input type="hidden" name="bb_id" value="<?= $bloodbank->bb_id ?>">
