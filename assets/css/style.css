@@ -2,7 +2,7 @@
     width: 100px;
     height: 50px;
     background-color: green;
-    margin: 10px;
+    /* margin: 10px; */
 }
 * {
     margin: 0;
@@ -21,6 +21,128 @@ main
 {
     min-height: 100vh;
 }
+
+
+.bb-navbar{
+  
+    position: fixed;
+    top: 0;
+    background-color: #F8F9FA;
+    height: 80px;
+    width: 100%;
+    z-index: 10;
+}
+
+label.logo{
+    color: #000000;
+    font-size: 20px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold
+}
+.bb-navbar ul{
+    float: right;
+    margin-right: 100px;
+ }
+
+ .bb-navbar ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+ }
+
+ .bb-navbar ul li a{
+    color:  #000000;
+    font-size: 17px;
+    padding: 7px 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+ }
+
+ a:active, a:hover{
+    background: #eee;
+    transition: .5s;
+ }
+
+ .checkbtn{
+    font-size: 25px;
+    color: #000;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+ 
+ }
+
+ #check{
+    display: none;
+ }
+
+
+ @media (max-width :1080px)
+ {
+    label.logo{
+        font-size: 2.2vw;
+        padding-left: 50px;
+    }
+  .checkbtn{
+    display: block;
+  }  
+
+  .bb-navbar ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #d4d4d4;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  .bb-navbar ul li{
+    display: block;
+    margin :50px 0;
+    line-height: 30px;
+  }
+
+  .bb-navbar ul li a{
+    font-size:  16px;
+  }
+
+  a:hover, a:active{
+    background: none;
+    color: #535353;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }
+ }
+
+ @media (max-width :660px)
+ {
+    label.logo{
+        font-size: 15px;
+        padding-left: 50px;
+    }
+    .checkbtn{
+        font-size: 17px;
+      }  
+ }
+ @media (max-width :360px)
+ {
+    label.logo{
+        font-size: 12px;
+        padding-left: 30px;
+    }
+    .checkbtn{
+        font-size: 10px;
+      }  
+ }
 
 /* // navbar */
 .dropdown-toggle::after {
@@ -72,11 +194,11 @@ main
 
 
 .table-section{
-    margin-top: 3rem;
-    /* min-height: 100vh; */
+    min-height: 100vh;
+    position: relative;
 }
 .table-sec-title{
-    margin: 5rem 0 3rem 0;
+    margin: 2rem 0 3rem 0;
     color: #ff1f1f;
     text-align: center;
     
@@ -101,11 +223,14 @@ th {
     text-align: center;
 }
 
+
 #datatable th {
     background-color: rgb(198, 27, 27);
-    font-size: 12px;
     font-weight: bold;
-
+    color: white;
+    font-size: 15px;
+    padding: 15px;
+    text-align: center;
 }
 
 table thead tr th a{
@@ -114,7 +239,9 @@ table thead tr th a{
     font-weight: 600;
     font-size: 1.2em;
 }
-
+.top-gap{
+    padding-top: 80px;
+}
  
 
  /*---------------Blood Bank Card---------------*/
@@ -264,6 +391,7 @@ table thead tr th a{
             font-size: 10px;
          }
 
+
 }
 
 /*----------------------Blood Bank Details---------------------*/
@@ -362,63 +490,196 @@ table thead tr th a{
     flex-direction: column;
     background-color: #e1e1e1;
 }
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    background-color: #f1f1f1;
+
+
+/*---------Bloodbank Profile-----------*/
+.profile-name-container {
+    position: relative;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-img1 {
+    width: 350px;
+    height: 300px;
     border-radius: 10px;
-    margin: 10px;
+}
+.title-con{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title-contain{
+    flex-direction: column;
+}
+
+.title-contain h3{
+
+    font-size: 70px;
+}
+.title-contain h4{
+    font-size: 30px;
+
+}
+
+.title-contain h3, .title-contain h4{
+    font-style: normal;
+    position: relative;
+    left: 20px;
+    font-weight: bold;
+    margin: 10px 50px;
+    color: white;
+}
+
+
+
+.bb-profile{
+    min-width: 15%;
+    height: fit-content;
+    overflow: none;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
+    background-color: rgb(149, 39, 39);
+    padding:  15px;
+}
+
+/* Style the tab */
+.topnav{
+    border-bottom: 2px double rgb(124, 120, 120);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
+}
+.tab {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 7px;
+    width: fit-content;
+    
   }
   
   /* Style the buttons inside the tab */
-  .tab button {
+  .tab button{
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 18px 16px;
     transition: 0.3s;
-    font-size: 17px;
+    float: left;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 7px;
+    font-weight: bold;
     width: 150px;
-    border-right: 1px solid rgb(119, 119, 119);
   }
   
   /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
+  .tab button:hover{
+    background-color: #e7e7e7;
   }
   
   /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #e1e1e1;
+  .tab button.active{
+    background-color: #ccc;
   }
   
   /* Style the tab content */
   .tabcontent {
+    position: relative;
+    margin: auto;
     display: none;
-    padding: 6px 12px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
-    margin: 20px;
     min-height: 500px;
+    border-radius: 7px;
     height: fit-content;
+    padding-bottom: 10px;
   }
 
-  .active{
-    display: block;
+  .tab-main-container{
+    width: 100%;
   }
+
+  .tab-container{
+    margin: 10px 5px;
+    background-color: white;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+
+  
+  .topnav .icon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    margin: 10px;
+    padding: 10px;
+    color: #000;
+  }
+
+  .navi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+@media screen and (max-width: 800px) {
+.topnav a{display: none;}
+.topnav a.icon {
+  float: right;
+  display: block;
+}
+}
+
+
+@media screen and (max-width: 800px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+  position: absolute;
+  /* left: 70px;
+  top: -10px; */
+  margin: 1px 8px;
+}
+.topnav.responsive a
+{
+    width: 100%;
+}
+
+.topnav.responsive a, 
+.topnav.responsive button {
+  float: none;
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 15px 10px;
+}
+.tab{
+    padding-top: 10px;
+}
+
+
+}
+@media screen and (max-width: 430px) {
+.topnav.responsive a, .topnav.responsive button {
+  font-size: 12px;
+  margin: 1px;
+}
+
+}
 
 @media screen and (max-width :1350px) {
     .bank-detail-header{
         height: fit-content;
         width: 100%;
     }
+    
 }
 
-@media screen and (max-width: 850px) {
-
- 
+@media screen and (max-width: 1000px) {
 
     .bank-detail-profile h1{
         font-size: 20px;
@@ -429,8 +690,61 @@ table thead tr th a{
      .bank-detail-profile p{
         font-size: 10px;
      }
+     .title-contain h3{
+        font-size: 50px;
+     }
+    .title-contain h4{  
+        font-size: 20px;
+     }
+    .title-con {
+        display: flex;
+        flex-direction: column;
+     }
+    .profile-img1 { 
+        width: 300px;
+        height: 250px;
+     }
+    .tab button {
+        font-size: 15px;
+        padding: 12px 12px;
+     }
 
+}
+@media screen and (max-width: 567px) {
 
+    .title-contain h3{
+        font-size: 40px;
+    }
+    .title-contain h4{
+        font-size: 15px;
+    }
+    .title-contain h3, .title-contain h4{
+        position: relative;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    .title-contain h3{
+        font-size: 20px;
+    }
+    .title-contain h4{
+        font-size: 10px;
+    }
+    .profile-img1 {
+        width: 220px;
+        height: 170px;
+    }
+    .tab{
+        justify-content: center;
+        align-items: center;
+    }
+    .tab button {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px 8px;
+    }
 }
 
 @media screen and (max-width  : 500px){
@@ -522,11 +836,14 @@ overflow: none;
 
 .dashboard,
 .info .container {
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
         background-color: white;
     border-radius: 10px;
         padding:  15px;
+        
    
+}
+.info .container{
+    margin: 10px 0;
 }
 
 .profile-container {
@@ -583,8 +900,7 @@ overflow: none;
     padding: 10px;
     width: 100%;
     border-bottom: 1px solid rgb(68, 68, 68);
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 1rem;
     text-decoration: none;
     color: black;
 }
@@ -707,31 +1023,33 @@ overflow: none;
 
 
 /*---form---*/
-
+.info{
+    position: relative;
+    margin: auto;
+}
+.bb-form{
+    width: fit-content;
+}
 .info .container {
-    /* position: relative; */
-    /* max-width: 900px; */
-    width: 100%;
+    position: relative;
     border-radius: 6px;
-    /* padding: 30px; */
-    margin: 15px 0;
-   
- 
     background-color: rgb(255, 255, 255);
 }
 
 .info .container .heading {
     position: relative;
     font-size: 30px;
-    font-weight: 600;
-    margin: 10px;
+    font-weight: bold;
+    width: fit-content;
+    margin: auto;
     color: #333;
 }
 
 .info .container form {
     position: relative;
     /* min-height: 490px; */
-    margin-top: 16px;
+    margin:auto;
+    z-index: 3;
 }
 
 .info .container form .details {
@@ -740,10 +1058,10 @@ overflow: none;
 
 .info .container form .title {
     display: block;
-    margin-top: 30px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 6px 0;
+    margin: auto;
+    width: fit-content;
     color: #333;
 }
 
@@ -783,7 +1101,7 @@ form .fields .input_field {
 
 
 .input_field input:is(:focus, :valid) {
-    box-shadow: -4px -3px 45px 10px rgba(181, 181, 181, 0.35);
+    box-shadow: 0px 0px 3.5px 3.5px rgba(181, 181, 181, 0.35);
 }
 
 .input_field input[type="date"] {
@@ -799,28 +1117,34 @@ form .fields .input_field {
     text-decoration: none;
 }
 
-form .button {
+form .button,.button {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 43px;
     max-width: 200px;
-    width: 100%;
-    border: none;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 12px;
+    border: 1px solid rgb(172, 18, 18);;
     outline: none;
     background-color: rgb(172, 18, 18);
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     position: relative;
     top: 0;
     left: 0;
 
 }
-
+.form input[type="submit"]{
+    font-size: 18px;
+    width: 300px;
+    margin-top: 10px;
+}
 
 form .button:hover,
 .upload-img:hover {
@@ -863,7 +1187,7 @@ footer a {
          
 }
 /* for laptop and small  */
-@media screen and (max-width: 950px) { 
+@media screen and (max-width: 1050px) { 
 form .fields .input_field {
         display: flex;
         width: calc(100% / 1 - 15px);
@@ -871,16 +1195,23 @@ form .fields .input_field {
         margin: 10px 4px;
     }
 
-    .dashboard_container {
-        display: flex;
-        flex-direction: column;
+  
+    .side-list a,.info label, .info input{
+        font-size: 12px;
+        
     }
 
-    .dashboard,
-    .info {
-        width: 95%;
+    .dashboard h3{
+        font-size: 18px;
     }
-        .datatable-search .datatable-input{
+
+    .info .container .heading, .info .container h3{
+        font-size: 20px;
+    }
+    .info .container .userdetails{
+        font-size: 14px;
+    }
+    .datatable-search .datatable-input{
       font-size: 12px;
       padding: 5px;
 
@@ -906,12 +1237,23 @@ form .fields .input_field {
 }
 
 @media screen and (max-width: 567px) {
-    /* img {
-        width: 70%;
-        height: 70%;
-    } */
+    .dashboard_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-   
+    .dashboard{
+        position: relative;
+        margin: auto;
+        width: 95%;
+    }
+    .side-list{
+        text-align: center;
+    }
+    .info{
+        width: 95%;
+    }
 
 
 }
@@ -1015,102 +1357,43 @@ table.dataTable thead .sorting_desc_disabled:before {
         margin: 0 10px;
     }
 
-  /* event css */
-  img{
-    width: auto;
-    margin-right: 20px;
-    position: relative;
-    
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+     padding: 40px;/* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
   }
   
-  .event-container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-     display: flex;
-    flex-wrap: wrap;
-     flex-direction: row;
-}
-.events-container{
-    width: 600px;
-}
-.event-details {
-    flex: 2;
-    margin-top: 20px;
-    padding: 10px;
-}
-.event-button-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items:left;
-    padding: 20px;
-    border: 1px solid gray;
-    margin-left: 20px;
-    border-radius: 7px;
-    width: 400px;
-}
-.event-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #e74c3c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
-    text-align: top;
-}
-
-@media screen and (max-width: 768px) {
-
-    .event-container {
-        flex-direction: column-reverse;
-        align-items: center;
-        width: 900px;
-    }
-    .image-container {
-        margin-right: 0;
-        margin-bottom: 20px;
-        flex-direction: column-reverse;
-    }
-    .event-button-container {
-        margin-top: 0;
-        align-items: center;
-        text-align: center;
-        position: static;
-        margin: 10px;
-        
-    }
-    .event-button {
-        display: block;
-        order: -1;
-        width: 30%;
-        height: fit-content;
-        justify-content: center;
-        align-content: center;
-        font-size: 20px;
-        margin: 40px;
-        
-    }
-}
-@media screen and (max-width: 400px) {
-    .event-button {
-        display: block;
-        order: -1;
-        width: 40%;
-        height: fit-content;
-        justify-content: center;
-        align-content: center;
-        font-size: 20px;
-        padding: 20px;
-        margin: 10px;
-        
-    }
-    .event-button-container{
-        width:500px;
-        
-    }
-}
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

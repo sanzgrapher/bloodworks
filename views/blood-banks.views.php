@@ -1,7 +1,7 @@
 <?php require "header.php";
 // show($data);
 ?>
-<main class="container-xxl">
+<main class="container-xxl top-gap">
     <div class="table-section">
         <h2 class="table-sec-title fw-bold display-5">Available Bloodbanks</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti excepturi harum accusantium ducimus vero ipsa dolore sint praesentium veritatis hic sapiente, nemo vitae perferendis quis inventore numquam quo totam reiciendis?</p>
@@ -20,7 +20,7 @@
                         </th>
                         <!-- <th class="th-sm">View
                         </th> -->
-                        
+
 
                     </tr>
                 </thead>
@@ -30,7 +30,10 @@
                     } else {
                         foreach ($bloodbanklist as $bloodbank) { ?>
                             <tr>
-                                <td><?=  $bloodbank->bb_name; ?></td>
+
+
+                                <td><a href="<?= ROOT ?>/bloodbank/<?= $bloodbank->bb_id; ?>"><?= $bloodbank->bb_name; ?></a></td>
+
                                 <td><?= $bloodbank->bb_email; ?></td>
                                 <td><?= $bloodbank->bb_address; ?></td>
                                 <td><?= $bloodbank->bb_phoneno; ?></td>

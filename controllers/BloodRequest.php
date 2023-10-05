@@ -60,7 +60,7 @@ class BloodRequest
             "req_description" => $description,
         ];
         $addBloodBank->insert($data);
-        redirect(HOSTNAME . "");
+        redirect(HOSTNAME . "dash/requests");
     }
 
     
