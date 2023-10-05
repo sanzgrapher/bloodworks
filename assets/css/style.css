@@ -36,7 +36,7 @@ background: none;
     background-color: #F8F9FA;
     height: 80px;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
 }
 
 label.logo{
@@ -1053,7 +1053,7 @@ overflow: none;
     position: relative;
     /* min-height: 490px; */
     margin:auto;
-    z-index: 100;
+    z-index: 3;
 }
 
 .info .container form .details {
@@ -1366,7 +1366,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 200; /* Sit on top */
+    z-index: 10; /* Sit on top */
      padding: 40px;/* Location of the box */
     left: 0;
     top: 0;

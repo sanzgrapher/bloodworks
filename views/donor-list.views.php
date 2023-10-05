@@ -24,7 +24,7 @@ $sn = 0;
                         <th>Name</th>
                         <th>Bloodgroup</th>
                         <th>Address</th>
-                        <!-- <th>Contact Number</th> -->
+                        <th>Contact Number</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -42,14 +42,14 @@ $sn = 0;
                             <td><?= $donor->fname . " " . $donor->mname . " " . $donor->lname; ?></td>
                             <td><?= $donor->bloodgroup; ?></td>
                             <td><?= $donor->address; ?></td>
-                            <!-- <td><?= isset($donor->phone_no) ? $donor->phone_no : 'N/A'; ?></td> -->
+                            <td><?= isset($donor->phone_no) ? $donor->phone_no : 'N/A'; ?></td>
 
 
                             <td>
                                 <!-- <form action="donorlist" method="POST"> -->
                                 <!-- <input class="submit button" type="submit" name="sendmail" value="Send For Approval"> -->
                                 <!-- <input value="sendemail" type="submit" class="btn btn-primary"> -->
-                                <button id="myBtn" class="btn btn-danger">Open Modal</button>
+                                <button type="button" id="myBtn" class="btn btn-danger modal-btn edit-btn">Contact</button>
                                 <!-- </form> -->
                             </td>
                         </tr>
@@ -63,9 +63,6 @@ $sn = 0;
             </table>
         </div>
     </div>
-
-
-
 </main>
 
 
@@ -88,26 +85,39 @@ $sn = 0;
                     <div class="form first">
                         <div class="details personal">
                             <span class="title">Donor's Information</span>
-                            <input type="hidden" name="id" value="<?= $user; ?>">
+                            <input type="hidden" name="id" id="ct_id" value="<?= $user; ?>">
                             <div class="fields">
                                 <div class="input_field">
-                                    <label>Donor's First Name</label>
-                                    <input type="text" name="fname" placeholder="Enter your First name" required>
+                                    <label>Donor's Name</label>
+                                    <input type="text" id="fullname" name="name" placeholder="Donor's Full Name"required>
                                 </div>
 
                                 <div class="input_field">
-                                    <label>Donor's Last Name</label>
-                                    <input type="text" name="lname" placeholder="Enter your Last name" required>
-                                </div>
-                                <div class="input_field">
-                                    <label>Contact Number</label>
-                                    <input type="text" maxlength="10" name="phone_no" placeholder="Enter your mobile number" required>
+                                    <label>Blood Group</label>
+                                    <input type="text" id="bloodgroup" name="bloodgroup" placeholder="Blood Group" required>
+                                
+                                    <!-- <select name="bloodgroup">
+                                        <option value="">Select Your Blood Group</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select> -->
                                 </div>
                                 <div class="input_field">
                                     <label>Address</label>
-                                    <input type="text" name="address" placeholder=" City-ward no,tole eg,(Pokhara-17,Chhorepatan)" required>
+                                    <input type="text" id="address" name="address" placeholder=" City-ward no,tole eg,(Pokhara-17,Chhorepatan)" required>
                                 </div>
 
+                                <div class="input_field">
+                                    <label>Contact Number</label>
+                                    <input type="text" maxlength="10" id="contact" name="phone_no" placeholder="Donor's contact number" required>
+                                </div>
+                                
                                 <!-- <div class="input_field">
                            <label>Gender</label>
                            <select name="gender">
@@ -118,20 +128,7 @@ $sn = 0;
                            </select>
                        </div> -->
 
-                                <div class="input_field">
-                                    <label>Blood Group</label>
-                                    <select name="bloodgroup">
-                                        <option value="">Select Your Blood Group</option>
-                                        <option value="A+">A+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="AB-">AB-</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                    </select>
-                                </div>
+                               
 
                                 <div class="input_field">
                                     <label>Urgency</label>
@@ -165,10 +162,6 @@ $sn = 0;
     </div>
 
 </div>
-
-
-
-
 
 
 
