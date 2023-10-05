@@ -638,6 +638,7 @@ overflow: none;
     margin-bottom: 5px;
     margin-right: 10px;
     min-width: 20px;
+    font-weight: bold;
 }
 
 .formpage .input-container {
@@ -698,6 +699,7 @@ overflow: none;
         width: 90%;
         padding: 10px;
     }
+   
 }
 
 
@@ -827,6 +829,7 @@ form .button:hover,
     border: 1px solid rgb(172, 18, 18);
     padding: -1px;
 }
+
 
 /* form  */
 
@@ -1011,3 +1014,103 @@ table.dataTable thead .sorting_desc_disabled:before {
         font-weight: bold;
         margin: 0 10px;
     }
+
+  /* event css */
+  img{
+    width: auto;
+    margin-right: 20px;
+    position: relative;
+    
+  }
+  
+  .event-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     display: flex;
+    flex-wrap: wrap;
+     flex-direction: row;
+}
+.events-container{
+    width: 600px;
+}
+.event-details {
+    flex: 2;
+    margin-top: 20px;
+    padding: 10px;
+}
+.event-button-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+    padding: 20px;
+    border: 1px solid gray;
+    margin-left: 20px;
+    border-radius: 7px;
+    width: 400px;
+}
+.event-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: top;
+}
+
+@media screen and (max-width: 768px) {
+
+    .event-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 900px;
+    }
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+        flex-direction: column-reverse;
+    }
+    .event-button-container {
+        margin-top: 0;
+        align-items: center;
+        text-align: center;
+        position: static;
+        margin: 10px;
+        
+    }
+    .event-button {
+        display: block;
+        order: -1;
+        width: 30%;
+        height: fit-content;
+        justify-content: center;
+        align-content: center;
+        font-size: 20px;
+        margin: 40px;
+        
+    }
+}
+@media screen and (max-width: 400px) {
+    .event-button {
+        display: block;
+        order: -1;
+        width: 40%;
+        height: fit-content;
+        justify-content: center;
+        align-content: center;
+        font-size: 20px;
+        padding: 20px;
+        margin: 10px;
+        
+    }
+    .event-button-container{
+        width:500px;
+        
+    }
+}

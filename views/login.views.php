@@ -7,6 +7,7 @@
 </head>
 
 <body>
+           
     <div class="formpage">
         <h1>Login</h1>
         <form name="form" action="login" method="POST">
@@ -26,7 +27,7 @@
 
 
         </form>
-    </div>
+</div>        
 </body>
 
 </html>
