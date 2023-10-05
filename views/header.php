@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
 
@@ -32,10 +32,13 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">BLOODWORKS</label>
+        <div class="brand d-inline-block">
+            <a href="<?= HOSTNAME ?>"> <label class="logo">BLOODWORKS</label></a>
+
+        </div>
         <ul>
             <li>
-                <a href="<?= HOSTNAME ?>" >HOME</a>
+                <a href="<?= HOSTNAME ?>">HOME</a>
             </li>
             <li>
                 <a href="<?= HOSTNAME ?>donorlist">DONATE</a>
@@ -47,10 +50,11 @@
                 <a href="<?= HOSTNAME ?>events">EVENTS</a>
             </li>
             <li class="nav-item">
-                <?php $checkIflLoggedIn = checkIflLoggedIn(); if($checkIflLoggedIn == false) {?>
-                <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
-                <?php }else{ ?>
-                <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
+                <?php $checkIflLoggedIn = checkIflLoggedIn();
+                if ($checkIflLoggedIn == false) { ?>
+                    <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
+                <?php } else { ?>
+                    <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
                 <?php } ?>
             </li>
         </ul>
@@ -76,9 +80,10 @@
             </ul>
             <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
                 <li class="nav-item">
-                    <?php $checkIflLoggedIn = checkIflLoggedIn(); if($checkIflLoggedIn == false) {?>
+                    <?php $checkIflLoggedIn = checkIflLoggedIn();
+                    if ($checkIflLoggedIn == false) { ?>
                     <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
-                    <?php }else{ ?>
+                    <?php } else { ?>
                     <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
                     <?php } ?>
                 </li>
@@ -126,9 +131,10 @@
 
                 <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
                     <li class="nav-item">
-                        <?php $checkIflLoggedIn = checkIflLoggedIn(); if($checkIflLoggedIn == false) {?>
+                        <?php $checkIflLoggedIn = checkIflLoggedIn();
+                        if ($checkIflLoggedIn == false) { ?>
                         <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
-                    <?php }else{ ?>
+                    <?php } else { ?>
                     <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
                     <?php } ?>
 
@@ -139,8 +145,5 @@
             </div>
             </div>
                 </div> -->
-        <!-- </div>
+    <!-- </div>
     </nav> -->
- 
-
-   
