@@ -59,21 +59,23 @@ modalBtn.forEach(function(e) {
     }
   }
 
-//Fetch data of the donir row to modal popup
-$(document).ready(function(){
-  $('.edit-btn').on('click', function(){
-
-      $tr = $(this).closest('tr');
-
-      var data =$tr.children("td").map(function() {
-          return $(this).text();
-      }).get();
-
-      console.log(data);
-
-      $('#fullname').val(data[0]); 
-      $('#bloodgroup').val(data[1]);
-      $('#address').val(data[2]);
-      $('#contact').val(data[3]);
+const buttons = document.querySelectorAll('#myBtn');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const dataId = button.getAttribute('data-id');
+    document.querySelector('#donorid').value = dataId;
+    
   });
 });
+      
+        const emailCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith('email='));
+        if (emailCookie !== undefined) {
+          const emailValue = decodeURIComponent(emailCookie.split('=')[1]);
+          const toast = document.getElementById('liveToast');
+          const toastBody = toast.querySelector('.toast-body');
+          toastBody.textContent = emailValue;
+          const toastInstance = new bootstrap.Toast(toast);
+          toastInstance.show();
+          document.cookie = 'email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        }
+    
