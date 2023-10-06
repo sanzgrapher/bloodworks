@@ -1,8 +1,8 @@
 <?php
 // class name should match the file name so we find the class file name
+require_once "User.php";
 
-
-class Event
+class Event extends User
 {
     use Controller;
 
@@ -11,10 +11,19 @@ class Event
         $event_id=$a;
 
         $uid = getLoggedinUser('userid');
+
         $eventDetails = $this->eventDetails($event_id);
         $checkin = $this->isCheckIn($event_id, $uid);
 
+        $userDetails = $this->getUserData(); // fom user class
+        // print avaiability
+       $u_d=$userDetails[0];
+
+      
+    //    show($u_d);
+
         $data = [
+            "userAvaiability" => $u_d->donor_availability ?? "",
             "isCheckIn" => $checkin,
             "eventData" => $eventDetails,
 
