@@ -61,10 +61,9 @@ function smtp_mailer($to, $subject, $msg)
         'allow_self_signed' => false
     ));
     if (!$mail->Send()) {
-
-        die("Error");
+        return False; 
     } else {
-        return 'Sent';
+        return True;
     }
 }
 
