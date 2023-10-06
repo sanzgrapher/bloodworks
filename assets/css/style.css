@@ -816,11 +816,11 @@ table thead tr th a{
 
 }
 .dashboard_container {
-    /* position: relative; */
+    position: relative;
     display: flex;
     flex-direction: row;
-    /* top: 80px;
-    left: 0; */
+    top: 40px;
+    left: 0;
     max-width: 1140px;
     margin: 40px auto;
 }
@@ -1048,7 +1048,7 @@ overflow: none;
     font-weight: bold;
     width: fit-content;
     margin: auto;
-    color: #333;
+    color: rgb(193, 41, 41);
 }
 
 .info .container form {
@@ -1084,6 +1084,16 @@ form .fields .input_field {
     width: calc(100% / 2 - 15px);
     flex-direction: column;
     margin: 10px 4px;
+}
+
+form .log-reg-field{
+    gap: 15px;
+}
+form .log-reg-field .input_field{
+    position: relative;
+    margin: auto;
+    width: calc(100% / 1 - 145px);
+   
 }
 
 .input_field label {
@@ -1122,7 +1132,14 @@ form .fields .input_field {
 .info .container form button select {
     text-decoration: none;
 }
+.form-container{
+    margin-top: 60px;
+}
 
+.reg{
+    background-color: #2196F3;
+    max-width: 800px;
+}
 form .button,.button {
     display: flex;
     align-items: center;
@@ -1144,6 +1161,7 @@ form .button,.button {
     position: relative;
     top: 0;
     left: 0;
+    transition: all .3s;
 
 }
 .form input[type="submit"]{
@@ -1160,6 +1178,23 @@ form .button:hover,
     padding: -1px;
 }
 
+.button-manage{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.button-manage button{
+    background-color: inherit;
+    border: none;
+    text-decoration: none;
+    color: #2196F3;
+    font-size: 15px;
+}
+
+.button-manage button:hover{
+    text-decoration: underline;
+}
 
 /* form  */
 
@@ -1200,6 +1235,10 @@ form .fields .input_field {
         flex-direction: column;
         margin: 10px 4px;
     }
+    .info .container .heading {
+        font-size: 30px;
+    }
+
 
   
     .side-list a,.info label, .info input{
@@ -1211,7 +1250,7 @@ form .fields .input_field {
         font-size: 18px;
     }
 
-    .info .container .heading, .info .container h3{
+     .info .container h3{
         font-size: 20px;
     }
     .info .container .userdetails{
@@ -1239,7 +1278,9 @@ form .fields .input_field {
         padding: 2em;
         text-align: center;
     }
-        
+    .info .container .heading {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 567px) {
@@ -1261,7 +1302,16 @@ form .fields .input_field {
         width: 95%;
     }
 
-
+    form .log-reg-field{
+        display: flex;
+        flex-direction: column;
+    }
+    form .log-reg-field .input_field{
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 1 - 15px);
+       
+    }
 }
 
 
@@ -1353,6 +1403,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     .slider.round:before {
       border-radius: 50%;
     }
+
   
     .switch-donor a{
         align-items: center;
@@ -1360,7 +1411,10 @@ table.dataTable thead .sorting_desc_disabled:before {
         top: 4px;
         font-size: 20px;
         font-weight: bold;
+        margin-bottom: 10px;
         margin: 0 10px;
+        
+        
     }
 
 
@@ -1369,7 +1423,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 10; /* Sit on top */
+    z-index: 20; /* Sit on top */
      padding: 40px;/* Location of the box */
     left: 0;
     top: 0;
@@ -1402,4 +1456,96 @@ table.dataTable thead .sorting_desc_disabled:before {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+/*----------Event Page-----------*/
+  .main-event-container{
+    margin-top: 100px;
+   
+  }
+  .main-sub-event-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .event-title-container{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    border-bottom: 2px solid gray;
+  }
+
+.event-information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid gray;
+  }
+
+
+  .event-info-container{
+    width: 70%;
+  }
+
+  .event-info-container h2,.en-info p{
+    text-align: center;
+  }
+  .event-info-container img{
+    width: 80%;
+  }
+  .event-detail-container{
+    width: 25%;
+    float: right;
+    margin-top: 10px;
+  }
+
+  .event-detail-container h3{
+    font-size: 20px;
+  }
+  .event-detail-container p{
+    font-size: 15px;
+    margin: 5px;
+  }
+
+  .en-info{
+    border-bottom: 2px solid gray;
+    margin: 15px 5px 40px 5px;
+  }
+
+
+  .event-info{
+    border-radius: 5px;
+  }
+  en-info-btn,.event-info{
+    margin: 20px 5px;
+  }
+
+  .en-info-btn{
+    position: relative;
+    margin: auto;
+    width: fit-content;
+  }
+
+  @media screen and (max-width:1080px) {
+    .main-sub-event-container{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: all 5s;
+      }
+      .event-information{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .event-detail-container,
+      .event-info-container{
+        position: relative;
+        margin: auto;
+      }
+
+      .event-detail-container{
+        width: 45%;
+      }
   }
