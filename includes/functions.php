@@ -3,10 +3,12 @@ include('smtp/PHPMailerAutoload.php');
 // $hostname = "http://localhost/bloodworks/";
 function show($stuff)
 {
-    // printing anything sent as parameter
+  
+    echo "<hr>";
     echo "<pre>";
     print_r($stuff);
     echo "</pre>";
+    echo "<hr>";
 }
 function redirect($data){
     header("Location: $data");
