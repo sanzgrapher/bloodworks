@@ -30,18 +30,18 @@ $sn = 0;
 
     <div class="table-section">
         <h1 class="table-sec-title fw-bold display-5">Available donors</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti excepturi harum accusantium ducimus vero ipsa dolore sint praesentium veritatis hic sapiente, nemo vitae perferendis quis inventore numquam quo totam reiciendis?</p>
+        <p>Find the donors avaiable near to you .You also can contact to the donor to perform PtoP donation .</p>
         <div style="overflow-x:auto;">
 
 
             <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing=" 0" width="100%">
                 <thead>
                     <tr>
-
+                        <th>S.N</th>
                         <th>Name</th>
                         <th>Bloodgroup</th>
                         <th>Address</th>
-                        <th>Contact Number</th>
+                       
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -50,17 +50,18 @@ $sn = 0;
 
 
 
-                <?php if (empty($donors)) {
+                <?php 
+                $SN=1;
+                if (empty($donors)) {
                     echo "No donor available";
                 } else {
                     foreach ($donors as $donor) { ?>
                         <tr>
-
+                            <td><?= ++$sn ?></td>
                             <td><?= $donor->fname . " " . $donor->mname . " " . $donor->lname; ?></td>
                             <td><?= $donor->bloodgroup; ?></td>
                             <td><?= $donor->address; ?></td>
-                            <td><?= isset($donor->phone_no) ? $donor->phone_no : 'N/A'; ?></td>
-
+                           
 
                             <td>
                                 <button data-id="<?= $donor->id; ?>" type="button" id="myBtn" class="btn btn-danger modal-btn edit-btn">Contact</button>
