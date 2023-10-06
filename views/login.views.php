@@ -9,12 +9,13 @@
 <body>
     
 
-<div class="info bb-form">
-    <div class="form-container">
+<div class="inf inform">
     <div class="container">
+        <h1>BLOODWORKS</h1>
             <div class="heading">
-                Log In
+                Login to Your Account
             </div>
+            <p>Enter your username & password to login</p>
            
             <form name="form" action="login" method="POST">
                 <div class="form first">
@@ -31,16 +32,15 @@
                             </div>
     
                             <div class="button-manage">
-                                <button type="button" onclick="location.href='register'">Create New Account</button>
-
                                 <input class="submit button" type="submit" name="login" value="LOG IN">
+                                <p>Don't have account?  <button type="button" onclick="location.href='register'">  Create an account</button></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-    </div>
+   
     </div>
 
 

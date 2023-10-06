@@ -11,27 +11,23 @@
          <?php include_once 'asidemenu.php'; ?>
 
 
-         <div class="info ">
-             <div class="container">
-                 <div class="heading">
-                     Blood Bank Home admin
-                 </div>
-                 <!-- Total users : <?= $totalusers ?><br>
-                 Total blood banks : <?= $totalbloodbanks ?> -->
-
-             </div>
-             <div class="container">
-                 <div class="heading">
-                     Statistics
-                 </div>
+         <div class="in ">
+             <div class="">
                  <div class="bank-card-list">
                      <div class="bank-card">
-                         <a>Users</a>
-                         <p><?= $totalusers ?></p>
+                        <i class="fa-solid fa-users-line"></i>
+                         <div class="card-data">
+                            <a href="#">Users</a>
+                            <p><?= $totalusers ?></p>
+                         </div>
+                         
                      </div>
                      <div class="bank-card">
+                        <i class="fa-solid fa-house-medical"></i>
+                         <div class="card-data">
                          <a href="#">Blood Banks</a>
                          <p><?= $totalbloodbanks ?></p>
+                         </div>
                      </div>
                  </div>
              </div>

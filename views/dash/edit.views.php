@@ -23,7 +23,7 @@
              <?php foreach ($loggedinuser as $user) { ?>
                  <div class="container">
                      <div class="switch-donor">
-                         <a>Become Donors</a>
+                         <a>Become A Donor</a>
                          <!-- 
                      <form action="edit" id="availabilityForm" method="POST">
                          <label class="switch">

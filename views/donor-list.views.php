@@ -88,7 +88,7 @@ $sn = 0;
 
     <!-- Modal content -->
     <div class="modal-content">
-        <div class="info bb-form">
+        <div class="inf bb-form">
             <div class="container">
                 <span class="close">&times;</span>
                 <div class="heading">
