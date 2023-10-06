@@ -51,7 +51,32 @@ class Dash
             "transaction_status" => "completed"
         ];
         $completeTransaction->update($id, $data, 'req_id');
-      
+
+
+        // find the request type is public or private if private update the user deatis using attribute donor id
+        $completeTransaction->order_column = "req_id";
+
+        $w_data = [
+
+            "req_id" => $id,
+
+        ];
+        $det = $completeTransaction->where($w_data);
+        $det = $det[0];
+        if ($det->transaction_type == "private") {
+
+
+            $updateUser = new Model;
+            $updateUser->table = "user";
+            $data = [
+                "last_donation_date" => $det->required_date,
+                "donor_availability" => "Unavailable"
+            ];
+            $updateUser->update($det->donor_id, $data, 'id');
+        }
+
+
+
         redirect(HOSTNAME . "dash/requests");
     }
     private function requestlist()
