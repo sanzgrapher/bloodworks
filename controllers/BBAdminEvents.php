@@ -1,6 +1,8 @@
 <?php
 
-class BBAdmin
+include_once "Bloodbank.php";
+
+class BBAdmin extends BloodBank
 {
     use Controller;
 
@@ -9,7 +11,9 @@ class BBAdmin
 
 
         $loggedindata = $this->getUserData();
-        $eventlist = $this->eventDetail();
+        $bb_id = getLoggedinUser('bb_id'); // functions file sends the session id
+
+        $eventlist = $this->eventDetail($bb_id);
         $data = [
             "events" => $eventlist,
             "loggedinuser" => $loggedindata,
@@ -52,21 +56,7 @@ class BBAdmin
     }
 
 
-    private function eventDetail()
-    {
-        $eventlist = new Model;
-        $eventlist->table = "event";
-        $eventlist->order_column = "event_id";
-        $getsessionid = getLoggedinUser('bb_id'); // functions file sends the session id
-
-        $data = [
-            "bb_id" => $getsessionid
-        ];
-
-        $eventlist = $eventlist->where($data);
-        return $eventlist;
-
-    }
+    
 
     public function addEvent()
     {
@@ -90,4 +80,5 @@ class BBAdmin
         redirect(HOSTNAME."bbadmin");
 
     }
+    
 }
