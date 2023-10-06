@@ -32,24 +32,77 @@
                          </label>
                      </form> -->
 
-
-                         <form id="availabilityForm" method="POST" action="edit">
-
-
+                         <?php
+                            //  show($loggedinuser);
 
 
-                             <label class="switch">
-                                 <input onchange="toggleValue()" type="checkbox" id="availability" name="availability" <?= ($user->donor_availability == "Available" ? "checked" : ""); ?>>
-                                 <span class="slider round"></span>
+                            // Replace $dateString with the actual last donation date in your code format.
+                            $dateString = $user->last_donation_date;
+                            //    $dateString = "2023-6-09"; // donation date
+                            // //    $dateString = "2023-7-01"; // 3months
+                            // // $dateString = "2023-10-01"; // past
+                            // // $dateString = "2023-10-05"; // yesterday
+                            // // $dateString = "2023-10-06"; //today
+                            // // $dateString = "2023-10-07"; // tommorroe
 
-                             </label>
-                             <input class="btn btn-primary" type="submit" name="toogle" value="Submit">
+
+                            $lastDonationDate = $dateString;
+                            $donationPeriod = 90;
+                            $endDate = date('Y-m-d', strtotime($lastDonationDate . " + $donationPeriod days"));
+                            // sho in date like fridat oct 21 2023
+                            $endDate = date('l M d Y', strtotime($lastDonationDate . " + $donationPeriod days"));
+                            $currentDate = date('Y-m-d');
+
+                            // Calculate the difference between the current date and the end date
+                            $diff = strtotime($endDate) - strtotime($currentDate);
+
+                            // Calculate the number of days remaining
+                            $daysRemaining = floor($diff / (60 * 60 * 24));
+                            if ($daysRemaining > 0) {
+                                $res = false;
+
+                                $daysLeft = $daysRemaining;
+                            } else {
+                                $res = true;
+                                $output = "available";
+                                $daysLeft = 0;
+                            }
 
 
 
 
-                         </form>
-                         
+
+                            if ($res) { ?>
+                             <form id="availabilityForm" method="POST" action="edit">
+
+
+
+
+                                 <label class="switch">
+                                     <input onchange="toggleValue()" type="checkbox" id="availability" name="availability" <?= ($user->donor_availability == "Available" ? "checked" : ""); ?>>
+                                     <span class="slider round"></span>
+
+                                 </label>
+                                 <input class="btn btn-primary" type="submit" name="toogle" value="Submit">
+
+
+
+
+                             </form>
+                         <?php } else {
+
+
+
+                            ?>
+                             <br>
+                             <br>
+                             <div class="alert alert-danger" role="alert">
+                                 You are not available for donation until <?= "<strong> " . $endDate . " => " . $daysLeft . " Days Left </strong>" ?> <br>
+                             </div>
+
+                         <?php
+                            } ?>
+
 
 
 
