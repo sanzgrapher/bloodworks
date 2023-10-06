@@ -103,6 +103,7 @@ $sn = 0;
                         <div class="form first">
                             <div class="details personal">
                                 <span class="title">Fill the details of the form to request for blood</span>
+                                <p class="text-center text-warning">1 unit (up to 500ml) can be donated in P TO P Donation</p>
                                 <input type="hidden" name="id" id="donorid">
                                 <div class="fields">
                                     <div class="input_field">
@@ -123,15 +124,6 @@ $sn = 0;
                                         <input type="text" name="address" placeholder=" City-ward no,tole eg,(Pokhara-17,Chhorepatan)" required>
                                     </div>
 
-                                    <!-- <div class="input_field">
-                                        <label>Gender</label>
-                                        <select name="gender">
-                                            <option value="">Select Gender</option>
-                                            <option value="female">Female</option>
-                                            <option value="male">Male</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div> -->
 
                                     <div class="input_field">
                                         <label>Patient's Blood Group</label>
