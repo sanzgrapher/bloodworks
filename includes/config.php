@@ -6,7 +6,7 @@
 //     return $hostname;
 // }
 // yor ip address 
-$ip= "192.168."; // place yout pc ip address here
+$ip= "192.168.1.68"; // place yout pc ip address here
 
 
 
@@ -31,15 +31,8 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define('DBHOST', 'localhost');
     define('DBUSER', 'root');
     define('DBPASS', '');
-    define('ROOT', 'http://$ip/bloodworks/');
-
-    // // CHANGE ACCORDNGLY ON THE SERVER
-    // define('DBNAME', 'mvc_tut');
-    // define('DBHOST', 'localhost');
-    // define('DBUSER', 'root');
-    // define('DBPASS', '');
-
-    // define('ROOT', 'http://mvc.local/public');
+    define('ROOT', "http://$ip/bloodworks/");
+   
 }
 
 else {
