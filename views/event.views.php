@@ -38,24 +38,41 @@
                 </div>
                 <div class="en-info-btn">
                        <?php
-                        if ($isCheckIn != "1") { ?>
-                            <form method="POST" action="<?= $eventData->event_id ?>">
+        if (isset($_SESSION['u-type'])) {
+            if ($userAvaiability == "Available") {
+                                if ($isCheckIn != "1") { ?>
+                                    <form method="POST" action="<?= $eventData->event_id ?>">
 
 
 
 
-                                <label class="switch">
-                                    <input onchange="toggleValue()" type="checkbox" name="eventCheckIn" <?php // ($isCheckIn == "true" ? "checked" : ""); 
-                                                                                                        ?>>
-                                    <span class="slider round"></span>
+                                        <label class="switch">
+                                            <input onchange="toggleValue()" type="checkbox" name="eventCheckIn" <?php // ($isCheckIn == "true" ? "checked" : ""); 
+                                                                                                                ?>>
+                                            <span class="slider round"></span>
 
-                                </label>
-                                <input class="btn btn-primary" type="submit" name="eventCheckIn-btn" value="Take Part">
-                            </form>
-                        <?php } else {
-                            echo "You have already checked in {print here button}";
-                        } ?>
-                        <?php
+                        </label>
+
+                        <input class="btn btn-primary" type="submit" name="eventCheckIn-btn" value="Submit">
+
+                    </form>
+        <?php } else {
+                    echo "You have already checked in {print here button}";
+                }
+            } else {
+                echo "You are not available to donate blood";
+            }
+        } else {
+            echo "Please login to check in";
+        }
+
+
+
+
+        ?>
+
+
+    <?php
 
                         }
                         ?>                          
