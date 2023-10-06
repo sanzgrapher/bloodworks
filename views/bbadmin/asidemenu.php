@@ -12,12 +12,11 @@
             <a href="<?= HOSTNAME ?>bbadmin">
                 <i class="fa-solid fa-chart-simple active"></i>Dashboard</a>
             <a href="<?= HOSTNAME ?>bbadmin/bloodstock">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>Blood Stocks</a>
+                <i class="fa-solid fa-cubes-stacked"></i>Blood Stocks</a>
             <a href="<?= HOSTNAME ?>bbadmin/edit">
-                <i class="fa-regular fa-user"></i>BB Settings</a>
+                <i class="fa-solid fa-gear"></i>BB Settings</a>
             <a href="<?= HOSTNAME ?>bbadmin/events">
-                <i class="fa-regular fa-user"></i>BB Events</a>
-
+                <i class="fa-solid fa-calendar-check"></i>BB Events</a>
             <a href="<?= HOSTNAME ?>logout">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
         </div>
