@@ -7,6 +7,7 @@
 </head>
 
 <body>
+
     <div class="formpage">
         <h1>BB Login</h1>
         <form name="form" action="login" method="POST">
@@ -27,6 +28,7 @@
 
         </form>
     </div>
+
 </body>
 
 </html>

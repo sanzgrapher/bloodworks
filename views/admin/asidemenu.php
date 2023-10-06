@@ -9,7 +9,7 @@
         <a href="<?= HOSTNAME ?>admin">
             <i class="fa-solid fa-chart-simple "></i>Dashboard</a>
         <a href="<?= HOSTNAME ?>admin/bbrequests">
-            <i class="fa-regular fa-list"></i>Blood Bank Request</a>
+            <i class="fa-solid fa-house-medical"></i>Blood Bank Request</a>
         <a href="<?= HOSTNAME ?>logout">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
 
