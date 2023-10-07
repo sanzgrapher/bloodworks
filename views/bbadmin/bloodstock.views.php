@@ -13,52 +13,55 @@ include_once 'views/header.php';
                     Blood Bank's Blood Stocks
                 </div>
 
-                <div class="table-section">
+                <div class="table-section" style="margin: 0 auto;">
                     <div style="overflow-x:auto;">
                         <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    
-                                    <th class="th-sm">A +
-                                    </th>
-                                    <th class="th-sm">A -
-                                    </th>
-                                    <th class="th-sm">B +
-                                    </th>
-                                    <th class="th-sm">B -
-                                    </th>
-                                    <th class="th-sm">AB +
-                                    </th>
-                                    <th class="th-sm">AB -
-                                    </th>
-                                    <th class="th-sm">0 +
-                                    </th>
-                                    <th class="th-sm">0 -
-                                    </th>
+                                    <th>Blood Type</th>
+                                    <th>Blood Unit Avaiable</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                
-                                 
+                                <tr>
+                                    <td>A+</td>
                                     <td><?= $bloodstock->a_pos; ?></td>
-                                    <td><?= $bloodstock->a_neg; ?></td>
-                                    <td><?= $bloodstock->b_pos; ?></td>
-                                    <td><?= $bloodstock->b_neg; ?></td>
-                                    <td><?= $bloodstock->ab_pos; ?></td>
-                                    <td><?= $bloodstock->ab_neg; ?></td>
-                                    <td><?= $bloodstock->o_pos; ?></td>
-                                    <td><?= $bloodstock->o_neg; ?></td>
-                                   
-
-                                  
                                 </tr>
-                                <?php
-                                //     }
-                                // }
-                                ?>
-
+                                <tr>
+                                    <td>A-</td>
+                                    <td><?= $bloodstock->a_neg; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>B+</td>
+                                    <td><?= $bloodstock->b_pos; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>B-</td>
+                                    <td><?= $bloodstock->b_neg; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>AB+</td>
+                                    <td><?= $bloodstock->ab_pos; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>AB-</td>
+                                    <td><?= $bloodstock->ab_neg; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>O+</td>
+                                    <td><?= $bloodstock->o_pos; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>O-</td>
+                                    <td><?= $bloodstock->o_neg; ?></td>
+                                </tr>
                             </tbody>
+
+
+
+
+
                         </table>
                     </div>
                 </div>

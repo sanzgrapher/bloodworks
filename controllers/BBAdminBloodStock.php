@@ -1,6 +1,6 @@
 <?php
-
-class  BBAdmin
+include_once "Bloodbank.php";
+class  BBAdmin extends BloodBank
 {
     use Controller;
 
@@ -9,7 +9,8 @@ class  BBAdmin
 
 
         $loggedindata = $this->getUserData();
-        $bloodstock = $this->getBloodStockDetails();
+        $bb_id = getLoggedinUser('bb_id'); 
+        $bloodstock = $this->getBloodStockDetails($bb_id); //
 
 
         if(isset($_POST['updatebloodstock'])){
@@ -45,23 +46,10 @@ class  BBAdmin
         return $getuserdata;
     }
 
-    public function getBloodStockDetails(){
-        $getBStock = new Model;
-        $getBStock->table = "bloodstock";
-        // $getBStock->order_column = "bb_id";
-        $getsessionid = getLoggedinUser('bb_id');
-        if (!$getsessionid) {
-            // redirect(HOSTNAME . "bbadmin/login");
-            // die();
-        }
+    
 
-        $data = [
-            "bb_id" => "$getsessionid"
-        ];
-        
-        $getBStock = $getBStock->first($data);
-        return $getBStock;
-    }
+
+
     public function updateBloodStock(){
       // update blood group blood stock
         $updateBloodStock = new Model;
