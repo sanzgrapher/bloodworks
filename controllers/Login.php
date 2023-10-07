@@ -11,11 +11,9 @@ class Login
         if (isset($_POST['login'])) {
             $this->validateLogin();
         }
-       if(isset($_SESSION['loggedin']) ){
-          redirect(HOSTNAME.$_SESSION['u-type']);
-       }
-       
-
+        if (isset($_SESSION['loggedin'])) {
+            redirect(HOSTNAME . $_SESSION['u-type']);
+        }
     }
 
     public function validateLogin()
@@ -32,36 +30,33 @@ class Login
         ];
 
         $user_return = $user->where($data);
-         if (empty($user_return)) {
-        
-        die("user not found");
-    }
+        if (empty($user_return)) {
+
+            die("user not found");
+        }
 
 
         $userdata = $user_return[0];
 
-    
-       
 
-        
-       
+
+
+
+
         if (count($user_return) == 1) {
 
-           
+
             // if (password_verify($password, $user->password)) {
             if ($password == $userdata->password) {
-                
+
                 $_SESSION['userid'] = $userdata->id;
                 $_SESSION['loggedin'] = true;
                 $_SESSION['u-type'] = 'dash';
-               
-                redirect(HOSTNAME."dash");  
-               
-        
-            }else{
+
+                redirect(HOSTNAME . "dash");
+            } else {
                 echo "password not match";
             }
-
         } else {
             echo "user not found";
         }
