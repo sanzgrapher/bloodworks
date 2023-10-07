@@ -44,29 +44,37 @@
                             // // $dateString = "2023-10-05"; // yesterday
                             // // $dateString = "2023-10-06"; //today
                             // // $dateString = "2023-10-07"; // tommorroe
+                            if($dateString != null){
+                                $lastDonationDate = $dateString;
+                                $donationPeriod = 90;
+                                $endDate = date('Y-m-d', strtotime($lastDonationDate . " + $donationPeriod days"));
+                                // sho in date like fridat oct 21 2023
+                                $endDate = date('l M d Y', strtotime($lastDonationDate . " + $donationPeriod days"));
+                                $currentDate = date('Y-m-d');
 
+                                // Calculate the difference between the current date and the end date
+                                $diff = strtotime($endDate) - strtotime($currentDate);
 
-                            $lastDonationDate = $dateString;
-                            $donationPeriod = 90;
-                            $endDate = date('Y-m-d', strtotime($lastDonationDate . " + $donationPeriod days"));
-                            // sho in date like fridat oct 21 2023
-                            $endDate = date('l M d Y', strtotime($lastDonationDate . " + $donationPeriod days"));
-                            $currentDate = date('Y-m-d');
+                                // Calculate the number of days remaining
+                                $daysRemaining = floor($diff / (60 * 60 * 24));
+                                if ($daysRemaining > 0) {
+                                    $res = false;
 
-                            // Calculate the difference between the current date and the end date
-                            $diff = strtotime($endDate) - strtotime($currentDate);
-
-                            // Calculate the number of days remaining
-                            $daysRemaining = floor($diff / (60 * 60 * 24));
-                            if ($daysRemaining > 0) {
-                                $res = false;
-
-                                $daysLeft = $daysRemaining;
-                            } else {
+                                    $daysLeft = $daysRemaining;
+                                } else {
+                                    $res = true;
+                                    $output = "available";
+                                    $daysLeft = 0;
+                                }
+                            }
+                            else{
                                 $res = true;
                                 $output = "available";
                                 $daysLeft = 0;
                             }
+
+                            
+                      
 
 
 
