@@ -5,8 +5,8 @@
 //     $hostname = "http://localhost/bloodworks/";
 //     return $hostname;
 // }
-// yor ip address 
-$ip= "192.168.1.3"; // place yout pc ip address here
+// your ip address 
+$ip= "192.168.1.3"; // place your pc ip address here
 
 
 
