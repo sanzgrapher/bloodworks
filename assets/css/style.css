@@ -22,6 +22,188 @@ main
     min-height: 100vh;
 }
 
+
+img{
+    width: 100%;
+    border-radius: 12px;
+    height: 214px;
+    object-fit: cover;
+}
+.container1{
+    gap: 70px;
+    width: fit-content;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+}
+
+.container1,.stats-container{
+
+    display: flex;
+    flex-direction: row;
+}
+.stats-container{
+    margin-top: 35vh;
+    margin-bottom: 10vh;
+    gap: 40px;
+    width: 100%;
+}
+.stat-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.card-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.card1{
+    width: 36%;
+    margin: 20px;
+    background-color: #F8F9FA;
+    padding: 17px;
+    border-radius: 4px;
+    height: fit-content;
+    border-width: 100%;
+    border-bottom: 2px solid rgb(116, 25, 25);
+}
+.card1:hover{
+    border-bottom: 5px solid rgb(195, 43, 43);;
+}
+
+.card-heading{
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.na1{
+    font-size: 14.5px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    color: #7f8c9b;
+}
+
+.card-details{
+    padding: 16px 16px 8px 16px; 
+}
+
+.card-details i{
+    font-size: 40px;
+    margin-left: 10px;
+    color: rgb(195, 43, 43);
+}
+
+.card-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(217, 56, 56);
+    padding: 10px 13px;
+    border-radius: 3px;
+    margin-top: 12px;
+    text-align: center;
+    width: 200px;  
+}
+.card-btn:hover{
+    background-color: rgb(116, 25, 25);
+}
+
+.card-details label{
+    width: fit-content;
+    text-align: center;
+}
+.c-btn{
+    position: relative;
+    margin: auto;
+    width: fit-content;
+}
+
+.stats{
+    width: 35%;
+    margin: 20px;
+    background-color: #F8F9FA;
+    border: 2px solid #eaeced;
+    padding: 17px;
+    border-radius: 4px;
+    height: 200px;
+    border-width: 100%;
+}
+.stats-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.stats-details i{
+    font-size: 40px;
+    color: rgb(195, 43, 43);
+}
+.stats-details p{
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 0rem;
+}
+
+
+
+
+@media screen and (max-width : 970px) {
+
+    .card-cont{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card1{
+        width: 96%;
+        margin-bottom: 1px;
+    }
+}
+
+@media screen and (max-width : 750px) {
+    .stat-cont{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card1{
+        width: 96%;
+        margin-bottom: 1px;
+    }
+    .stats{
+        width: 96%;
+        margin-bottom: 1px;
+    }
+}
+
+@media screen and (max-width : 610px) {
+    .container1{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card1{
+        width: 96%;
+        margin-bottom: 1px;
+    }
+}
+
+
+
+
+
+
+
+
 .brand a:hover{
 text-decoration: none;
 background: none;
@@ -1090,6 +1272,7 @@ table thead tr th a{
 }
 .bb-reg{
     margin-top: 10vh;
+    margin-bottom: 3vh;
     
 }
 

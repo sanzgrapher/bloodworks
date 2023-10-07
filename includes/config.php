@@ -6,7 +6,7 @@
 //     return $hostname;
 // }
 // yor ip address 
-$ip= "192.168.1.68"; // place yout pc ip address here
+$ip= "192.168.1.3"; // place yout pc ip address here
 
 
 
