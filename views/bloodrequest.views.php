@@ -7,7 +7,7 @@
 
 
 
- <main class="dash-container top-gap">
+ <main class="dash-container ">
      <section class="dashboard_container">
          <div class="info">
 
