@@ -1,6 +1,6 @@
 <?php
 
-use function PHPSTORM_META\type;
+
 
 class BBAdmin
 {
@@ -8,14 +8,14 @@ class BBAdmin
 
     public function index($a = "", $b = "", $c = ""){
 
-        $this->view('bbadmin/login');
-
+        
         if (isset($_POST['login'])) {
             $this->validateLogin();
         }
         if (isset($_SESSION['loggedin'])) {
             redirect(HOSTNAME . $_SESSION['u-type']);
         }
+        $this->view('bbadmin/login');
 
     }
 
