@@ -1,8 +1,8 @@
 <?php
 // class name should match the file name so we find the class file name
+// require_once "BBAdminEvents.php"; // include the parent class
 
-
-class BloodBank
+class BloodBank 
 {
     use Controller;
 
@@ -13,10 +13,15 @@ class BloodBank
 
 
 
-        $bbDetails = $this->bbDetails($bb_id); 
+           $eventlist = $this->eventDetail($bb_id);
+        $bloodstock = $this->getBloodStockDetails($bb_id);
 
+        //    $eventlist= $eventlist[0];
+        $bbDetails = $this->bbDetails($bb_id);
         $data = [
             "bbData" => $bbDetails,
+            "events" => $eventlist,
+            "bloodstock" => $bloodstock,
 
         ];
 
@@ -39,6 +44,38 @@ class BloodBank
         return $bbDetails;
 
 
+    }
+
+    public function eventDetail($bb_id)
+    {
+        $eventlist = new Model;
+        $eventlist->table = "event";
+        $eventlist->order_column = "event_id";
+
+        $data = [
+            "bb_id" => $bb_id
+        ];
+
+        $eventlist = $eventlist->where($data);
+        return $eventlist;
+    }
+    public function getBloodStockDetails($bb_id)
+    {
+        $getBStock = new Model;
+        $getBStock->table = "bloodstock";
+        // $getBStock->order_column = "bb_id";
+       
+        if (!$$bb_id) {
+            // redirect(HOSTNAME . "bbadmin/login");
+            // die();
+        }
+
+        $data = [
+            "bb_id" => "$bb_id"
+        ];
+
+        $getBStock = $getBStock->first($data);
+        return $getBStock;
     }
 
 
