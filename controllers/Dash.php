@@ -1,7 +1,7 @@
 <?php
+include_once "User.php";
 
-
-class Dash
+class Dash extends User
 {
     use Controller;
 
@@ -9,12 +9,21 @@ class Dash
     {
         $loggedindata = $this->getUserData();
         $eventlist = $this->eventLists();
-       
+        $user_totalDonated = $this->u_totalDonated(getLoggedinUser('userid'));
+        $user_totalEvents = $this->totalUserEvents(getLoggedinUser('userid'), "count");
+        $user_totalP2p = $this->totalP2Pdonated(getLoggedinUser('userid'), "count");
+       $stat=[
+              "totalDonated" => $user_totalDonated,
+                "totalEvents" => $user_totalEvents,
+                "totalp2p" => $user_totalP2p,
+       ];
          
        
         $data = [
                 "loggedinuser" => $loggedindata,
             "events" => $eventlist,
+            "stats" => $stat,
+
            
 
             ];
