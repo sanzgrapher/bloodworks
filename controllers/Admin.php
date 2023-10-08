@@ -25,11 +25,12 @@ class Admin
         $totalusers = $this->totalusers();
         
         $totalbloodbanks = $this->totalbloodbanks();
-        
+        $totalvusers = $this->totalVusers(); // donors avaiabble
         
         $data = [
             "totalusers" => $totalusers,
-            "totalbloodbanks" => $totalbloodbanks
+            "totalbloodbanks" => $totalbloodbanks,
+            "totalvusers" => $totalvusers,
         ];
 
         return $data;
@@ -47,6 +48,20 @@ class Admin
         
         return count($totalusers);
     }
+    private function totalVusers()
+    {
+        $totalvusers = new Model;
+        $totalvusers->table = "user";
+        $totalvusers->order_column = "id";
+        $data = [
+            "donor_availability" => "avaiable"
+        ];
+        $totalvusers = $totalvusers->where($data);
+        if($totalvusers!=null){
+            $totalvusers = count($totalvusers);
+        }
+        return $totalvusers =0;
+    }
 
     // total blood banks
     private function totalbloodbanks()
@@ -58,8 +73,17 @@ class Admin
             "bb_status" => "verified"
         ];
         $totalbloodbanks = $totalbloodbanks->where($data);
+       
+
+        if($totalbloodbanks!=null){
+            $totalbloodbanks = count($totalbloodbanks);
+            return $totalbloodbanks;
+        }else{
+            $totalbloodbanks = 0;
+
+        }
         
-        return count($totalbloodbanks);
+        
     }
 
 }
