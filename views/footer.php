@@ -64,7 +64,7 @@
                     <li>
                         <a href="<?= HOSTNAME ?>dash" class="text-white">User Dash</a>
                     </li>
-                    
+
                 </ul>
             </div>
 
@@ -104,6 +104,23 @@
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
 <script src="https://kit.fontawesome.com/db9243b83f.js" crossorigin="anonymous"></script>
 <script src="<?= HOSTNAME ?>assets/js/app.js"></script>
+<script>
+    $(function() {
+        var dtToday = new Date();
+
+        var month = dtToday.getMonth() + 1;
+        var day = dtToday.getDate();
+        var year = dtToday.getFullYear();
+        if (month < 10)
+            month = '0' + month.toString();
+        if (day < 10)
+            day = '0' + day.toString();
+
+        var maxDate = year + '-' + month + '-' + day;
+        // alert(maxDate);
+        $('#inputdate').attr('min', maxDate);
+    });
+</script>
 
 </body>
 
