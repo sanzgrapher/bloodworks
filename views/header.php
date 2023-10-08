@@ -15,7 +15,10 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
 
 
-    <link rel="stylesheet" href="<?= HOSTNAME ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?= HOSTNAME ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= HOSTNAME ?>assets/js/app.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
