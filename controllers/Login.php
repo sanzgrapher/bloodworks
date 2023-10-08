@@ -47,7 +47,8 @@ class Login
 
 
             // if (password_verify($password, $user->password)) {
-            if ($password == $userdata->password) {
+            
+            if (password_verify($password, $userdata->password)) {
 
                 $_SESSION['userid'] = $userdata->id;
                 $_SESSION['loggedin'] = true;
