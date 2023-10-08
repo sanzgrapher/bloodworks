@@ -14,8 +14,8 @@ include_once 'views/header.php';
                 <div class="heading">
                     Event Edit
                 </div>
-                <form action="editevent" method="post">
-                    <?php foreach ($events as $event) { ?>
+                <?php foreach ($events as $event) { ?>
+                <form action="<?= $event->event_id; ?>" method="post">
                         <div class="form first">
                             <div class="details personal">
                                 <span class="title">Event Details</span>
