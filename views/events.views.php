@@ -33,7 +33,7 @@ $sn = 0;
                             <td><?= $event->contact_info; ?></td>
 
 
-                            <td><a class="btn btn-danger" href="event/<?= $event->event_id ?>">View Evemt</a></td>
+                            <td><a class="btn btn-danger" href="event/<?= $event->event_id ?>">View Event</a></td>
                         </tr>
                 <?php
                     }

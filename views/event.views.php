@@ -6,15 +6,22 @@
 
     ?>
 <div class="main-event-container info">
-   <div class="main-sub-event-container container">
+   <div class="main-sub-event-container">
         <div class="event-title-container">
                 <h2 class="event-info"><?= $eventData->event_name ?></h2>
         </div>
         <div class="event-information">
-            <div class="event-info-container">    
-                <img class="event-info" src="https://dummyimage.com/640x4:3/" alt="img 600x400">
+            <div class="event-info-container">
+                <div class="event-img">
+                   <h2 class="event-info"><?= $eventData->event_name ?></h2>
+                </div>
+                <div class="event-info">
+                    <img  src="https://dummyimage.com/640x4:3/" alt="img 600x400">
+                </div>    
+                
                 <div class="event-info" >
                     <h3>Event's Description</h3>
+                    <br>
                     <p><?= $eventData->event_desc ?></p>
                 </div>
             </div>
