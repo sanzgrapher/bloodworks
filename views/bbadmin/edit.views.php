@@ -9,7 +9,7 @@
  <main class="dash-container">
      <section class="dashboard_container">
          <?php include_once 'asidemenu.php'; ?>
-         <div class="info ">
+         <div class="info">
          <div class="container">
                 <div class="heading">
                     PROFILE
@@ -23,12 +23,12 @@
                                 <div class="fields">
                                     <div class="input_field">
                                         <label>Blood Bank Name</label>
-                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?> " placeholder="Enter your blood bank name" required>
+                                        <input type="text" name="bb_name" value="<?= $user->bb_name; ?>" placeholder="Enter your blood bank name" required>
                                     </div>
                                     
                                     <div class="input_field">
                                         <label>Contact Number</label>
-                                        <input type="text" maxlength="10" name="bb_phoneno" value="<?= $user->bb_phoneno; ?>" placeholder="Enter the blood bank contact number" required>
+                                        <input type="text"  name="bb_phoneno" value="<?= $user->bb_phoneno; ?>" placeholder="Enter the blood bank contact number" required>
                                     </div>
                                     <div class="input_field">
                                         <label>Address</label>
