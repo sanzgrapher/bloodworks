@@ -3,14 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2023 at 01:12 PM
+-- Generation Time: Oct 06, 2023 at 02:42 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
- 
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -45,8 +45,9 @@ CREATE TABLE `bloodstock` (
 
 INSERT INTO `bloodstock` (`bb_id`, `a_pos`, `a_neg`, `b_pos`, `b_neg`, `o_neg`, `o_pos`, `ab_pos`, `ab_neg`) VALUES
 (31, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(30, 0, 7, 1, 6, 4, 3, 2, 5),
-(32, 0, 0, 0, 0, 0, 0, 0, 0);
+(30, 10, 7, 1, 6, 4, 3, 2, 5),
+(32, 0, 0, 0, 0, 0, 0, 0, 0),
+(41, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,8 @@ INSERT INTO `blood_banks` (`bb_id`, `bb_name`, `bb_email`, `bb_username`, `bb_pa
 (37, 'Sheila Nieves', 'jufydajoz@mailinator.com', 'supaneze', 'Pa$$w0rd!', '+1 (288) 624-7305', 'Consequatur magni ut', 'verified', 'Explicabo Accusamus'),
 (38, 'Branden Davenport', 'jakexi@mailinator.com', 'nodegebug', 'Pa$$w0rd!', '+1 (604) 369-1667', 'Corporis non laborum', 'verified', 'Ut eu nulla qui reru'),
 (39, 'Quamar Black', 'cora@mailinator.com', 'sofusun', 'Pa$$w0rd!', '+1 (695) 543-2056', 'Consectetur ullamco ', 'not-verified', 'Quaerat blanditiis r'),
-(40, 'Sharon Goff', 'ravem@mailinator.com', '12345', '12345', '+1 (934) 632-9157', 'Numquam modi irure r', 'not-verified', 'Magni rem cillum aut');
+(40, 'Sharon Goff', 'ravem@mailinator.com', '12345', '12345', '+1 (934) 632-9157', 'Numquam modi irure r', 'not-verified', 'Magni rem cillum aut'),
+(41, 'Kimberley Hicks', 'zecyjuju@mailinator.com', 'dopimulez', 'dopimulez', '+1 (144) 185-4228', 'Fugiat perferendis ', 'verified', 'Voluptas est ex enim');
 
 -- --------------------------------------------------------
 
@@ -137,7 +139,10 @@ INSERT INTO `event_participants` (`event_id`, `user_id`, `blood_unit`, `particip
 (18, 153, 0, 6),
 (18, 15, 0, 7),
 (25, 16, 16, 8),
-(25, 15, 15, 9);
+(25, 15, 15, 9),
+(26, 16, 0, 10),
+(26, 38, 0, 11),
+(18, 38, 0, 12);
 
 -- --------------------------------------------------------
 
@@ -148,28 +153,26 @@ INSERT INTO `event_participants` (`event_id`, `user_id`, `blood_unit`, `particip
 CREATE TABLE `request_list` (
   `req_id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
+  `transaction_type` varchar(8) NOT NULL,
+  `donor_id` int(11) NOT NULL,
+  `transaction_status` varchar(50) DEFAULT NULL,
   `req_description` text DEFAULT NULL,
-  `transaction_status` varchar(50) DEFAULT NULL
+  `required_blood_group` varchar(5) NOT NULL,
+  `required_date` date NOT NULL,
+  `req_blood_unit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `request_list`
 --
 
-INSERT INTO `request_list` (`req_id`, `user_id`, `req_description`, `transaction_status`) VALUES
-(1, 15, 'Patients Name :Cally BlevinsTad Vincent<br> Patient Contact : +1 (598) 421-4992<br> Patient Address : Reprehenderit non u<br> Patient Blood Group O-<br> Required Before : 1978-12-11<br> Urgency : moderate<br> Patient Blood Reason : Aut aliquip fugiat ', 'completed'),
-(2, 15, 'Patients Name :Arsenio NewmanCarson Warner<br> Patient Contact : +1 (609) 884-4413<br> Patient Address : Esse deserunt eu quo<br> Patient Blood Group O+<br> Required Before : 1984-08-07<br> Urgency : urgent<br> Patient Blood Reason : Eaque magnam magni q', 'pending'),
-(3, 15, 'Patients Name :Quincy DanielMadaline Mann<br> Patient Contact : +1 (997) 482-9005<br> Patient Address : Ut saepe quasi ut fu<br> Patient Blood Group AB+<br> Required Before : 2003-12-19<br> Urgency : moderate<br> Patient Blood Reason : Inventore quo verita', 'completed'),
-(4, 15, 'Patients Name :Georgia BruceClayton Stone<br> Patient Contact : +1 (752) 677-1508<br> Patient Address : Deleniti ullam in ut<br> Patient Blood Group AB+<br> Required Before : 1998-09-20<br> Urgency : urgent<br> Patient Blood Reason : Et temporibus minus ', 'completed'),
-(5, 15, 'Patients Name :Faith SloanRalph Mcgee<br> Patient Contact : +1 (128) 427-7652<br> Patient Address : Dicta autem deserunt<br> Patient Blood Group B+<br> Required Before : 2004-01-18<br> Urgency : urgent<br> Patient Blood Reason : Aliquam atque sed ea', 'completed'),
-(6, 15, 'Patients Name :Reagan MillerLila Figueroa<br> Patient Contact : +1 (838) 521-1032<br> Patient Address : Tempor qui culpa est<br> Patient Blood Group B-<br> Required Before : 1998-05-21<br> Urgency : not urgent<br> Patient Blood Reason : Magnam incidunt cup', 'completed'),
-(7, 37, 'Patients Name :NaranDhalal<br> Patient Contact : 9842534651<br> Patient Address : Malepatan<br> Patient Blood Group A+<br> Required Before : 2023-07-03<br> Urgency : urgent<br> Patient Blood Reason : Dying', 'completed'),
-(8, 15, 'Patients Name :Joy WiseTiger Rosales<br> Patient Contact : +1 (345) 207-4826<br> Patient Address : Eveniet accusamus v<br> Patient Blood Group O-<br> Required Before : 2015-01-25<br> Urgency : urgent<br> Patient Blood Reason : Est repellendus Inc', 'completed'),
-(9, 15, 'Patients Name :Sydney DaughertyClarke Charles<br> Patient Contact : +1 (937) 413-7387<br> Patient Address : Eligendi error delec<br> Patient Blood Group B+<br> Required Before : 2008-05-24<br> Urgency : urgent<br> Patient Blood Reason : Eos illum irure do', 'completed'),
-(10, 15, 'Patients Name :Kelsie TuckerCruz Gamble<br> Patient Contact : +1 (935) 988-5753<br> Patient Address : Quas harum quia omni<br> Patient Blood Group O+<br> Required Before : 1982-12-09<br> Urgency : not urgent<br> Patient Blood Reason : Qui quis expedita cu', 'completed'),
-(11, 15, 'Patients Name :Amber SteeleDavis Kirk<br> Patient Contact : +1 (394) 841-5679<br> Patient Address : Consectetur dolore e<br> Patient Blood Group AB-<br> Required Before : 1999-10-19<br> Urgency : not urgent<br> Patient Blood Reason : Dignissimos rerum ac', 'completed'),
-(12, 15, 'Patients Name :Alyssa SpearsRose Crosby<br> Patient Contact : +1 (397) 153-5244<br> Patient Address : Non aliquid et sed l<br> Patient Blood Group A+<br> Required Before : 2006-07-18<br> Urgency : moderate<br> Patient Blood Reason : Officia tempora labo', 'pending'),
-(13, 15, 'Patients Name :Clio DillardVincent Wade<br> Patient Contact : +1 (901) 292-4857<br> Patient Address : Officia mollitia non<br> Patient Blood Group B-<br> Required Before : 2011-08-20<br> Urgency : moderate<br> Patient Blood Reason : Ex voluptate distinc', 'completed');
+INSERT INTO `request_list` (`req_id`, `user_id`, `transaction_type`, `donor_id`, `transaction_status`, `req_description`, `required_blood_group`, `required_date`, `req_blood_unit`) VALUES
+(1, 15, 'private', 15, 'completed', '\n            Patients Name :Portia HaleyRia Harrell<br> Patient Contact : +1 (434) 411-3912<br> Patient Address : Corporis nihil nobis<br> Patient Blood Group A+<br> Required Before : 1992-07-26<br> Urgency : moderate<br> Patient Blood Reason : Consequatur velit qu', 'A+', '2023-09-06', 1),
+(2, 15, 'public', 0, 'completed', 'Patients Name :Quinn YoungTate Bradley<br> Patient Contact : +1 (932) 526-5543<br> Patient Address : Consectetur quidem <br> Patient Blood Group B-<br> Required Before : 1972-09-12<br> Urgency : urgent<br> Patient Blood Reason : Neque dolorem ut tot', '', '0000-00-00', 0),
+(3, 15, 'private', 38, 'completed', '\r\n            Patients Name :Jaime TannerDavid Park<br> Patient Contact : +1 (908) 632-4182<br> Patient Address : Praesentium sint fu<br> Patient Blood Group O+<br> Required Before : 2017-04-23<br> Urgency : not urgent<br> Patient Blood Reason : Consectetur occaeca', 'O+', '2017-04-23', 1),
+(4, 15, 'private', 38, 'completed', '\r\n            Patients Name :Anjolie HerreraJudith Berger<br> Patient Contact : +1 (138) 799-7994<br> Patient Address : Sit praesentium omni<br> Patient Blood Group O-<br> Required Before : 2023-10-06<br> Urgency : urgent<br> Patient Blood Reason : Expedita fugiat nequ', 'O-', '2023-10-06', 1),
+(5, 15, 'private', 15, 'pending', '\r\n            Patients Name :Kevin DavisMiriam Everett<br> Patient Contact : +1 (954) 254-7539<br> Patient Address : Mollitia sequi archi<br> Patient Blood Group B-<br> Required Before : 1975-02-26<br> Urgency : moderate<br> Patient Blood Reason : Non officiis non eu ', 'B-', '1975-02-26', 1),
+(6, 15, 'private', 15, 'completed', '\r\n            Patients Name :Julie DurhamAzalia Roberson<br> Patient Contact : +1 (747) 997-4394<br> Patient Address : Odit eveniet dolore<br> Patient Blood Group B-<br> Required Before : 2023-10-06<br> Urgency : urgent<br> Patient Blood Reason : Et ipsum inventore e', 'B-', '2023-10-06', 1);
 
 -- --------------------------------------------------------
 
@@ -201,44 +204,46 @@ CREATE TABLE `user` (
   `mname` varchar(20) DEFAULT NULL,
   `lname` varchar(20) DEFAULT NULL,
   `dateofbirth` date DEFAULT NULL,
-  `email` varchar(25) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
   `password` varchar(70) DEFAULT NULL,
   `username` varchar(25) DEFAULT NULL,
   `bloodgroup` varchar(5) DEFAULT NULL,
   `donor_availability` varchar(15) DEFAULT NULL,
   `address` varchar(100) DEFAULT NULL,
   `phone_no` varchar(100) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL
+  `age` int(11) DEFAULT NULL,
+  `last_donation_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `fname`, `mname`, `lname`, `dateofbirth`, `email`, `password`, `username`, `bloodgroup`, `donor_availability`, `address`, `phone_no`, `age`) VALUES
-(15, 'Rdavid   ', 'Bdr', 'Sharma', '1989-05-17', 'john@example.com', 'userone', 'userone', 'A-', 'Available', '   pokhara', '9846956604', 34),
-(16, 'Jane', 'Elizabeth', 'Johnson', '1988-09-27', 'jane@example.com', 'usertwo', 'usertwo', 'A-', 'Unavailable', 'Pokhara, Nepal', '+97798456xxxx', 33),
-(17, 'Michael', 'Lee', 'Brown', '1995-02-10', 'michael@example.com', 'userthree', 'userthree', 'B+', 'Available', 'Lalitpur, Nepal', '+97798678xxxx', 26),
-(18, 'Emily', NULL, 'Smith', '1992-07-08', 'emily@example.com', 'userfour', 'userfour', 'AB-', 'Unavailable', 'Birgunj, Nepal', '+97798123xxxx', 29),
-(19, 'Daniel', NULL, 'Williams', '1985-11-18', 'daniel@example.com', 'userfive', 'userfive', 'A+', 'Available', 'Bharatpur, Nepal', '+97798456xxxx', 36),
-(20, 'Olivia', NULL, 'Taylor', '1994-04-29', 'olivia@example.com', 'usersix', 'usersix', 'O-', 'Unavailable', 'Dharan, Nepal', '+97798678xxxx', 27),
-(21, 'David', NULL, 'Miller', '1998-12-02', 'david@example.com', 'userseven', 'userseven', 'AB+', 'Available', 'Biratnagar, Nepal', '+97798123xxxx', 23),
-(22, 'Sophia', NULL, 'Anderson', '1991-06-23', 'sophia@example.com', 'usereight', 'usereight', 'B-', 'Unavailable', 'Janakpur, Nepal', '+97798456xxxx', 30),
-(23, 'James', NULL, 'Thomas', '1987-03-12', 'james@example.com', 'usernine', 'usernine', 'O+', 'Available', 'Butwal, Nepal', '+97798678xxxx', 34),
-(24, 'Ava', NULL, 'Clark', '1997-08-05', 'ava@example.com', 'userten', 'userten', 'A-', 'Unavailable', 'Hetauda, Nepal', '+97798123xxxx', 24),
-(25, 'William', 'Henry', 'Lewis', '1993-01-17', 'william@example.com', 'usereleven', 'usereleven', 'B+', 'Available', 'Nepalgunj, Nepal', '+97798456xxxx', 28),
-(26, 'Mia', 'Grace', 'Walker', '1989-10-28', 'mia@example.com', 'usertwelve', 'usertwelve', 'O-', 'Unavailable', 'Dhangadhi, Nepal', '+97798678xxxx', 32),
-(27, 'Benjamin', NULL, 'Green', '1996-03-21', 'benjamin@example.com', 'userthirteen', 'userthirteen', 'O+', 'Available', 'Kathmandu, Nepal', '+97798123xxxx', 27),
-(28, 'Ethan', 'Michael', 'Johnson', '1991-07-14', 'ethan@example.com', 'userfourteen', 'userfourteen', 'A+', 'Unavailable', 'Pokhara, Nepal', '+97798456xxxx', 32),
-(29, 'Isabella', NULL, 'Davis', '1994-11-03', 'isabella@example.com', 'userfifteen', 'userfifteen', 'AB-', 'Available', 'Lalitpur, Nepal', '+97798678xxxx', 29),
-(30, 'Alexander', NULL, 'Martinez', '1998-02-25', 'alexander@example.com', 'usersixteen', 'usersixteen', 'B-', 'Unavailable', 'Birgunj, Nepal', '+97798123xxxx', 25),
-(31, 'Sofia', 'Lily', 'Lee', '1990-06-19', 'sofia@example.com', 'userseventeen', 'userseventeen', 'O+', 'Available', 'Bharatpur, Nepal', '+97798456xxxx', 31),
-(32, 'Joseph', NULL, 'White', '1986-03-29', 'joseph@example.com', 'usereighteen', 'usereighteen', 'A-', 'Unavailable', 'Dharan, Nepal', '+97798678xxxx', 35),
-(33, 'Charlotte', NULL, 'Harris', '1997-08-02', 'charlotte@example.com', 'usernineteen', 'usernineteen', 'B+', 'Available', 'Biratnagar, Nepal', '+97798123xxxx', 24),
-(34, 'Henry', 'James', 'King', '1992-01-12', 'henry@example.com', 'usertwenty', 'usertwenty', 'O-', 'Unavailable', 'Janakpur, Nepal', '+97798456xxxx', 29),
-(35, 'Yvette', 'Burke Carroll', 'Luna', '1974-04-03', 'mezy@mailinator.com', 'Pa$$w0rd!', 'zynefav', 'B+', NULL, 'Illo amet voluptatu', '+1 (584) 558-2073', NULL),
-(36, 'Mollie', 'Steven Kent', 'Booth', '1983-08-16', 'loxexofuj@mailinator.com', 'Pa$$w0rd!', 'noneki', 'B+', 'Available', 'Pariatur Suscipit i', '+1 (769) 261-2713', NULL),
-(37, 'Bibit', '', 'Kunwar', '2023-07-26', 'kunwar.bibit7@gmail.com', 'hrllo/World', 'bibitk', 'A+', 'Unavailable', 'Malepatan', '9816655644', 0);
+INSERT INTO `user` (`id`, `fname`, `mname`, `lname`, `dateofbirth`, `email`, `password`, `username`, `bloodgroup`, `donor_availability`, `address`, `phone_no`, `age`, `last_donation_date`) VALUES
+(15, 'Narayan', 'Bdr', 'Sharma', '1989-05-17', 'narayandhakal443@gmail.com', 'userone', 'userone', 'A-', 'Unavailable', '   pokhara', '9846956604', 34, '2023-10-06'),
+(16, 'Jane', 'Elizabeth', 'Johnson', '1988-09-27', 'jane@example.com', 'usertwo', 'usertwo', 'A-', 'Available', 'Pokhara, Nepal', '+97798456xxxx', 33, NULL),
+(17, 'Michael', 'Lee', 'Brown', '1995-02-10', 'michael@example.com', 'userthree', 'userthree', 'B+', 'Available', 'Lalitpur, Nepal', '+97798678xxxx', 26, NULL),
+(18, 'Emily', NULL, 'Smith', '1992-07-08', 'emily@example.com', 'userfour', 'userfour', 'AB-', 'Unavailable', 'Birgunj, Nepal', '+97798123xxxx', 29, NULL),
+(19, 'Daniel', NULL, 'Williams', '1985-11-18', 'daniel@example.com', 'userfive', 'userfive', 'A+', 'Available', 'Bharatpur, Nepal', '+97798456xxxx', 36, NULL),
+(20, 'Olivia', NULL, 'Taylor', '1994-04-29', 'olivia@example.com', 'usersix', 'usersix', 'O-', 'Unavailable', 'Dharan, Nepal', '+97798678xxxx', 27, NULL),
+(21, 'David', NULL, 'Miller', '1998-12-02', 'david@example.com', 'userseven', 'userseven', 'AB+', 'Available', 'Biratnagar, Nepal', '+97798123xxxx', 23, NULL),
+(22, 'Sophia', NULL, 'Anderson', '1991-06-23', 'sophia@example.com', 'usereight', 'usereight', 'B-', 'Unavailable', 'Janakpur, Nepal', '+97798456xxxx', 30, NULL),
+(23, 'James', NULL, 'Thomas', '1987-03-12', 'james@example.com', 'usernine', 'usernine', 'O+', 'Available', 'Butwal, Nepal', '+97798678xxxx', 34, NULL),
+(24, 'Ava', NULL, 'Clark', '1997-08-05', 'ava@example.com', 'userten', 'userten', 'A-', 'Unavailable', 'Hetauda, Nepal', '+97798123xxxx', 24, NULL),
+(25, 'William', 'Henry', 'Lewis', '1993-01-17', 'william@example.com', 'usereleven', 'usereleven', 'B+', 'Available', 'Nepalgunj, Nepal', '+97798456xxxx', 28, NULL),
+(26, 'Mia', 'Grace', 'Walker', '1989-10-28', 'mia@example.com', 'usertwelve', 'usertwelve', 'O-', 'Unavailable', 'Dhangadhi, Nepal', '+97798678xxxx', 32, NULL),
+(27, 'Benjamin', NULL, 'Green', '1996-03-21', 'benjamin@example.com', 'userthirteen', 'userthirteen', 'O+', 'Available', 'Kathmandu, Nepal', '+97798123xxxx', 27, NULL),
+(28, 'Ethan', 'Michael', 'Johnson', '1991-07-14', 'ethan@example.com', 'userfourteen', 'userfourteen', 'A+', 'Unavailable', 'Pokhara, Nepal', '+97798456xxxx', 32, NULL),
+(29, 'Isabella', NULL, 'Davis', '1994-11-03', 'isabella@example.com', 'userfifteen', 'userfifteen', 'AB-', 'Available', 'Lalitpur, Nepal', '+97798678xxxx', 29, NULL),
+(30, 'Alexander', NULL, 'Martinez', '1998-02-25', 'alexander@example.com', 'usersixteen', 'usersixteen', 'B-', 'Unavailable', 'Birgunj, Nepal', '+97798123xxxx', 25, NULL),
+(31, 'Sofia', 'Lily', 'Lee', '1990-06-19', 'sofia@example.com', 'userseventeen', 'userseventeen', 'O+', 'Available', 'Bharatpur, Nepal', '+97798456xxxx', 31, NULL),
+(32, 'Joseph', NULL, 'White', '1986-03-29', 'joseph@example.com', 'usereighteen', 'usereighteen', 'A-', 'Unavailable', 'Dharan, Nepal', '+97798678xxxx', 35, NULL),
+(33, 'Charlotte', NULL, 'Harris', '1997-08-02', 'charlotte@example.com', 'usernineteen', 'usernineteen', 'B+', 'Available', 'Biratnagar, Nepal', '+97798123xxxx', 24, NULL),
+(34, 'Henry', 'James', 'King', '1992-01-12', 'henry@example.com', 'usertwenty', 'usertwenty', 'O-', 'Unavailable', 'Janakpur, Nepal', '+97798456xxxx', 29, NULL),
+(35, 'Yvette', 'Burke Carroll', 'Luna', '1974-04-03', 'mezy@mailinator.com', 'Pa$$w0rd!', 'zynefav', 'B+', NULL, 'Illo amet voluptatu', '+1 (584) 558-2073', NULL, NULL),
+(36, 'Mollie', 'Steven Kent', 'Booth', '1983-08-16', 'loxexofuj@mailinator.com', 'Pa$$w0rd!', 'noneki', 'B+', 'Available', 'Pariatur Suscipit i', '+1 (769) 261-2713', NULL, NULL),
+(37, 'Bibit', '', 'Kunwar', '2023-07-26', 'kunwar.bibit7@gmail.com', 'hrllo/World', 'bibitk', 'A+', 'Unavailable', 'Malepatan', '9816655644', 0, NULL),
+(38, 'Narayan', '', 'Dhakal', '1990-12-15', 'narayandhakal443@gmail.com', 'sanzgrapher', 'sanzgrapher', 'AB+', 'Available', 'Gandaki,pokhara, Pokhara-17,chhorepatan, Pokhara-17,chhorepatan', '9846945604', 32, '2023-01-06');
 
 --
 -- Indexes for dumped tables
@@ -288,7 +293,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `blood_banks`
 --
 ALTER TABLE `blood_banks`
-  MODIFY `bb_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `bb_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `event`
@@ -300,19 +305,19 @@ ALTER TABLE `event`
 -- AUTO_INCREMENT for table `event_participants`
 --
 ALTER TABLE `event_participants`
-  MODIFY `participation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `participation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `request_list`
 --
 ALTER TABLE `request_list`
-  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
