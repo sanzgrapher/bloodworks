@@ -65,7 +65,7 @@ class BloodBank
         $getBStock->table = "bloodstock";
         // $getBStock->order_column = "bb_id";
        
-        if (!$$bb_id) {
+        if (!$bb_id) {
             // redirect(HOSTNAME . "bbadmin/login");
             // die();
         }
