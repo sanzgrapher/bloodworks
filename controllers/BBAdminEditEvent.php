@@ -7,18 +7,12 @@ class BBAdmin
     public function index($a = "", $b = "", $c = "")
     { // default function should be in every class
 
-        $eveid=$b;
-
-       
-
-        $loggedindata = $this->getUserData();
-
-       
+        $eveid = $b;
         
-      
-       
+        $loggedindata = $this->getUserData();
         $eventlist = $this->eventDetail($eveid);
         $eventdonors = $this->eventPaticipatiants($eveid);
+
         $data = [
             "events" => $eventlist,
             "loggedinuser" => $loggedindata,
@@ -39,12 +33,13 @@ class BBAdmin
         $this->view('bbadmin/editevent', $data); // from controller class 
 
 
-    
+
     }
-    public function updateDonation($eve_id){
+    public function updateDonation($eve_id)
+    {
         $updateeventdonors = new Model;
         $updateeventdonors->table = "event_participants";
-        $participation_id=$_POST['participation_id'];
+        $participation_id = $_POST['participation_id'];
         // $u_id=$_POST['user_id'];
 
         $data = [
@@ -52,20 +47,17 @@ class BBAdmin
             "blood_unit" => $_POST['blood_unit'],
            
         ];
-   
-
-        $updateeventdonors = $updateeventdonors->update($participation_id, $data, 'participation_id');   
-
-      
-             redirect(HOSTNAME . "bbadmin/editevent/$eve_id#update-donation");
 
 
+        $updateeventdonors = $updateeventdonors->update($participation_id, $data, 'participation_id');
 
 
+        redirect(HOSTNAME . "bbadmin/editevent/$eve_id#update-donation");
     }
 
 
-    public function eventPaticipatiants ($eveid){
+    public function eventPaticipatiants($eveid)
+    {
         $geteventdonors = new Model;
         $geteventdonors->table = "event_participants";
         $geteventdonors->order_column = "participation_id";
@@ -93,10 +85,10 @@ class BBAdmin
         ];
 
         $geteventdonors = $geteventdonors->joinTables($table1, $table2, $columns, $conditions);
-        
-   
 
- 
+
+
+
 
 
  
@@ -171,13 +163,15 @@ class BBAdmin
         // For example, you can pass it to the view or perform further operations
     }
 
-    public function updateEvent(){
+    public function updateEvent()
+    {
+        
         $updateEvent = new Model;
         $updateEvent->table = "event";
-        $eveid=$_POST['event_id'];
-         
+        $eveid = $_POST['event_id'];
+
         $data = [
-            
+
             "event_name" => $_POST['event_name'],
             "event_location" => $_POST['event_location'],
             "event_date" => $_POST['event_date'],
@@ -185,16 +179,16 @@ class BBAdmin
             "organizer" => $_POST['organizer'],
             "contact_info" => $_POST['contact_info'],
         ];
-    
-       
+
+
         $updateEvent = $updateEvent->update($eveid, $data, 'event_id');
-       if(!$updateEvent){
-              echo "<script>alert('Event not updated');</script>";
-       }
+
+       
+
+        if (!$updateEvent) {
+            echo "<script>alert('Event not updated');</script>";
+        }
 
         redirect(HOSTNAME . "bbadmin/events");
-       
     }
-
-
 }

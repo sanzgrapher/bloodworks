@@ -381,7 +381,7 @@ label.logo{
 
 
 .table-section{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     position: relative;
 }
 .table-sec-title{

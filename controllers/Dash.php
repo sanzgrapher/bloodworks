@@ -12,6 +12,7 @@ class Dash extends User
         $user_totalDonated = $this->u_totalDonated(getLoggedinUser('userid'));
         $user_totalEvents = $this->totalUserEvents(getLoggedinUser('userid'), "count");
         $user_totalP2p = $this->totalP2Pdonated(getLoggedinUser('userid'), "count");
+        
        $stat=[
               "totalDonated" => $user_totalDonated,
                 "totalEvents" => $user_totalEvents,
@@ -23,6 +24,7 @@ class Dash extends User
                 "loggedinuser" => $loggedindata,
             "events" => $eventlist,
             "stats" => $stat,
+            "requestedTo" => $this->requestedTo(getLoggedinUser('userid')),
 
            
 
@@ -68,6 +70,24 @@ class Dash extends User
 
        
     }
+
+    private function requestedTo ($u_id){
+        $requestedTo = new Model;
+        $requestedTo->table = "request_list";
+        $requestedTo->order_column = "req_id";
+        $data = [
+            "donor_id" => $u_id,
+            "transaction_status" => "pending"
+
+        ];
+        $requestedTo = $requestedTo->where($data);
+        
+        return $requestedTo;
+
+
+    }
+
+
 
 
 
