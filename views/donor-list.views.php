@@ -64,8 +64,11 @@ $sn = 0;
                            
 
                             <td>
-                                <button data-id="<?= $donor->id; ?>" type="button" id="myBtn" class="btn btn-danger modal-btn edit-btn">Contact</button>
-
+                                <?php if (isset($_SESSION['userid']) && $_SESSION['userid'] == $donor->id) {
+                                    echo "n/a";
+                                } else { ?>
+                                    <button data-id="<?= $donor->id; ?>" type="button" id="myBtn" class="btn btn-danger modal-btn edit-btn">Contact</button>
+                                <?php   } ?>
                             </td>
                         </tr>
                 <?php
@@ -152,7 +155,7 @@ $sn = 0;
                                     </div>
                                     <div class="input_field">
                                         <label>Required Before</label>
-                                        <input type="date" placeholder="Select Date" name="required_date" required>
+                                        <input type="date" id="inputdate" placeholder="Select Date" name="required_date" required>
                                     </div>
                                     <div class="input_field">
                                         <label>Reason for Requirment</label>
