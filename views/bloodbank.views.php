@@ -26,8 +26,8 @@ if (empty($bbData)) {
 
             </div>
 
-            <div class="tab-main-container">
-                <div class="tab-container">
+            <div class="tab-main-container container-xl">
+                <div class="tab-container ">
                     <div class="topnav" id="myTopnav1">
                         <div class="tab">
                             <a href="#"><button class="tablinks active" onclick="openTab(event, 'Overview')">Overview</button></a>
@@ -46,17 +46,18 @@ if (empty($bbData)) {
                                 Blood Bank's Details
                             </h1>
                             <div class="bbd-desc">
-                            <h2>About Blood Bank</h2>
-                            <p>
-                                <?= $bData->bb_description ?>
-                                <br>
-                                <h3>Address : <p><?= $bData->bb_address ?></p></h3>
-                                
+                                <h2>About Blood Bank</h2>
+                                <p>
+                                    <?= $bData->bb_description ?>
+                                    <br>
+                                <h3>Address : <p><?= $bData->bb_address ?></p>
+                                </h3>
+
                                 <h3>Contact : <p><?= $bData->bb_phoneno ?></h3>
-                                
+
                                 <h3>Email : <p><?= $bData->bb_email ?></h3>
-                                
-                            </p>
+
+                                </p>
                             </div>
 
 

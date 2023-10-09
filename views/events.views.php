@@ -2,7 +2,7 @@
 $sn = 0;
 ?>
 <?php include "header.php"; ?>
-<main class="container-xxl top-gap">
+<main class="container-xl top-gap">
 
     <div class="table-section">
     <div class="list-head">

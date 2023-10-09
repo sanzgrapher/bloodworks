@@ -1,7 +1,7 @@
 <?php require "header.php";
 // show($data);
 ?>
-<main class="container-xxl top-gap">
+<main class="container-xl top-gap">
     <div class="table-section">
     <div class="list-head">
         <h2 class="table-sec-title fw-bold display-5">List of Bloodbanks</h2>
