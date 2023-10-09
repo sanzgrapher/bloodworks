@@ -45,7 +45,8 @@
                             // // $dateString = "2023-10-06"; //today
                             // // $dateString = "2023-10-07"; // tommorroe
                             if($dateString != null){
-                                $lastDonationDate = $dateString;
+                                $lastDonationDate = $currentDate = date('Y-m-d');;
+                                //  current date
                                 $donationPeriod = 90;
                                 $endDate = date('Y-m-d', strtotime($lastDonationDate . " + $donationPeriod days"));
                                 // sho in date like fridat oct 21 2023
