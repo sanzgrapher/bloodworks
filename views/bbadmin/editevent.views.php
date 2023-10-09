@@ -92,7 +92,7 @@ include_once 'views/header.php';
 
 
                                             <td>
-                                                <form action="http://bloodworks.local/bbadmin/editevent/25" method="post">
+                                                <form action="<?= HOSTNAME."bbadmin/editevent/". $event->event_id ?>" method="post">
                                                     <input type="hidden" name="user_id" value="<?= $eventdonor->id ?>">
                                                     <input type="hidden" name="participation_id" value="<?= $eventdonor->participation_id ?>">
                                                     <input type="text" name="blood_unit" value="<?php if ($eventdonor->blood_unit != 0) echo $eventdonor->blood_unit;  ?>">
