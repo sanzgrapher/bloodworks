@@ -52,12 +52,25 @@ class BloodRequest
     {
         $addBloodBank = new Model;
         $addBloodBank->table = "request_list";
-        $description = "Patients Name :". $_POST['fname'] . $_POST['lname'] ."<br> Patient Contact : " . $_POST['phone_no'] ."<br> Patient Address : ". $_POST['address'] ."<br> Patient Blood Group " . $_POST['bloodgroup'] . "<br> Required Before : " . $_POST['required_date'] . "<br> Urgency : " . $_POST['urgency'] ."<br> Patient Blood Reason : " . $_POST['reason'];
+        $description = "
+        Patients Name :". $_POST['fname'] . $_POST['lname'] .
+        "<br> Patient Contact : " . $_POST['phone_no'] .
+        "<br> Patient Address : ". $_POST['address'] .
+        "<br> Patient Blood Group " . $_POST['bloodgroup'] . 
+        "<br> Required Before : " . $_POST['required_date'] . 
+        "<br> Urgency : " . $_POST['urgency'] .
+        "<br> Patient Blood Reason : " . $_POST['reason'];
         $data = [
             "user_id" => $_POST['id'],
+            "transaction_type" => "public",
             "transaction_status" => "pending",
-           
             "req_description" => $description,
+            "required_blood_group" => $_POST['bloodgroup'],
+            "required_date" => $_POST['required_date'],
+            "req_blood_unit" => $_POST['req_blood_unit'],
+        
+
+
         ];
         $addBloodBank->insert($data);
         redirect(HOSTNAME . "dash/requests");
