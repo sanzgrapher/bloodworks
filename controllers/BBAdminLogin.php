@@ -47,9 +47,8 @@ class BBAdmin
         if (count($user_return) == 1) {
               $userdata = $user_return[0];
 
-  
-           
-            if ($password == $userdata->bb_password  ) {
+
+            if (password_verify($password, $userdata->bb_password)) {
 
                 $_SESSION['bb_id'] = $userdata->bb_id;
                 $_SESSION['loggedin'] = true;

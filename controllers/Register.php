@@ -46,7 +46,7 @@ class Register
             "lname" => $lname,
             "dateofbirth" => $dateofbirth,
             "email" => $email,
-            "password" => $password,
+            "password" => password_hash($password, PASSWORD_DEFAULT),
             "username" => $username,
             "bloodgroup" => $bloodgroup,
             "address" => $address,

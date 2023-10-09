@@ -23,7 +23,7 @@ class AddBloodBank
             "bb_name" => $_POST['bb_name'],
             "bb_email" => $_POST['bb_email'],
             "bb_username" => $_POST['bb_username'],
-            "bb_password" => $_POST['bb_password'],
+            "bb_password" => password_hash($_POST['bb_password'], PASSWORD_DEFAULT),
             "bb_phoneno" => $_POST['bb_phoneno'],
             "bb_address" => $_POST['bb_address'],
             "bb_status" => 'not-verified',
