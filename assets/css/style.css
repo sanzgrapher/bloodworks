@@ -829,14 +829,17 @@ table thead tr th a{
   
   /* Change background color of buttons on hover */
   .tab button:hover{
-    background-color: #e7e7e7;
+    background-color: #ccc;
   }
   
   /* Create an active/current tablink class */
   .tab button.active{
-    background-color: #ccc;
+    background-color: #fff;
+    color: #000;
   }
-  
+  .tablinks{
+    color: #fff;
+  }
   /* Style the tab content */
   .tabcontent {
     position: relative;
@@ -847,7 +850,7 @@ table thead tr th a{
     min-height: 500px;
     border-radius: 7px;
     height: fit-content;
-    padding-bottom: 10px;
+    padding: 20px;
   }
 
   .tab-main-container{
@@ -860,6 +863,10 @@ table thead tr th a{
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
+  }
+  .tab-container .topnav{
+  
+background-color: rgb(149, 39, 39);
   }
 
   .bbd-desc{
@@ -1792,7 +1799,7 @@ table.dataTable thead .sorting_desc_disabled:before {
   .event-info-container{
     width: 68%;
     background-color:#F8F9FA;
-    padding: 10px;
+  
     border-radius: 4px;
   }
 
@@ -1808,7 +1815,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     width: 30%;
     float: right;
     background-color:#F8F9FA;
-    padding: 10px;
+  
     border-radius: 4px;
   }
 
@@ -1826,13 +1833,19 @@ table.dataTable thead .sorting_desc_disabled:before {
  
 
   .en-info{
-    margin: 15px 5px 40px 5px;
+    margin: 15px 5px ;
   }
 
 
   .event-info{
     border-radius: 5px;
+
+    
+
+
   }
+  
+ 
   .en-info-btn,.event-info{
     margin: 20px 5px;
   }
@@ -1842,6 +1855,30 @@ table.dataTable thead .sorting_desc_disabled:before {
     margin: auto;
     width: fit-content;
   }
+
+   .eve-heading {
+    color: #fff;
+    border-radius: 1px;
+       font-size: 20px;
+       text-align: center;
+       margin: 0px;
+       padding: 10px 0;
+       background-color: rgb(149, 39, 39);
+       
+   }
+   .eve-content{
+       
+         padding: 10px 15px;
+         /* background-color: #F8F9FA; */
+         /* border-radius: 4px; */
+
+   }
+   .event-detail-container{
+    height: fit-content;
+   }
+   .eve-details{
+    padding: 10px 15px;
+   }
 
   @media screen and (max-width:1080px) {
     .main-sub-event-container{
