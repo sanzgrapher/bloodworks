@@ -79,6 +79,7 @@ include_once 'views/header.php';
                             </thead>
                             <tbody>
                                 <?php
+                                // show($eventdonors);
                                 if (empty($eventdonors)) {
                                     echo "No events available";
                                 } else {
@@ -95,8 +96,13 @@ include_once 'views/header.php';
                                                 <form action="<?= HOSTNAME."bbadmin/editevent/". $event->event_id ?>" method="post">
                                                     <input type="hidden" name="user_id" value="<?= $eventdonor->id ?>">
                                                     <input type="hidden" name="participation_id" value="<?= $eventdonor->participation_id ?>">
-                                                    <input type="text" name="blood_unit" value="<?php if ($eventdonor->blood_unit != 0) echo $eventdonor->blood_unit;  ?>">
+                                                    <?php if($eventdonor->transaction_status != 'completed' ){?>
+                                                    <input type="number" name="blood_unit" value="<?php if ($eventdonor->blood_unit != 0) echo $eventdonor->blood_unit;  ?>">
+                                                    
                                                     <input type="submit" name="update_blood_unit" value="Submit">
+                                                    <?php }else{?>
+                                                        <input type="number" name="blood_unit" value="<?php if ($eventdonor->blood_unit != 0) echo $eventdonor->blood_unit;  ?>" disabled>
+                                                        <?php } ?>
                                                 </form>
 
                                             </td>
