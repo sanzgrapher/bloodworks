@@ -91,6 +91,12 @@
                                      </div>
 
 
+                                     <div class="input_field">
+                                         <label>Required Blood Unit</label>
+                                         <input type="number" placeholder="Enter Reuired Blood Unit" name="req_blood_unit" required>
+                                     </div>
+
+
                                  </div>
                                  <input class="submit button" type="submit" name="request-blood" value="Post Request Blood">
 
