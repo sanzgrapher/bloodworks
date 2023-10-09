@@ -11,7 +11,7 @@
 
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase">Public Pages</h5>
 
                 <ul class="list-unstyled mb-0">
@@ -30,7 +30,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase">Forms</h5>
 
                 <ul class="list-unstyled mb-0">
@@ -40,54 +40,30 @@
                     <li>
                         <a href="<?= HOSTNAME ?>bloodrequest" class="text-white">Request Blood</a>
                     </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 4</a>
-                    </li>
+                  
                 </ul>
             </div>
-
-
-
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Dash Panels</h5>
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Social Links</h5>
 
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="<?= HOSTNAME ?>bbadmin" class="text-white">BB Admin</a>
+                        <a href="<?= HOSTNAME ?>addbloodbank" class="text-white">Facebook</a>
                     </li>
                     <li>
-                        <a href="<?= HOSTNAME ?>admin" class="text-white">Admin</a>
+                        <a href="<?= HOSTNAME ?>bloodrequest" class="text-white">Twitter</a>
                     </li>
-                    <li>
-                        <a href="<?= HOSTNAME ?>dash" class="text-white">User Dash</a>
-                    </li>
-
+                  
                 </ul>
             </div>
 
 
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
+        
 
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="#!" class="text-white">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-white">Link 4</a>
-                    </li>
-                </ul>
-            </div>
+
+
+           
 
         </div>
 
