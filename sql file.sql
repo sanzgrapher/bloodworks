@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2023 at 11:10 AM
+-- Generation Time: Oct 09, 2023 at 04:29 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.5
 
@@ -44,10 +44,9 @@ CREATE TABLE `bloodstock` (
 --
 
 INSERT INTO `bloodstock` (`bb_id`, `a_pos`, `a_neg`, `b_pos`, `b_neg`, `o_neg`, `o_pos`, `ab_pos`, `ab_neg`) VALUES
-(52, 0, 0, 0, 0, 0, 0, 0, 0),
-(48, 2, 2, 2, 2, 2, 2, 2, 2),
-(49, 0, 0, 0, 0, 0, 0, 0, 0),
-(50, 0, 0, 0, 0, 0, 0, 0, 0);
+(1, 84, 20, 30, 62, 67, 33, 23, 10),
+(2, 3, 70, 88, 70, 6, 33, 37, 94),
+(3, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -64,23 +63,18 @@ CREATE TABLE `blood_banks` (
   `bb_phoneno` varchar(20) DEFAULT NULL,
   `bb_address` varchar(255) DEFAULT NULL,
   `bb_status` varchar(50) DEFAULT NULL,
-  `bb_description` varchar(255) DEFAULT NULL
+  `bb_description` varchar(255) DEFAULT NULL,
+  `bb_image` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `blood_banks`
 --
 
-INSERT INTO `blood_banks` (`bb_id`, `bb_name`, `bb_email`, `bb_username`, `bb_password`, `bb_phoneno`, `bb_address`, `bb_status`, `bb_description`) VALUES
-(44, 'Cassandra Spears', 'makohis@mailinator.com', 'porazexux', 'Pa$$w0rd!', '+1 (903) 347-6083', 'Repellendus Pariatu', 'not-verified', 'Est sunt nesciunt f'),
-(45, 'Cassandra Spears', 'makohis@mailinator.com', 'porazexux', 'Pa$$w0rd!', '+1 (903) 347-6083', 'Repellendus Pariatu', 'not-verified', 'Est sunt nesciunt f'),
-(46, 'Cassandra Spears', 'makohis@mailinator.com', 'porazexux', 'Pa$$w0rd!', '+1 (903) 347-6083', 'Repellendus Pariatu', 'not-verified', 'Est sunt nesciunt f'),
-(47, 'Cassandra Spears', 'makohis@mailinator.com', 'porazexux', 'Pa$$w0rd!', '+1 (903) 347-6083', 'Repellendus Pariatu', 'not-verified', 'Est sunt nesciunt f'),
-(48, 'Nepal Red Cross Blood Bank', 'nrcbb@example.com', 'redcross', 'redcross', '9855555555', '   Kathmandu, Nepal', 'verified', '   Providing blood donation services'),
-(49, 'Mount Everest Blood Center', 'mebc@example.com', 'mounteverest', 'mounteverest', '+977-1-2345678', 'Pokhara, Nepal', 'verified', 'Supporting the local community with blood supplies.'),
-(50, 'Bhaktapur Blood Donation Center', 'bbdc@example.com', 'bbdc_user', 'safe12345', '+977-1-3456789', 'Bhaktapur, Nepal', 'verified', 'Temporarily closed for maintenance.'),
-(51, 'Himalayan Blood Bank', 'hbb@example.com', 'hbb_user', 'strongpass789', '+977-1-4567890', 'Kathmandu, Nepal', 'not-verified', '24/7 blood donation services available.'),
-(52, 'Lumbini Blood Center', 'lbc@example.com', 'lbc_user', 'protective567', '+977-1-5678901', 'Lumbini, Nepal', 'verified', 'Providing blood for medical emergencies.');
+INSERT INTO `blood_banks` (`bb_id`, `bb_name`, `bb_email`, `bb_username`, `bb_password`, `bb_phoneno`, `bb_address`, `bb_status`, `bb_description`, `bb_image`) VALUES
+(1, 'Redcross BloodBank', 'redcross@redcross.com', 'redcross', '$2y$10$VhDQc7qHoNzsgGEfNIjd5eIXybQJVCTpFoxVFiWRZv8XscrJ/9pBS', '+1 (675) 607-3401', 'pokhara', 'verified', 'Redcross From Pokhara Nepal', ''),
+(2, 'Geoffrey Santiago', 'xysygeqi@mailinator.com', 'geoffrey', '$2y$10$.rUmUwHwDGBaGDngXtFY.uFtMU6C/9DxJ0xOljvghWcIBWWzD0fiK', '+1 (415) 823-5172', 'Occaecat optio qui ', 'verified', 'Omnis eligendi commo', ''),
+(3, 'Todd Lowery', 'nirelubecy@mailinator.com', 'toxaceti', '$2y$10$3oflufqK45z05Uc.mdOph.Z7ATc73D2d9rcTtD/9iCd04IKEL/VQK', '+1 (435) 349-9165', 'Ea nulla labore aute', 'verified', 'Eos quia et sapiente', 'BloodBank.png');
 
 -- --------------------------------------------------------
 
@@ -96,15 +90,17 @@ CREATE TABLE `event` (
   `event_desc` text DEFAULT NULL,
   `organizer` varchar(50) DEFAULT NULL,
   `contact_info` varchar(255) DEFAULT NULL,
-  `event_date` date DEFAULT NULL
+  `event_date` date DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`event_id`, `bb_id`, `event_name`, `event_location`, `event_desc`, `organizer`, `contact_info`, `event_date`) VALUES
-(27, 48, 'Redcross Donation Pokhara', 'Pokhara', 'Redcross Event Page Description', 'RedCros', '9898989', '2023-10-10');
+INSERT INTO `event` (`event_id`, `bb_id`, `event_name`, `event_location`, `event_desc`, `organizer`, `contact_info`, `event_date`, `image`) VALUES
+(1, 2, 'Urielle Warner', 'Voluptas hic cupidit', 'Nemo voluptatem volu', 'Veniam ut ipsa vel', 'Nostrud re', '2023-10-09', NULL),
+(3, 1, 'Kiara Gilmore', 'Aut eius mollit quid', 'Sed ut sit quas fuga', 'Et sit praesentium ', 'Voluptatum', '2023-10-09', 'bloodworkseve.png');
 
 -- --------------------------------------------------------
 
@@ -138,13 +134,6 @@ CREATE TABLE `request_list` (
   `req_blood_unit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `request_list`
---
-
-INSERT INTO `request_list` (`req_id`, `user_id`, `transaction_type`, `donor_id`, `transaction_status`, `req_description`, `required_blood_group`, `required_date`, `req_blood_unit`) VALUES
-(16, 41, 'private', 40, 'pending', '\r\n            Patients Name :Gavin OlsenZorita Gilbert<br> Patient Contact : +1 (248) 588-3089<br> Patient Address : Dicta molestias mole<br> Patient Blood Group AB-<br> Required Before : 2023-10-08<br> Urgency : moderate<br> Patient Blood Reason : Aut eu placeat volu', 'AB-', '2023-10-08', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -155,13 +144,6 @@ CREATE TABLE `site_info` (
   `app_name` varchar(20) DEFAULT NULL,
   `app_desc` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `site_info`
---
-
-INSERT INTO `site_info` (`app_name`, `app_desc`) VALUES
-('bloodworks', 'A simple Blood management system');
 
 -- --------------------------------------------------------
 
@@ -191,11 +173,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fname`, `mname`, `lname`, `dateofbirth`, `email`, `password`, `username`, `bloodgroup`, `donor_availability`, `address`, `phone_no`, `age`, `last_donation_date`) VALUES
-(40, 'Narayan', 'Dhakal', 'Dhakal', '2021-11-23', 'narayandhakal443@gmail.com', 'sanzgrapher', 'sanzgrapher', 'A+', 'Available', 'pokhara', '999999999999', 21, NULL),
-(41, 'Userone', 'Merrill Short', 'Pace', '1970-05-14', 'qosuqizomu@mailinator.com', 'userone', 'userone', 'AB+', 'Unavailable', 'Aut do nostrum asper', '+1 (477) 638-2266', 53, NULL),
-(42, 'Usertwo', 'Uriel Keller', 'Fulton', '1980-12-03', 'sihakigabe@mailinator.com', 'usertwo', 'usertwo', 'AB+', 'Unavailable', 'Hic aperiam adipisic', '+1 (141) 958-4744', 42, NULL),
-(43, 'Stewart', 'Louis Murray', 'Mcbride', '1981-05-13', 'wajybyho@mailinator.com', 'Pa$$w0rd!', 'pywoselul', 'A-', 'Unavailable', 'Aliqua Cupiditate q', '+1 (651) 753-4617', 42, NULL),
-(44, 'Rudyard', 'Imogene Cleveland', 'Nelson', '2001-11-23', 'cihako@mailinator.com', 'dd', 'jixoziz', 'A+', 'Unavailable', 'Pariatur Fugiat qui', '+1 (361) 153-3814', 21, NULL);
+(1, 'Bilokunuc', 'Camille Petersen', 'Paul', '2007-06-18', 'coridugu@mailinator.com', '$2y$10$jVQ5JejByvy5xKVjY2w6R./NryxwtdWgvt966LXSJysU5wNgqeQYG', 'bilokunuc', 'B-', 'Unavailable', 'Pokhara', '+1 (247) 789-9331', 16, NULL),
+(2, 'Alexander', 'Alma Day', 'Best', '2006-08-15', 'jenir@mailinator.com', '$2y$10$9XfarerUR7494M5G5lKaIOSeW9GwGskmvqeQi7Vhaj05rZPTGhFcy', 'alexander', 'B-', 'Unavailable', 'lalitpur', '+1 (446) 423-7573', 17, NULL),
+(3, 'Brenden', 'Germane Perkins', 'Hudson', '1979-06-16', 'rynobafuku@mailinator.com', '$2y$10$rpXgZ7cBlhYh4Ox4SqtwPumTvyXRb4it/KKu8QX.W6nm/JtBUao8S', 'brenden', 'A+', 'Unavailable', 'Nepalgunj', '+1 (941) 336-8086', 44, NULL),
+(4, 'Userone', 'Laith', 'Flores', '1999-01-05', 'userone@mailinator.com', '$2y$10$0VymwFldcenIve0kXFSlfOwLacizV/UhPbb1Aiq2/FivcVlgeH0W6', 'userone', 'O-', 'Available', 'butwal', '+1 (173) 167-7499', 24, NULL),
+(5, 'user', 'user', 'user', '2001-10-26', 'user@user.com', '$2y$10$Uxc7be/HpyUKmcPRN.IKbuadPVVWz4OfJ7BavkiKMZRFWrINzyV9S', 'user', 'A+', 'Unavailable', 'pokhara', '9889898989', 21, NULL);
 
 --
 -- Indexes for dumped tables
@@ -245,31 +227,31 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `blood_banks`
 --
 ALTER TABLE `blood_banks`
-  MODIFY `bb_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `bb_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `event_participants`
 --
 ALTER TABLE `event_participants`
-  MODIFY `participation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `participation_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `request_list`
 --
 ALTER TABLE `request_list`
-  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
