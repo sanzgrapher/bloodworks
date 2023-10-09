@@ -38,15 +38,23 @@ include_once 'views/header.php';
                                         <td><?= $request->transaction_status; ?></td>
 
                                         <td>
-                                            <?php if ($request->transaction_status != "completed") { ?>
+                                            <?php if ($request->transaction_status == "pending") { ?>
                                                 <form action="<?= HOSTNAME . "dash/requests" ?>" method="post">
                                                     <input type="hidden" name="req_id" value="<?= $request->req_id ?>">
-                                                    <button type="submit" class="btn btn-success" name="complete">Completed</button>
+                                                    <button type="submit" class="btn btn-success p-2" name="complete">Completed</button>
+                                                </form>
+                                                <br>
+                                                <form action="<?= HOSTNAME . "dash/requests" ?>" method="post">
+                                                    <input type="hidden" name="req_id" value="<?= $request->req_id ?>">
+                                                    <button type="submit" class="btn btn-danger p-2" name="cancelled">Cancelled</button>
                                                 </form>
                                             <?php
-                                            } else { ?>
+                                            } elseif ($request->transaction_status == "cancelled") { ?>
+                                                This Transaction is cancelled
+                                            <?php } else { ?>
                                                 This Transaction is completed
                                             <?php } ?>
+
                                         </td>
 
 
