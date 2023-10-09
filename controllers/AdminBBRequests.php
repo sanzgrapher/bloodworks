@@ -71,6 +71,21 @@ class Admin
         ];
         $addBloodStock->insert($data);
 
+        $emailsend= new Model;
+        $emailsend->table = "blood_banks";
+        $emailsend->order_column = "bb_id";
+        $data = [
+            "bb_id" => $id
+        ];
+        $emailsend = $emailsend->where($data);
+        $emailsend = $emailsend[0];
+        $email = $emailsend->bb_email;
+        $name = $emailsend->bb_name;
+        $subject = "Blood Bank Verification";
+        $message = "Hello $name, Your Blood Bank has been verified by the admin. You can now login to your account and start using the services.";
+        $resp = smtp_mailer("$email", "BloodWorks : $subject", "$message");
+
+
         redirect(HOSTNAME ."admin/bbrequests");
     }
 
