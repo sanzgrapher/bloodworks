@@ -9,14 +9,14 @@ class Admin
     public function index($a = "", $b = "", $c = "")
     {
 
-        $this->view('admin/login');
-
+        
         if (isset($_POST['login'])) {
             $this->validateLogin();
         }
         if (isset($_SESSION['loggedin'])) {
             redirect(HOSTNAME . $_SESSION['u-type']);
         }
+        $this->view('admin/login');
     }
 
     public function validateLogin()
