@@ -17,7 +17,7 @@
                     </div>
                     <div class="eve-content">
                         <div class="event-info">
-                            <img src="https://media.istockphoto.com/id/1077189294/vector/blood-donation-vector-illustration-flat-mini-persons-concept-for-donor-aid.jpg?s=2048x2048&w=is&k=20&c=JEsrE1sKZm0KoE4JG8zPHCbrxX_r9UeWYWopTrKb4_U=" alt="img 600x400">
+                            <img src="<?php if ($eventData->image == null) {$image = "bloodworkseve.png";} else {$image = $eventData->image;}echo HOSTNAME . "assets/images/" . $image ?>" alt="img 600x400">
                         </div>
 
                         <div class="event-info">

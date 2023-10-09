@@ -16,7 +16,7 @@ if (empty($bbData)) {
                 <div class="profile-name-container">
 
                     <div class="title-con">
-                        <img src="https://media.istockphoto.com/id/1446660489/vector/blood-donation-concept.jpg?s=2048x2048&w=is&k=20&c=87lttGaa7voOT09xrmaY12DQNw5bUrUpiLYJzAmrH5E=" alt="" class="profile-img1">
+                        <img style="border: 1px solid white;" src="<?php if($bData->bb_image==null){$image= "bloodworksbb.png"; } else{$image = $bData->bb_image ;} echo HOSTNAME . "assets/images/" . $image ?>" alt="" class="profile-img1">
                         <div class="title-contain">
                             <h3><?= $bData->bb_name ?></h3>
                             <h4><?= $bData->bb_address ?></h1>
