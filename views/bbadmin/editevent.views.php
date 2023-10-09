@@ -15,7 +15,7 @@ include_once 'views/header.php';
                     Event Edit
                 </div>
                 <?php foreach ($events as $event) { ?>
-                <form action="<?= $event->event_id; ?>" method="post">
+                    <form action="<?= $event->event_id; ?>" method="post">
                         <div class="form first">
                             <div class="details personal">
                                 <span class="title">Event Details</span>
@@ -57,105 +57,114 @@ include_once 'views/header.php';
                                 <input class="submit button" type="submit" name="update-event" value="Update Event Details">
                             </div>
                         </div> <?php } ?>
-                </form>
+                    </form>
             </div>
+
             <div class="container">
                 <div class="heading">
-                    Event Participation
+                    Update Event Participation
                 </div>
-                <p>Update The Blood Unit of respective Donor</p>
-                <div class="table-section" id="update-donation">
-                    <div style="overflow-x:auto;">
-                        <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
-                            <thead>
-                                <tr>
-                                    <th class="th-sm">Name
-                                    </th>
+                <?php if (true) { ?>
+                    <p>Update The Blood Unit of respective Donor</p>
+                    <div class="table-section" id="update-donation">
+                        <div style="overflow-x:auto;">
+                            <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm">Name
+                                        </th>
 
-                                    <th class="th-sm">Blood Unit
-                                    </th>
+                                        <th class="th-sm">Blood Unit
+                                        </th>
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                // show($eventdonors);
-                                if (empty($eventdonors)) {
-                                    echo "No events available";
-                                } else {
-                                    foreach ($eventdonors as $eventdonor) {
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    // show($eventdonors);
+                                    if (empty($eventdonors)) {
+                                        echo "No events available";
+                                    } else {
+                                        foreach ($eventdonors as $eventdonor) {
 
-                                ?>
-                                        <tr>
-                                            <td><?= $eventdonor->username; ?></td>
-
-
+                                    ?>
+                                            <tr>
+                                                <td><?= $eventdonor->username; ?></td>
 
 
-                                            <td>
-                                                <form action="<?= HOSTNAME."bbadmin/editevent/". $event->event_id ?>" method="post">
-                                                    <input type="hidden" name="user_id" value="<?= $eventdonor->id ?>">
-                                                    <input type="hidden" name="participation_id" value="<?= $eventdonor->participation_id ?>">
-                                                    <?php if($eventdonor->transaction_status != 'completed' ){?>
-                                                    <input type="number" name="blood_unit" value="<?php if ($eventdonor->blood_unit != 0) echo $eventdonor->blood_unit;  ?>">
-                                                    
-                                                    <input type="submit" name="update_blood_unit" value="Submit">
-                                                    <?php }else{?>
-                                                        <input type="number" name="blood_unit" value="<?php if ($eventdonor->blood_unit != 0) echo $eventdonor->blood_unit;  ?>" disabled>
+
+
+                                                <td>
+                                                    <form action="<?= HOSTNAME . "bbadmin/editevent/" . $event->event_id ?>" method="post">
+                                                        <input type="hidden" name="user_id" value="<?= $eventdonor->id ?>">
+                                                        <input type="hidden" name="participation_id" value="<?= $eventdonor->participation_id ?>">
+                                                        <?php if ($eventdonor->transaction_status != 'completed') { ?>
+                                                            <input type="number" name="blood_unit" value="<?php if ($eventdonor->blood_unit != 0) echo $eventdonor->blood_unit;  ?>">
+
+                                                            <input type="submit" name="update_blood_unit" value="Submit">
+                                                        <?php } else { ?>
+                                                            <input type="number" name="blood_unit" value="<?php if ($eventdonor->blood_unit != 0) echo $eventdonor->blood_unit;  ?>" disabled>
                                                         <?php } ?>
-                                                </form>
+                                                    </form>
 
-                                            </td>
-                                        </tr>
-                                <?php
+                                                </td>
+                                            </tr>
+                                    <?php
+                                        }
                                     }
-                                }
-                                ?>
+                                    ?>
 
-                            </tbody>
+                                </tbody>
 
-                        </table>
+                            </table>
 
-                    </div>
-                </div>
-                <hr>
-                <div class="heading">
-                    Add Unregistered Donor
-                </div>
-                <p>Fill the details of the donor to add them to the event</p>
-                <form action="editevent" method="post">
-
-                    <div class="form first">
-                        <div class="details personal">
-                            <span class="title">Event Details</span>
-                            <input type="hidden" name="event_id" value="<?= $event->event_id; ?>">
-                            <div class="fields">
-
-                                <div class="input_field">
-                                    <label>Email</label>
-                                    <input type="email" name="email" required>
-                                </div>
-                                <div class="input_field">
-                                    <label>Blood Group</label>
-                                    <input type="text" name="blood_unit" required>
-                                </div>
-                                <div class="input_field">
-                                    <label>Age</label>
-                                    <input type="text" name="blood_unit" required>
-                                </div>
-                                <div class="input_field">
-                                    <label>Blood Unit Donated</label>
-                                    <input type="text" name="blood_unit" required>
-                                </div>
-
-                            </div>
-                            <input class="submit button" type="submit" name="add-donor" value="Add Donor">
                         </div>
                     </div>
-                </form>
+                    <hr>
+                    <div class="heading">
+                        Add Unregistered Donor
+                    </div>
+                    <p>Fill the details of the donor to add them to the event</p>
+                    <form action="editevent" method="post">
 
+                        <div class="form first">
+                            <div class="details personal">
+                                <span class="title">Event Details</span>
+                                <input type="hidden" name="event_id" value="<?= $event->event_id; ?>">
+                                <div class="fields">
+
+                                    <div class="input_field">
+                                        <label>Email</label>
+                                        <input type="email" name="email" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Blood Group</label>
+                                        <input type="text" name="blood_unit" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Age</label>
+                                        <input type="text" name="blood_unit" required>
+                                    </div>
+                                    <div class="input_field">
+                                        <label>Blood Unit Donated</label>
+                                        <input type="text" name="blood_unit" required>
+                                    </div>
+
+                                </div>
+                                <input class="submit button" type="submit" name="add-donor" value="Add Donor">
+                            </div>
+                        </div>
+                    </form>
+                <?php } else{ ?>
+                    <br>
+                    <div class="alert alert-warning" role="alert">
+                        You can only update the event details on event day only !
+                    </div>
+
+                <?php } ?>
 
             </div>
+
 
 
 
