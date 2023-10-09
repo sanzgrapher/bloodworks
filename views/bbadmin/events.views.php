@@ -72,7 +72,7 @@ include_once 'views/header.php';
                 <div class="heading">
                     Add Events
                 </div>
-                <form action="events" method="post">
+                <form action="events" method="post" enctype="multipart/form-data">
 
                     <div class="form first">
                         <div class="details personal">
@@ -100,6 +100,11 @@ include_once 'views/header.php';
                                 <div class="input_field">
                                     <label>Contact Info</label>
                                     <textarea type="text" maxlength="10" name="contact_info" placeholder="Enter the contact number" required></textarea>
+                                </div>
+                                <div class="input_field">
+                                    <label>Event Image</label>
+
+                                    <input style="padding: 10px;height:auto;" type="file" name="image" class="custom-file-input" id="inputGroupFile01">
                                 </div>
                                 <div class="input_field">
                                     <label>Event Description</label>
