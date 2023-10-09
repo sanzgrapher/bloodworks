@@ -16,7 +16,7 @@ class Event extends User
         $checkin = $this->isCheckIn($event_id, $uid);
 
         $userDetails = $this->getUserData(); // fom user class
-          $u_d = $userDetails[0];
+          $u_d = $userDetails[0]??"";
           
         $data = [
             "userAvaiability" => $u_d->donor_availability ?? "",
