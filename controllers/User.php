@@ -39,7 +39,7 @@ class User
 
         $totalDonated_eve = $evenntsfromuser;
 
-        $requestDonated = $this->totalP2Pdonated($user_id);
+        $requestDonated = $this->totalP2Pdonated($user_id, "");
 
         $totalDonated_req = $requestDonated;
 
@@ -55,7 +55,7 @@ class User
         $totalUserEvents->table = "event_participants";
         $totalUserEvents->order_column = "participation_id";
         $data = [
-            "user_id" => "38",
+            "user_id" => $user_id,
             "transaction_status" => "completed"
         ];
         $eventDonated = $totalUserEvents->where($data);
@@ -86,7 +86,7 @@ class User
         $totalP2Pdonated->table = "request_list";
         $totalP2Pdonated->order_column = "req_id";
         $data = [
-            "donor_id" => '38',
+            "donor_id" => $user_id,
             "transaction_status" => "completed"
         ];
         $requestDonated = $totalP2Pdonated->where($data);
