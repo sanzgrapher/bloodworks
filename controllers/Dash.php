@@ -45,7 +45,7 @@ class Dash extends User
         $getuserdata->order_column = "id";
         $getsessionid = getLoggedinUser('userid');
         if (!$getsessionid) {
-        redirect("../login");
+        redirect(HOSTNAME ."login");
         die();  
         }
         $data = [
