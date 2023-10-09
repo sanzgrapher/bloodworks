@@ -44,7 +44,7 @@
                 <a href="<?= HOSTNAME ?>">HOME</a>
             </li>
             <li>
-                <a href="<?= HOSTNAME ?>donorlist">DONATE</a>
+                <a href="<?= HOSTNAME ?>donorlist">DONORS</a>
             </li>
             <li>
                 <a href="<?= HOSTNAME ?>bloodbanks">BLOODBANK</a>
@@ -55,7 +55,7 @@
             <li class="nav-item">
                 <?php $checkIflLoggedIn = checkIflLoggedIn();
                 if ($checkIflLoggedIn == false) { ?>
-                    <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
+                    <a href="<?= HOSTNAME ?>login" class="btn rounded btn-danger">LOGIN</a>
                 <?php } else { ?>
                     <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
                 <?php } ?>
@@ -63,90 +63,3 @@
         </ul>
 
     </nav>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
-        <div class="container"> 
-            <a class="navbar-brand d-flex align-items-center" href="#">
-
-                <span class="ml-3 font-weight-bold "><span class="">Blood</span>Works</apan>
-            </a> 
-
-            <div class="topnav" id="myTopnav">
-            <div class="top">
-            <div class="navi">
-            <ul class="navbar-nav mr-auto pl-lg-4 menu-nav">
-                <a href="<?= HOSTNAME ?>"><button  onclick="openTab(event, 'Home')"id="defaultOpen">HOME</button></a>
-                <a href="<?= HOSTNAME ?>donorlist"><button  onclick="openTab(event, 'DonorList')">DONOR LIST</button></a>
-                
-                <a href="<?= HOSTNAME ?>bloodbanks"><button  onclick="openTab(event,'BloodBank')">BLOOD BANKS</button></a>
-                <a href="<?= HOSTNAME ?>events"><button  onclick="openTab(event, 'Events')" >EVENTS</button></a>
-               
-            </ul>
-            <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
-                <li class="nav-item">
-                    <?php $checkIflLoggedIn = checkIflLoggedIn();
-                    if ($checkIflLoggedIn == false) { ?>
-                    <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
-                    <?php } else { ?>
-                    <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
-                    <?php } ?>
-                </li>
-            </ul>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-            </div>
-            </div>
-
-            <div class="topnav" id="myTopnav">
-             <div class="tab">
-            <div class="collapse navbar-collapse" id="navbar4">
-
-                <ul class="navbar-nav mr-auto pl-lg-4">
-                    <li class="nav-item px-lg-2 active">
-                        <a class="nav-link" href="<?= HOSTNAME ?>"> 
-                        <button class="tablinks" onclick="openTab(event, 'Home')">HOME</button>
-                        </a>
-                    </li>
-                    <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>donorlist"> 
-                        <button class="tablinks" onclick="openTab(event, 'DonorList')">DONOR LIST</button>
-                        </a>
-                    </li>
-                    <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>bloodbanks"> 
-                        <button class="tablinks" onclick="openTab(event, 'BloodBank')">BLOOD BANKS</button>
-                        </a>
-                    </li>
-                    <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="<?= HOSTNAME ?>events">
-                        <button class="tablinks" onclick="openTab(event, 'Events')">EVENTS</button>
-                        </a>
-                    </li>
-                    <li class="nav-item px-lg-2">
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                    </li>
-                  </a>
-
-
-                   </ul>
-
-                <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
-                    <li class="nav-item">
-                        <?php $checkIflLoggedIn = checkIflLoggedIn();
-                        if ($checkIflLoggedIn == false) { ?>
-                        <a href="<?= HOSTNAME ?>/login" class="btn rounded btn-danger">LOGIN</a>
-                    <?php } else { ?>
-                    <a href="<?= HOSTNAME ?><?= $checkIflLoggedIn ?>" class="btn rounded btn-success">DASH</a>
-                    <?php } ?>
-
-
-                    </li>
-                </ul>
-
-            </div>
-            </div>
-                </div> -->
-    <!-- </div>
-    </nav> -->
