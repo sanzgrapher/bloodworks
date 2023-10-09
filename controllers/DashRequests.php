@@ -14,10 +14,15 @@ class Dash
             "requests" => $requestlist,
 
         ];
+        if (isset($_POST['cancelled'])) {
+            // die("complete");
+            $this->cancel();
+        }
         if (isset($_POST['complete'])) {
             // die("complete");
             $this->completeTransaction();
         }
+       
 
 
 
@@ -79,6 +84,8 @@ class Dash
 
         redirect(HOSTNAME . "dash/requests");
     }
+
+
     private function requestlist()
     {
         $requestlist = new Model;
@@ -100,5 +107,16 @@ class Dash
 
         // Do something with the $eventlist data
         // For example, you can pass it to the view or perform further operations
+    }
+
+    private function cancel(){
+        $id = $_POST['req_id'];
+        $completeTransaction = new Model;
+        $completeTransaction->table = "request_list";
+        $data = [
+            "transaction_status" => "cancelled"
+        ];
+        $completeTransaction->update($id, $data, 'req_id');
+        redirect(HOSTNAME . "dash/requests");
     }
 }
