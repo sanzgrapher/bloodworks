@@ -70,12 +70,9 @@ include_once 'views/header.php';
             </div>
             <div class="container">
                 <div class="heading">
-                    User Dashboard
+                    Blood Requests To You
                 </div>
 
-                <p title="Total Blood Units Donated">total Blood Donated : <?= $stats['totalDonated'] . " Units" ?></p>
-                <p title="Total Event Participated">Total Event Participated : <?= $stats['totalEvents'] . " Events" ?></p>
-                <p title="Total p2p Participated">Total P2P Donations : <?= $stats['totalp2p'] . " Events" ?></p>
 
                 <div class="table-section">
                     <h3>Blood Requested To You </h3>
