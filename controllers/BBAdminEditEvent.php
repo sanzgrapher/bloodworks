@@ -45,13 +45,25 @@ class BBAdmin
         $data = [
 
             "blood_unit" => $_POST['blood_unit'],
+            "transaction_status" => 'completed',
            
         ];
 
+        $result = $updateeventdonors->update($participation_id, $data, 'participation_id');
 
-        $updateeventdonors = $updateeventdonors->update($participation_id, $data, 'participation_id');
+
+            $updateUser = new Model;
+            $updateUser->table = "user";
+            $data = [
+                "last_donation_date" => date('Y-m-d'),
+                "donor_availability" => "Unavailable"
+            ];
+            $updateUser->update($_POST['user_id'], $data, 'id');
 
 
+      
+     
+      
         redirect(HOSTNAME . "bbadmin/editevent/$eve_id#update-donation");
     }
 
@@ -78,7 +90,7 @@ class BBAdmin
 
         $table1 = 'event_participants';
         $table2 = 'user';
-        $columns = 'user.username,user.id,event_participants.blood_unit,event_participants.participation_id';
+        $columns = 'user.username,user.id,event_participants.blood_unit,event_participants.participation_id,event_participants.transaction_status';
         $conditions = [
             'event_participants.user_id' => 'user.id',
             'event_participants.event_id' => $eveid, // Event ID 5
