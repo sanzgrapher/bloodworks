@@ -32,20 +32,35 @@ img{
 .container1{
     gap: 70px;
     width: fit-content;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     margin-bottom: 20vh;
 }
 
 .container1,.stats-container{
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+.stat-heading{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.stat-heading p{
+    font-size: 50px;
+    font-weight: 600;
+    width: fit-content;
+   padding: 20px;
+   
+    
 }
 .stats-container{
-    margin-top: 35vh;
+
+    margin-top: 30vh;
     margin-bottom: 10vh;
     gap: 40px;
     width: 100%;
+   
 }
 .stat-cont{
     width: 100%;
@@ -84,6 +99,8 @@ img{
     margin-top: 16px;
     margin-bottom: 10px;
     color: #7f8c9b;
+    height: 120px;
+    overflow: auto;
 }
 
 .card-details{
@@ -128,10 +145,12 @@ img{
     width: 35%;
     margin: 20px;
     background-color: #F8F9FA;
-    border: 2px solid #eaeced;
+    
+    /* border: 1px solid rgb(116, 25, 25); */
     padding: 17px;
     border-radius: 4px;
     height: 200px;
+   
     border-width: 100%;
 }
 .stats-details{
@@ -150,6 +169,7 @@ img{
     font-weight: 600;
     margin-bottom: 0rem;
 }
+
 
 
 
@@ -217,7 +237,7 @@ background: none;
     height: 80px;
     width: 100%;
     z-index: 10;
-    box-shadow: 1px .1px 20px rgb(209, 209, 209);
+    /* box-shadow: 1px .1px 20px rgb(209, 209, 209); */
 }
 
 label.logo{
@@ -403,10 +423,9 @@ label.logo{
 }
 td,
 th {
-    padding: 20px;
+    font-size: 15px;
+    padding: 40px;
     height: 30px;
-    justify-content: center;
-    align-content: center;
     text-align: center;
 }
 
@@ -433,14 +452,14 @@ table thead tr th a{
 
  /*---------------Blood Bank Card---------------*/
  .bank-card{
-    width: 100%;
+  
     display: flex;
     flex-direction: row;
     justify-content:center;
      padding: 10px 20px 10px 10px;
      background-color: #F8F9FA;
-     width: calc(100% / 2 - 80px);
-     min-width: fit-content;
+     width: calc(100% / 3 - 13.5px);
+     /* min-width: fit-content; */
      border-radius: 4px;
      margin-bottom: 10px;
      box-shadow: 0 0 4px 0 rgba(161, 161, 161, 0.4);
@@ -448,7 +467,7 @@ table thead tr th a{
 .bank-card i{
     font-size: 40px;
     color: #b71a1a;
-    width: fit-content;
+    width: 30%;
     height: fit-content;
     margin: auto;
     border: 1px solid rgb(247, 247, 247);
@@ -466,13 +485,13 @@ table thead tr th a{
   }
   .card-data p{
     color: #424344;
-    width: 55%;
-    font-size: 35px;
+   
+    font-size: 30px;
     text-align: left;
     margin: 6px;
   }
   .card-data a{
-    color: #032e63;
+    color: #212529;
     text-decoration: none;
     font-weight: 600;
     font-size: 20px;
@@ -843,7 +862,17 @@ table thead tr th a{
     border-bottom-left-radius: 7px;
   }
 
-  
+  .bbd-desc{
+    margin-top: 30px;
+  }
+  .bbd-desc h3{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+  }
+  .bbd-desc p{
+    font-size: 20px;
+  }
   .topnav .icon {
     display: none;
     justify-content: center;
@@ -1286,14 +1315,14 @@ table thead tr th a{
 
 .info .container .heading, .container h1, .inf .container .heading {
     position: relative;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     width: fit-content;
     margin: auto;
     color: rgb(193, 41, 41);
 }
 .inf .container h1{
-    font-size: 60px;
+    font-size: 45px;
     margin-bottom: 30px;
 }
 .inf .container p{
@@ -1341,7 +1370,7 @@ form .log-reg-field .input_field input, form .fields .input_field input{
     padding: 27px;
 }
 form .log-reg-field label{
-    font-size: 20px;
+    font-size: 18px;
 }
 form .log-reg-field .input_field input,form .fields .input_field input{
     font-size: 17px;
@@ -1616,6 +1645,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-top: 20px;
   }
   
   .switch input { 
@@ -1678,8 +1708,7 @@ table.dataTable thead .sorting_desc_disabled:before {
         top: 4px;
         font-size: 20px;
         font-weight: bold;
-        margin-bottom: 10px;
-        margin: 0 10px;
+        margin: 0 10px 0 0;
   
     }
 
@@ -1725,6 +1754,16 @@ table.dataTable thead .sorting_desc_disabled:before {
   }
 
 /*----------Event Page-----------*/
+.evnt-info{
+    font-size: 22px;
+    text-align: center;
+}
+.list-head,.tb-cont{
+    background-color: #F8F9FA;
+    margin: 10px 0;
+    padding:5px 30px 30px 30px;
+    border-radius: 4px;
+}
   .main-event-container{
     margin-top: 90px;
    
@@ -1747,7 +1786,6 @@ table.dataTable thead .sorting_desc_disabled:before {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-bottom: 2px solid gray;
   }
 
 
@@ -1759,10 +1797,12 @@ table.dataTable thead .sorting_desc_disabled:before {
   }
 
   .event-info-container h2{
+    font-size: 30px;
     text-align: center;
   }
   .event-info-container img{
     width: 100%;
+    height: fit-content;
   }
   .event-detail-container{
     width: 30%;

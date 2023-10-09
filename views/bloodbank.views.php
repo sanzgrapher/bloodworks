@@ -16,7 +16,7 @@ if (empty($bbData)) {
                 <div class="profile-name-container">
 
                     <div class="title-con">
-                        <img src="https://resources.premierleague.com/premierleague/badges/rb/t43.svg" alt="" class="profile-img1">
+                        <img src="https://media.istockphoto.com/id/1446660489/vector/blood-donation-concept.jpg?s=2048x2048&w=is&k=20&c=87lttGaa7voOT09xrmaY12DQNw5bUrUpiLYJzAmrH5E=" alt="" class="profile-img1">
                         <div class="title-contain">
                             <h3><?= $bData->bb_name ?></h3>
                             <h4><?= $bData->bb_address ?></h1>
@@ -45,18 +45,19 @@ if (empty($bbData)) {
                             <h1 class="table-sec-title fw-bold display-5">
                                 Blood Bank's Details
                             </h1>
-                            <h2>About Blodd Bank</h2>
+                            <div class="bbd-desc">
+                            <h2>About Blood Bank</h2>
                             <p>
                                 <?= $bData->bb_description ?>
                                 <br>
-                            <h2>Address</h2>
-                            <p><?= $bData->bb_address ?></p>
-                            <h2>Contact</h2>
-                            <p><?= $bData->bb_phoneno ?>
-                            <h2>Email</h2>
-                            <p><?= $bData->bb_email ?>
-
+                                <h3>Address : <p><?= $bData->bb_address ?></p></h3>
+                                
+                                <h3>Contact : <p><?= $bData->bb_phoneno ?></h3>
+                                
+                                <h3>Email : <p><?= $bData->bb_email ?></h3>
+                                
                             </p>
+                            </div>
 
 
 
@@ -111,7 +112,7 @@ if (empty($bbData)) {
                                 Blood Bank's Blood Stocks
                             </h1>
 
-                            <div class="table-section" style="width: 50%;margin: 0 auto;">
+                            <div class="table-section" style="width: 50%;margin: 0 auto; margin-top:20px">
                                 <div style="overflow-x:auto;">
                                     <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
                                         <thead>
