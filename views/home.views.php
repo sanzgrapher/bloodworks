@@ -16,7 +16,7 @@ include "views/header.php";
                     <h2 class="fw-bold display-4">Donate Blood :<span class="text-primary"> Save Life </span></h2>
                     <p><strong>Welcome to Bloodworks</strong><br></p>
                     <!-- Together, we will bridge the gap between donors, recipients, and blood banks, making the process of obtaining and donating blood more efficient and effective. </p> -->
-                    <a href="<?= HOSTNAME ?>/events" class="btn btn-danger"> Donate</a>
+                    <a href="<?= HOSTNAME ?>events" class="btn btn-danger"> Donate</a>
                     <!-- <a href="#" class="btn btn-light btn-outline-danger"> Request</a> -->
                 </div>
                 <div class="col-sm-6 order-1 order-sm-2">
@@ -37,7 +37,7 @@ include "views/header.php";
                 <div class="card-heading">Become  Donor</div>
                 <div class="na1">Join us in the noble cause of providing life-saving support to those in need. Register as a donor now and be a part of the lifesaving journey. Your contribution matters.<br></div>
                 <div class="c-btn">
-                    <a href="<?= HOSTNAME ?>/events" class="card-btn">Donate</a>
+                    <a href="<?= HOSTNAME ?>events" class="card-btn">Donate</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@ include "views/header.php";
                 <div class="card-heading">Request Blood</div>
                 <div class="na1">Need blood urgently? We're here to assist you. Simply request the blood type you require, and our site will swiftly connect you with a compatible donor</div>
                 <div class="c-btn">
-                   <a href="<?= HOSTNAME ?>/donorlist" class="card-btn">Request</a>
+                   <a href="<?= HOSTNAME ?>donorlist" class="card-btn">Request</a>
                 </div>
             </div>
         </div>
@@ -59,13 +59,13 @@ include "views/header.php";
                 <div class="card-heading">For Bloodbanks</div>
                 <div class="na1">Join our platform to efficiently manage blood donations,and connect with donors and recipients. Sign up now and contribute to our mission of ensuring a steady supply of blood for those in need.</div>
                 <div class="c-btn">
-                    <a href="<?= HOSTNAME ?>/addbloodbank" class="card-btn">Host</a>
+                    <a href="<?= HOSTNAME ?>addbloodbank" class="card-btn">Host</a>
                 </div>
            </div>
         </div>
         </div>
     </div>
-
+<?php if(false): ?>
     <div class="stats-container">
         <div class="stat-heading">
             <p>Stats of Bloodworks</p>
@@ -95,6 +95,7 @@ include "views/header.php";
 
         </div>
     </div>
+<?php endif;?>
 
 </main>
 

@@ -66,7 +66,7 @@
 
                                             </label>
 
-                                            <input class="btn btn-primary rounded" type="submit" name="eventCheckIn-btn" value="Submit">
+                                            <input class="btn btn-primary rounded" type="submit" name="eventCheckIn-btn" value="Check In">
 
                                         </form>
                                     <?php } else {
