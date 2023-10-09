@@ -14,8 +14,8 @@ include "views/header.php";
             <div class="row">
                 <div class="col-sm-6 order-2 order-sm-1">
                     <h2 class="fw-bold display-4">Donate Blood :<span class="text-primary"> Save Life </span></h2>
-                    <p><strong>Welcome to Bloodworks</strong><br>
-                    Together, we will bridge the gap between donors, recipients, and blood banks, making the process of obtaining and donating blood more efficient and effective. </p>
+                    <p><strong>Welcome to Bloodworks</strong><br></p>
+                    <!-- Together, we will bridge the gap between donors, recipients, and blood banks, making the process of obtaining and donating blood more efficient and effective. </p> -->
                     <a href="<?= HOSTNAME ?>/events" class="btn btn-danger"> Donate</a>
                     <!-- <a href="#" class="btn btn-light btn-outline-danger"> Request</a> -->
                 </div>
