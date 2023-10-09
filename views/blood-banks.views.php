@@ -3,10 +3,12 @@
 ?>
 <main class="container-xxl top-gap">
     <div class="table-section">
-        <h2 class="table-sec-title fw-bold display-5">Available Bloodbanks</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti excepturi harum accusantium ducimus vero ipsa dolore sint praesentium veritatis hic sapiente, nemo vitae perferendis quis inventore numquam quo totam reiciendis?</p>
+    <div class="list-head">
+        <h2 class="table-sec-title fw-bold display-5">List of Bloodbanks</h2>
+        <p class="evnt-info">Browse through our listings, find the nearest blood bank, and connect with them for all your blood-related needs. Your journey to making a life-saving difference starts right here with our Blood Bank Directory.</p>    
+    </div>    
         <a class="btn btn-danger rounded float-right d-inline-block" href="<?= HOSTNAME ?>addbloodbank">Add Blood Bank</a>
-        <div style="overflow-x:auto;">
+        <div style="overflow-x:auto;" class="tb-cont">
             <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
                 <thead>
                     <tr>

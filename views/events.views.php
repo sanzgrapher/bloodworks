@@ -5,9 +5,11 @@ $sn = 0;
 <main class="container-xxl top-gap">
 
     <div class="table-section">
-        <h1 class="table-sec-title fw-bold display-5">Available events</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti excepturi harum accusantium ducimus vero ipsa dolore sint praesentium veritatis hic sapiente, nemo vitae perferendis quis inventore numquam quo totam reiciendis?</p>
-        <div style="overflow-x:auto;">
+    <div class="list-head">
+        <h1 class="table-sec-title fw-bold display-5">List of Available Events</h1>
+        <p class="evnt-info">If you would like to get involved in our website's blood donation events organized by various blood banks, please review the list of upcoming events provided below. By clicking the <strong>"View Event"</strong> button, you can access more details about each specific event and participate accordingly.</p>
+    </div>    
+    <div style="overflow-x:auto;" class="tb-cont">
 
 
             <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing=" 0" width="100%">

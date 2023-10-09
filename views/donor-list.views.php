@@ -29,9 +29,11 @@ $sn = 0;
 
 
     <div class="table-section">
-        <h1 class="table-sec-title fw-bold display-5">Available donors</h1>
-        <p>Find the donors avaiable near to you .You also can contact to the donor to perform PtoP donation .</p>
-        <div style="overflow-x:auto;">
+        <div class="list-head">
+            <h1 class="table-sec-title fw-bold display-5">List of Available Donors</h1>
+            <p class="evnt-info">Browse through our following listings of available donors. Locate nearby donors in your area, and reach out to them for convenient person-to-person (P2P) donations</p>
+        </div>
+        <div style="overflow-x:auto;" class="tb-cont">
 
 
             <table id="datatable" class="table table-hover table-striped table-bordered table-sm" cellspacing=" 0" width="100%">

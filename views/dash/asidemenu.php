@@ -14,7 +14,7 @@
              <a href="<?= HOSTNAME ?>dash/edit">
                 <i class="fa-solid fa-gear"></i>Settings</a>
              <a href="<?= HOSTNAME ?>dash/requests">
-                <i class="fa-solid fa-droplet"></i>Your Blood Requests></a>
+                <i class="fa-solid fa-droplet"></i>Your Blood Requests</a>
              <a href="<?= HOSTNAME ?>logout">
                  <i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
 
